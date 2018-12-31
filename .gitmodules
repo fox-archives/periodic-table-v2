@@ -1,0 +1,3 @@
+[submodule "src/vue-feather"]
+	path = src/vue-feather
+	url = https://github.com/EanKeen/vue-feather
