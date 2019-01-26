@@ -7,6 +7,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
+json-server --watch src/mock-json-server/mockElementData.json
 npm run serve
 ```
 

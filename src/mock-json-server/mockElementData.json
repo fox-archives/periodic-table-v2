@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "name": "Hydrogen",
+      "atomicNumber": 1,
+      "atomicWeight": 1.008,
+      "radius": 53,
+      "abbreviation": "H"
+    },
+    {
+      "name": "Helium",
+      "atomicNumber": 2,
+      "atomicWeight": 4.0026,
+      "radius": 31,
+      "abbreviation": "He"
+    },
+    {
+      "name": "Lithium",
+      "atomicNumber": 3,
+      "atomicWeight": 6.94,
+      "radius": 167,
+      "abbreviation": "Li"
+    },
+    {
+      "name": "Beryllium",
+      "atomicNumber": 4,
+      "atomicWeight": 9.0122,
+      "radius": 112,
+      "abbreviation": "Be"
+    }
+  ]
+}
