@@ -19,7 +19,7 @@ const getters = {
   basicElements: function(state) {
     return state.elementsBasic;
   },
-  tabElements: function(state) {
+  elementsTab: function(state) {
     return state.elementsTab;
   },
   tabElementsSpecific: function(state) {
