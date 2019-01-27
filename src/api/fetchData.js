@@ -5,7 +5,7 @@ export default {
       !Array.isArray(context.state.basicElementsData) ||
       !context.state.basicElementsData.length
     ) {
-      fetch("http://localhost:3000/" + "basicData")
+      fetch("http://localhost:3000/" + "elementsBasic")
         .then(response => {
           return response.json();
         })
@@ -15,11 +15,11 @@ export default {
     }
   },
   fetchTabsElementsData: function(context, payload) {
-    let route = "propertiesData";
+    let route = "elementsTabProperties";
     if (payload.tab === "properties") {
-      route = "propertiesData";
+      route = "elementsTabProperties";
     } else if (payload.tab === "electrons") {
-      route = "electronsData";
+      route = "elementsTabElectrons";
     }
 
     fetch("http://localhost:3000/" + route)
@@ -31,11 +31,11 @@ export default {
       });
   },
   fetchTabsElementsVariableData: function(context, payload) {
-    let route = "tabsElementsPropertiesVariableData";
+    let route = "elementsPropertiesSpecific";
     if (payload.tab === "properties") {
-      route = "tabsElementsPropertiesVariableData";
+      route = "elementsPropertiesSpecific";
     } else if (payload.tab === "electrons") {
-      route = "tabsElementsElectronsVariableData";
+      route = "elementsElectronsSpecific";
     }
 
     fetch("http://localhost:3000/" + route)

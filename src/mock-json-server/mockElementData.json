@@ -1,22 +1,5 @@
 {
-  "variableElementsTab": {
-    "variable": "electrons"
-  },
-  "tabsElementsPropertiesVariableData": [
-    { "boilingPoint": 20.28 },
-    { "boilingPoint": 4.22 },
-    { "boilingPoint": 1615 },
-    { "boilingPoint": 2743 },
-    { "boilingPoint": 4273 }
-  ],
-  "tabsElementsElectronsVariableData": [
-    { "radius": 53 },
-    { "radius": 31 },
-    { "radius": 167 },
-    { "radius": 112 },
-    { "radius": 87 }
-  ],
-  "basicData": [
+  "elementsBasic": [
     {
       "name": "Hydrogen",
       "abbreviation": "H",
@@ -48,7 +31,7 @@
       "atomicWeight": 10.81
     }
   ],
-  "propertiesData": [
+  "elementsTabProperties": [
     {
       "atomicNumber": 1,
       "boilingPoint": 20.28,
@@ -75,7 +58,7 @@
       "meltingPoint": 2348
     }
   ],
-  "electronsData": [
+  "elementsTabElectrons": [
     {
       "atomicNumber": 1,
       "radius": 53,
@@ -101,5 +84,19 @@
       "radius": 87,
       "electronegativity": 2.04
     }
+  ],
+  "elementsPropertiesSpecific": [
+    { "boilingPoint": 20.28 },
+    { "boilingPoint": 4.22 },
+    { "boilingPoint": 1615 },
+    { "boilingPoint": 2743 },
+    { "boilingPoint": 4273 }
+  ],
+  "elementsElectronsSpecific": [
+    { "radius": 53 },
+    { "radius": 31 },
+    { "radius": 167 },
+    { "radius": 112 },
+    { "radius": 87 }
   ]
 }

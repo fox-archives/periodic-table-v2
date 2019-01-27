@@ -5,7 +5,7 @@
     </div>
     <section class="periodic-table" v-if="basicElements">
       <div class="element-outer" v-for="basicElement in basicElements" v-bind:key="basicElement.name">
-        <element-z :elementData="basicElement"></element-z>
+        <element-z :basicElementData="basicElement" :tabElementSpecificData="tabElementsSpecific"></element-z>
       </div>
     </section>
   </div>
@@ -18,7 +18,7 @@ import Element from "@/components/Element";
 export default {
   name: "PeriodicTable",
   computed: {
-    ...mapGetters("elementData/", ["basicElements"])
+    ...mapGetters("elementData/", ["basicElements", "tabElementsSpecific"])
   },
   methods: {
     ...mapActions("elementData/", ["fetchPeriodicTableData"])

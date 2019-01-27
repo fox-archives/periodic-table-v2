@@ -1,7 +1,7 @@
 <template>
   <div class="element-inner">
-    <h3>{{ elementData.name }}</h3>
-    <p>{{ elementData.atomicNumber }}</p>
+    <h3>{{ basicElementData.name }}</h3>
+    <p>{{ basicElementData.atomicNumber }}</p>
   </div>
 </template>
 
@@ -9,7 +9,8 @@
 export default {
   name: "Element",
   props: {
-    elementData: Object
+    basicElementData: Object,
+    tabElementSpecificData: Array
   }
 };
 </script>
