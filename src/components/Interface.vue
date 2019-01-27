@@ -4,19 +4,19 @@
       <element-graphic>
 
       </element-graphic>
-      <element-data>
+      <element-information>
 
-      </element-data>
+      </element-information>
     </div>
     <periodic-table>
-      <element-z slot-scope="newProp" :elementData="newProp.propElementObject"></element-z>
+      <element-z slot-scope="newProp" :elementData="newProp.elementObject"></element-z>
     </periodic-table>
   </div>
 </template>
 
 <script>
 import ElementGraphic from "@/components/ElementGraphic";
-import ElementData from "@/components/ElementData";
+import ElementInformation from "@/components/ElementInformation";
 import PeriodicTable from "@/components/PeriodicTable";
 import Element from "@/components/Element";
 
@@ -24,7 +24,7 @@ export default {
   name: "Interface",
   components: {
     "element-graphic": ElementGraphic,
-    "element-data": ElementData,
+    "element-information": ElementInformation,
     "element-z": Element,
     "periodic-table": PeriodicTable
   }

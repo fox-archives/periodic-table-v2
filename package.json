@@ -36,7 +36,9 @@
       "plugin:vue/essential",
       "@vue/prettier"
     ],
-    "rules": {},
+    "rules": {
+
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     }
