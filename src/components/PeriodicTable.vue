@@ -4,8 +4,8 @@
       <p>LOADING DATA HERE</p>
     </div>
     <section class="periodic-table" v-if="basicElements">
-      <div class="element-outer" v-for="basicElement in basicElements" v-bind:key="basicElement.name">
-        <element-z :basicElementData="basicElement" :tabElementSpecificData="tabElementsSpecific"></element-z>
+      <div class="element-outer" v-for="(basicElement, index) in basicElements" v-bind:key="basicElement.name">
+        <element-z :basicElementData="basicElement" :tabElementSpecificData="tabElementsSpecific[index]"></element-z>
       </div>
     </section>
   </div>

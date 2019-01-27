@@ -85,18 +85,6 @@
       "electronegativity": 2.04
     }
   ],
-  "elementsPropertiesSpecific": [
-    { "boilingPoint": 20.28 },
-    { "boilingPoint": 4.22 },
-    { "boilingPoint": 1615 },
-    { "boilingPoint": 2743 },
-    { "boilingPoint": 4273 }
-  ],
-  "elementsElectronsSpecific": [
-    { "radius": 53 },
-    { "radius": 31 },
-    { "radius": 167 },
-    { "radius": 112 },
-    { "radius": 87 }
-  ]
+  "elementsPropertiesSpecific": [ 20.28, 4.22, 1615, 2743, 4273 ],
+  "elementsElectronsSpecific": [ 53, 31, 167, 112, 87 ]
 }

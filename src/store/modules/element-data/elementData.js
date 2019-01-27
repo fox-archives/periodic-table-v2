@@ -1,9 +1,18 @@
+import Vue from "vue";
 import api from "@/api/fetchData";
 
 const state = {
   elementsBasic: [],
   elementsTab: [],
-  elementsTabSpecific: [] // That piece of data a the bottom of each element square on the actual periodic table
+  elementsTabSpecific: [], // That piece of data at the bottom of each element square on the actual periodic table
+
+  selectedElement: {
+    name: "Hydrogen",
+    abbreviation: "H",
+    atomicNumber: 1,
+    atomicWeight: 1.008
+    // Add other properties
+  }
 };
 
 const getters = {
@@ -15,10 +24,34 @@ const getters = {
   },
   tabElementsSpecific: function(state) {
     return state.elementsTabSpecific;
+  },
+  selectedElement: function(state) {
+    return state.selectedElement;
   }
 };
 
-const mutations = {};
+const mutations = {
+  // Updates selectedElement in state, giving that object all existing properties of a particular element
+  updateSelectedElement: function(state, atomicNumber) {
+    // Convert atomicNumber to index
+    let index = atomicNumber - 1;
+
+    // Extract element from list of elementsBasic
+    let elementBasic = state.elementsBasic[index];
+
+    // Extract element from list of elementsTab
+    let elementTab = state.elementsTab[index];
+
+    // Set state
+    const obj = {
+      ...elementBasic,
+      ...elementTab
+    };
+
+    Vue.set(state.selectedElement, obj);
+    state.selectedElement = Object.assign({}, state.selectedElement, obj);
+  }
+};
 
 const actions = {
   fetchPeriodicTableData: function(context, payload) {
