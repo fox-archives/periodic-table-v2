@@ -1,10 +1,10 @@
 <template>
-  <h1>Explore</h1>
+  <h1>Trivia</h1>
 </template>
 
 <script>
 export default {
-  name: "Explore"
+  name: "TriviaTab"
 };
 </script>
 

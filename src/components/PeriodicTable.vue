@@ -9,7 +9,6 @@
       </div>
     </section>
   </div>
-
 </template>
 
 <script>
@@ -23,7 +22,7 @@ export default {
   },
   methods: {
     fetchElementData() {
-      fetch(this.host + "data")
+      fetch(this.host + "properties")
         .then(response => {
           return response.json();
         })
@@ -46,6 +45,6 @@ export default {
 }
 
 .element-outer {
-  margin: 10px;
+  margin: 5px;
 }
 </style>

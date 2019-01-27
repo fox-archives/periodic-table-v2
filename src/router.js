@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Properties from "./views/Properties.vue";
+import Properties from "./views/PropertiesTab.vue";
 
 Vue.use(Router);
 
@@ -18,23 +18,23 @@ export default new Router({
     },
     {
       path: "/electrons",
-      component: () => import("@/views/Electrons")
+      component: () => import("@/views/ElectronsTab")
     },
     {
       path: "/orbitals",
-      component: () => import("@/views/Orbitals")
+      component: () => import("@/views/OrbitalsTab")
     },
     {
       path: "/isotopes",
-      component: () => import("@/views/Isotopes")
+      component: () => import("@/views/IsotopesTab")
     },
     {
       path: "/explore",
-      component: () => import("@/views/Explore")
+      component: () => import("@/views/ExploreTab")
     },
     {
       path: "/trivia",
-      component: () => import("@/views/Trivia")
+      component: () => import("@/views/TriviaTab")
     }
   ]
 });

@@ -1,17 +1,20 @@
 <template>
-  <div id="app">
-    <navigation class="nav">Edwin</navigation>
-    <router-view/>
+  <div class="app">
+    <navigation class="nav"/>
+    <router-view class="router-view"/>
+    <foot/>
   </div>
 </template>
 
 <script>
 import Navigation from "@/components/navigation/Navigation";
+import Foot from "@/components/foot/Foot";
 
 export default {
   name: "App",
   components: {
-    navigation: Navigation
+    navigation: Navigation,
+    foot: Foot
   }
 };
 </script>
@@ -22,21 +25,9 @@ export default {
   padding: 0;
   margin: 0;
 }
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.app {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
 }
 </style>

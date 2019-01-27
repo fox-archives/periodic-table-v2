@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: "TableElement",
+  name: "Element",
   props: {
     elementData: Object
   }
@@ -19,7 +19,6 @@ export default {
   height: 100%;
   width: 100%;
   background-color: lightsalmon;
-  border-radius: 10px;
 
   &:hover {
     cursor: pointer;

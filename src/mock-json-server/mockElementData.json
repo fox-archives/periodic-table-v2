@@ -1,32 +1,76 @@
 {
-  "data": [
+  "properties": [
     {
       "name": "Hydrogen",
+      "abbreviation": "H",
       "atomicNumber": 1,
       "atomicWeight": 1.008,
-      "radius": 53,
-      "abbreviation": "H"
+      "boilingPoint": 20.28
     },
     {
       "name": "Helium",
+      "abbreviation": "He",
       "atomicNumber": 2,
       "atomicWeight": 4.0026,
-      "radius": 31,
-      "abbreviation": "He"
+      "boilingPoint": 4.22
     },
     {
       "name": "Lithium",
+      "abbreviation": "Li",
       "atomicNumber": 3,
       "atomicWeight": 6.94,
-      "radius": 167,
-      "abbreviation": "Li"
+      "boilingPoint": 1615
     },
     {
       "name": "Beryllium",
+      "abbreviation": "Be",
       "atomicNumber": 4,
       "atomicWeight": 9.0122,
-      "radius": 112,
-      "abbreviation": "Be"
+      "boilingPoint": 2743
+    },
+    {
+      "name": "Boron",
+      "abbreviation": "B",
+      "atomicNumber": 5,
+      "atomicWeight": 10.81,
+      "boilingPoint": 4273
+    }
+  ],
+  "electrons": [
+    {
+      "name": "Hydrogen",
+      "abbreviation": "H",
+      "atomicNumber": 1,
+      "atomicWeight": 1.008,
+      "radius": 53
+    },
+    {
+      "name": "Helium",
+      "abbreviation": "He",
+      "atomicNumber": 2,
+      "atomicWeight": 4.0026,
+      "radius": 31
+    },
+    {
+      "name": "Lithium",
+      "abbreviation": "Li",
+      "atomicNumber": 3,
+      "atomicWeight": 6.94,
+      "radius": 167
+    },
+    {
+      "name": "Beryllium",
+      "abbreviation": "Be",
+      "atomicNumber": 4,
+      "atomicWeight": 9.0122,
+      "radius": 112
+    },
+    {
+      "name": "Boron",
+      "abbreviation": "B",
+      "atomicNumber": 5,
+      "atomicWeight": 10.81,
+      "radius": 87
     }
   ]
 }

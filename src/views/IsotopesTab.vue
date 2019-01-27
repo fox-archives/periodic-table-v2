@@ -1,10 +1,10 @@
 <template>
-  <h1>Electrons</h1>
+  <h1>Isotopes</h1>
 </template>
 
 <script>
 export default {
-  name: "Electrons"
+  name: "IsotopesTab"
 };
 </script>
 

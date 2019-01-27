@@ -1,10 +1,10 @@
 <template>
-  <h1>Orbitals</h1>
+  <h1>Explore</h1>
 </template>
 
 <script>
 export default {
-  name: "Orbitals"
+  name: "ExploreTab"
 };
 </script>
 
