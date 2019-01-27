@@ -10,7 +10,7 @@ export default {
           return response.json();
         })
         .then(myJson => {
-          context.state.basicElementsData = myJson;
+          context.state.elementsBasic = myJson;
         });
     }
   },
@@ -27,7 +27,7 @@ export default {
         return response.json();
       })
       .then(myJson => {
-        context.state.tabsElementsData = myJson;
+        context.state.elementsTab = myJson;
       });
   },
   fetchTabsElementsVariableData: function(context, payload) {
@@ -43,7 +43,7 @@ export default {
         return response.json();
       })
       .then(myJson => {
-        context.state.tabsElementsVariableData = myJson;
+        context.state.elementsTabSpecific = myJson;
       });
   }
 };

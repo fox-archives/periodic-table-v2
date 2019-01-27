@@ -8,9 +8,7 @@
 
       </element-information>
     </div>
-    <periodic-table>
-      <element-z slot-scope="newProp" :elementData="newProp.elementObject"></element-z>
-    </periodic-table>
+    <periodic-table/>
   </div>
 </template>
 
@@ -18,14 +16,12 @@
 import ElementGraphic from "@/components/ElementGraphic";
 import ElementInformation from "@/components/ElementInformation";
 import PeriodicTable from "@/components/PeriodicTable";
-import Element from "@/components/Element";
 
 export default {
   name: "Interface",
   components: {
     "element-graphic": ElementGraphic,
     "element-information": ElementInformation,
-    "element-z": Element,
     "periodic-table": PeriodicTable
   }
 };

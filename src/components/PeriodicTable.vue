@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div v-if="getBasicElementsData == false">
+    <div v-if="basicElements == false">
       <p>LOADING DATA HERE</p>
     </div>
-    <section class="periodic-table" v-if="getBasicElementsData">
-      <div class="element-outer" v-for="elementObject in getBasicElementsData" v-bind:key="elementObject.name">
-        <slot :elementObject="elementObject"></slot>
+    <section class="periodic-table" v-if="basicElements">
+      <div class="element-outer" v-for="basicElement in basicElements" v-bind:key="basicElement.name">
+        <element-z :elementData="basicElement"></element-z>
       </div>
     </section>
   </div>
@@ -13,11 +13,12 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+import Element from "@/components/Element";
 
 export default {
   name: "PeriodicTable",
   computed: {
-    ...mapGetters("elementData/", ["getBasicElementsData"])
+    ...mapGetters("elementData/", ["basicElements"])
   },
   methods: {
     ...mapActions("elementData/", ["fetchPeriodicTableData"])
@@ -35,6 +36,9 @@ export default {
       tab: this.$route.meta.tab
     };
     this.fetchPeriodicTableData(dataToFetch);
+  },
+  components: {
+    "element-z": Element
   }
 };
 </script>

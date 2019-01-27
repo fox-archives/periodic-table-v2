@@ -1,26 +1,20 @@
 import api from "@/api/fetchData";
 
 const state = {
-  basicElementsData: [],
-  tabsElementsData: [],
-  // propertiesElementsData: [],
-  // electronsElementsData: [],
-  // orbitalsElementData: [],
-  // isotopesElementsData: [],
-
-  // variableElementsTab: [], // Which tab the variableElementsData came from
-  tabsElementsVariableData: [] // That piece of data a the bottom of each element square on the actual periodic table
+  elementsBasic: [],
+  elementsTab: [],
+  elementsTabSpecific: [] // That piece of data a the bottom of each element square on the actual periodic table
 };
 
 const getters = {
-  getBasicElementsData: function(state) {
-    return state.basicElementsData;
+  basicElements: function(state) {
+    return state.elementsBasic;
   },
-  getTabsElementsData: function(state) {
-    return state.tabsElementsData;
+  tabElements: function(state) {
+    return state.elementsTab;
   },
-  getTabsElementsVariableData: function(state) {
-    return state.tabsElementsVariableData;
+  tabElementsSpecific: function(state) {
+    return state.elementsTabSpecific;
   }
 };
 
