@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div v-if="elementsData == false">
+    <div v-if="getElementsData == false">
       <p>LOADING DATA HERE</p>
     </div>
-    <section class="periodic-table" v-if="elementsData">
-      <div class="element-outer" v-for="elementObject in elementsData" v-bind:key="elementObject.name">
+    <section class="periodic-table" v-if="getElementsData">
+      <div class="element-outer" v-for="elementObject in getElementsData" v-bind:key="elementObject.name">
         <slot :propElementObject="elementObject"></slot>
       </div>
     </section>
@@ -12,27 +12,21 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from "vuex";
+
 export default {
   name: "PeriodicTable",
-  data() {
-    return {
-      host: "http://localhost:3000/",
-      elementsData: []
-    };
+  computed: {
+    ...mapGetters("elementData/", ["getElementsData"])
   },
   methods: {
-    fetchElementData() {
-      fetch(this.host + "properties")
-        .then(response => {
-          return response.json();
-        })
-        .then(myJson => {
-          this.elementsData = myJson;
-        });
-    }
+    ...mapActions("elementData/", ["fetchElementsData"])
   },
   created() {
-    this.fetchElementData();
+    let dataToFetch = {
+      tab: this.$route.meta.tab
+    };
+    this.fetchElementsData(dataToFetch);
   }
 };
 </script>

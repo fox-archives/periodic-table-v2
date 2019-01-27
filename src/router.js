@@ -14,27 +14,45 @@ export default new Router({
     },
     {
       path: "/properties",
-      component: Properties
+      component: Properties,
+      meta: {
+        tab: "properties"
+      }
     },
     {
       path: "/electrons",
-      component: () => import("@/views/ElectronsTab")
+      component: () => import("@/views/ElectronsTab"),
+      meta: {
+        tab: "electrons"
+      }
     },
     {
       path: "/orbitals",
-      component: () => import("@/views/OrbitalsTab")
+      component: () => import("@/views/OrbitalsTab"),
+      meta: {
+        tab: "orbitals"
+      }
     },
     {
       path: "/isotopes",
-      component: () => import("@/views/IsotopesTab")
+      component: () => import("@/views/IsotopesTab"),
+      meta: {
+        tab: "isotopes"
+      }
     },
     {
       path: "/explore",
-      component: () => import("@/views/ExploreTab")
+      component: () => import("@/views/ExploreTab"),
+      meta: {
+        tab: "explore"
+      }
     },
     {
       path: "/trivia",
-      component: () => import("@/views/TriviaTab")
+      component: () => import("@/views/TriviaTab"),
+      meta: {
+        tab: "trivia"
+      }
     }
   ]
 });
