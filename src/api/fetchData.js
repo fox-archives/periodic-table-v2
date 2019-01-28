@@ -1,25 +1,10 @@
 export default {
-  fetchBasicData: function(context) {
-    // Only fetch the data if it does not already exist
-    if (
-      !Array.isArray(context.state.basicElementsData) ||
-      !context.state.basicElementsData.length
-    ) {
-      fetch("http://localhost:3000/" + "elementsBasic")
-        .then(response => {
-          return response.json();
-        })
-        .then(myJson => {
-          context.state.elementsBasic = myJson;
-        });
-    }
-  },
-  fetchTabsElementsData: function(context, payload) {
-    let route = "elementsTabProperties";
+  fetchTabAtomsData: function(context, payload) {
+    let route = "propertiesTabAtomData";
     if (payload.tab === "properties") {
-      route = "elementsTabProperties";
+      route = "propertiesTabAtomData";
     } else if (payload.tab === "electrons") {
-      route = "elementsTabElectrons";
+      route = "electronsTabAtomData";
     }
 
     fetch("http://localhost:3000/" + route)
@@ -27,15 +12,15 @@ export default {
         return response.json();
       })
       .then(myJson => {
-        context.state.elementsTab = myJson;
+        context.state.tabAtomsData = myJson;
       });
   },
-  fetchTabsElementsVariableData: function(context, payload) {
-    let route = "elementsPropertiesSpecific";
+  fetchSpecificAtomData: function(context, payload) {
+    let route = "propertiesSpecificAtomsData";
     if (payload.tab === "properties") {
-      route = "elementsPropertiesSpecific";
+      route = "propertiesSpecificAtomsData";
     } else if (payload.tab === "electrons") {
-      route = "elementsElectronsSpecific";
+      route = "electronsSpecificAtomsData";
     }
 
     fetch("http://localhost:3000/" + route)
@@ -43,7 +28,7 @@ export default {
         return response.json();
       })
       .then(myJson => {
-        context.state.elementsTabSpecific = myJson;
+        context.state.specificAtomsData = myJson;
       });
   }
 };

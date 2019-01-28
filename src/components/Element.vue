@@ -1,8 +1,7 @@
 <template>
-  <div class="element-inner" @click="updateSelectedElement(basicElementData.atomicNumber)">
-    <h3>{{ basicElementData.name }}</h3>
-    <p>{{ basicElementData.atomicNumber }}</p>
-    <p>{{ tabElementSpecificData }}</p>
+  <div class="element-inner" @click="updateSelectedElement(atomData.atomicNumber)">
+    <h3>{{ atomData.name }}</h3>
+    <p>{{ atomData.atomicNumber }}</p>
   </div>
 </template>
 
@@ -15,8 +14,7 @@ export default {
     ...mapMutations("elementData/", ["updateSelectedElement"])
   },
   props: {
-    basicElementData: Object,
-    tabElementSpecificData: Number
+    atomData: Object
   }
 };
 </script>

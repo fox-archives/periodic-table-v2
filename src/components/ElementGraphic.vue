@@ -2,10 +2,10 @@
   <div class="graphic-outer">
     <div class="graphic">
       <div class="graphic-inner">
-        <p>{{ selectedElement.atomicNumber }}</p>
-        <p>{{ selectedElement.abbreviation }}</p>
-        <p>{{ selectedElement.name }}</p>
-        <p>{{ selectedElement.atomicWeight }}</p>
+        <p>{{ selectedAtom.atomicNumber }}</p>
+        <p>{{ selectedAtom.abbreviation }}</p>
+        <p>{{ selectedAtom.name }}</p>
+        <p>{{ selectedAtom.atomicWeight }}</p>
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "ElementGraphic",
   computed: {
-    ...mapGetters("elementData/", ["selectedElement"])
+    ...mapGetters("elementData/", ["selectedAtom"])
   }
 };
 </script>

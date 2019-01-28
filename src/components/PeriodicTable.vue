@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div v-if="basicElements == false">
+    <div v-if="tabAtomsData == false">
       <p>LOADING DATA HERE</p>
     </div>
-    <section class="periodic-table" v-if="basicElements">
-      <div class="element-outer" v-for="(basicElement, index) in basicElements" v-bind:key="basicElement.name">
-        <element-z :basicElementData="basicElement" :tabElementSpecificData="tabElementsSpecific[index]"></element-z>
+    <section class="periodic-table" v-if="tabAtomsData">
+      <div class="element-outer" v-for="atomData in tabAtomsData" v-bind:key="atomData.name">
+        <element-z :atomData="atomData"></element-z>
       </div>
     </section>
   </div>
@@ -18,7 +18,7 @@ import Element from "@/components/Element";
 export default {
   name: "PeriodicTable",
   computed: {
-    ...mapGetters("elementData/", ["basicElements", "tabElementsSpecific"])
+    ...mapGetters("elementData/", ["tabAtomsData", "specificAtomsData"])
   },
   methods: {
     ...mapActions("elementData/", ["fetchPeriodicTableData"])

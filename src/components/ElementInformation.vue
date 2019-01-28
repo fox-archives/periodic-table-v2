@@ -13,17 +13,17 @@ import { mapGetters } from "vuex";
 export default {
   name: "ElementInformation",
   computed: {
-    ...mapGetters("elementData/", ["selectedElement", "elementsTab"]),
+    ...mapGetters("elementData/", ["selectedAtom", "tabAtomsData"]),
     selectedElementPropertiesInElementsTab: function() {
-      console.log(this.selectedElement);
-      console.log(this.elementsTab);
+      console.log(this.selectedAtom);
+      console.log(this.tabAtomsData);
 
-      let a = this.selectedElement;
+      let a = this.selectedAtom;
       return a;
     }
   },
   methods: {
-    // Only want keys in selectedElements that are in elementsTab
+    // Only want keys in selectedElements that are in tabAtomsData
   }
 };
 </script>

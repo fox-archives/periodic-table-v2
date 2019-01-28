@@ -2,11 +2,10 @@ import Vue from "vue";
 import api from "@/api/fetchData";
 
 const state = {
-  elementsBasic: [],
-  elementsTab: [],
-  elementsTabSpecific: [], // That piece of data at the bottom of each element square on the actual periodic table
+  tabAtomsData: [], // Atom data that's dependent on the selected tab
+  specificAtomsData: [], // Bottom of each element-z
 
-  selectedElement: {
+  selectedAtom: {
     name: "Hydrogen",
     abbreviation: "H",
     atomicNumber: 1,
@@ -16,54 +15,39 @@ const state = {
 };
 
 const getters = {
-  basicElements: function(state) {
-    return state.elementsBasic;
+  tabAtomsData: function(state) {
+    return state.tabAtomsData;
   },
-  elementsTab: function(state) {
-    return state.elementsTab;
+  specificAtomsData: function(state) {
+    return state.specificAtomsData;
   },
-  tabElementsSpecific: function(state) {
-    return state.elementsTabSpecific;
-  },
-  selectedElement: function(state) {
-    return state.selectedElement;
+  selectedAtom: function(state) {
+    return state.selectedAtom;
   }
 };
 
 const mutations = {
-  // Updates selectedElement in state, giving that object all existing properties of a particular element
+  // Updates selectedAtom in state, giving that object all existing properties of a particular element
   updateSelectedElement: function(state, atomicNumber) {
     // Convert atomicNumber to index
     let index = atomicNumber - 1;
 
-    // Extract element from list of elementsBasic
-    let elementBasic = state.elementsBasic[index];
+    // Extract element from list of tabAtomsData
+    let elementTab = state.tabAtomsData[index];
 
-    // Extract element from list of elementsTab
-    let elementTab = state.elementsTab[index];
-
-    // Set state
-    const obj = {
-      ...elementBasic,
-      ...elementTab
-    };
-
-    Vue.set(state.selectedElement, obj);
-    state.selectedElement = Object.assign({}, state.selectedElement, obj);
+    // Vue.set(state.selectedAtom, obj);
+    state.selectedAtom = Object.assign({}, state.selectedAtom, elementTab);
   }
 };
 
 const actions = {
   fetchPeriodicTableData: function(context, payload) {
-    // Fetch the basicElement data (shows up on each element of the periodic table) and does not change
-    api.fetchBasicData(context);
-
     // Fetch the bulk of the element data (most of the data), which depends on the current tab
-    api.fetchTabsElementsData(context, payload);
+    api.fetchTabAtomsData(context, payload);
 
     // Fetch the tabsElementsVariableData (shows up on each element of the periodic table (at the bottom
     // of the element) and changes on route change, and click on a property (that's looped in ElementInformation.vue)
-    api.fetchTabsElementsVariableData(context, payload);
+    api.fetchSpecificAtomData(context, payload);
   }
 };
 
