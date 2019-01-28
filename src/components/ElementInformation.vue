@@ -15,9 +15,6 @@ export default {
   computed: {
     ...mapGetters("elementData/", ["selectedAtom", "tabAtomsData"]),
     selectedElementPropertiesInElementsTab: function() {
-      console.log(this.selectedAtom);
-      console.log(this.tabAtomsData);
-
       let a = this.selectedAtom;
       return a;
     }

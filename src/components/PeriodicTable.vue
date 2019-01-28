@@ -21,21 +21,21 @@ export default {
     ...mapGetters("elementData/", ["tabAtomsData", "specificAtomsData"])
   },
   methods: {
-    ...mapActions("elementData/", ["fetchPeriodicTableData"])
+    ...mapActions("elementData/", ["fetchUpdatePeriodicTableData"])
   },
   watch: {
     $route() {
       let dataToFetch = {
         tab: this.$route.meta.tab
       };
-      this.fetchPeriodicTableData(dataToFetch);
+      this.fetchUpdatePeriodicTableData(dataToFetch);
     }
   },
   created() {
     let dataToFetch = {
       tab: this.$route.meta.tab
     };
-    this.fetchPeriodicTableData(dataToFetch);
+    this.fetchUpdatePeriodicTableData(dataToFetch);
   },
   components: {
     "element-z": Element

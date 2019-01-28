@@ -1,5 +1,5 @@
 export default {
-  fetchTabAtomsData: function(context, payload) {
+  fetchUpdateTabAtomsData: function(context, payload) {
     let route = "propertiesTabAtomData";
     if (payload.tab === "properties") {
       route = "propertiesTabAtomData";
@@ -13,6 +13,11 @@ export default {
       })
       .then(myJson => {
         context.state.tabAtomsData = myJson;
+      })
+      // Update selectedAtom with new data
+      .then(() => {
+        let selectedAtomAtomicNumber = context.state.selectedAtom.atomicNumber;
+        context.commit("updateSelectedAtom", selectedAtomAtomicNumber);
       });
   },
   fetchSpecificAtomData: function(context, payload) {

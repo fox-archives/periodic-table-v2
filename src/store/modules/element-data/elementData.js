@@ -1,5 +1,5 @@
-import Vue from "vue";
 import api from "@/api/fetchData";
+// import helper from "@/store/modules/element-data/helper";
 
 const state = {
   tabAtomsData: [], // Atom data that's dependent on the selected tab
@@ -10,6 +10,10 @@ const state = {
     abbreviation: "H",
     atomicNumber: 1,
     atomicWeight: 1.008
+    // radius: 53,
+    // electronegativity: 2.2,
+    // boilingPoint: 20.28,
+    // meltingPoint: 14.01
     // Add other properties
   }
 };
@@ -27,26 +31,26 @@ const getters = {
 };
 
 const mutations = {
-  // Updates selectedAtom in state, giving that object all existing properties of a particular element
-  updateSelectedElement: function(state, atomicNumber) {
+  // Updates selectedAtom in state, giving that object all existing properties of selected atom
+  updateSelectedAtom: function(state, atomicNumber) {
     // Convert atomicNumber to index
     let index = atomicNumber - 1;
 
-    // Extract element from list of tabAtomsData
+    // Extract atom from list of tabAtomsData
     let elementTab = state.tabAtomsData[index];
 
-    // Vue.set(state.selectedAtom, obj);
+    state.selectedAtom = {}; // Object.assign does not clear old properties, so this does (inefficient, but works)
     state.selectedAtom = Object.assign({}, state.selectedAtom, elementTab);
   }
 };
 
 const actions = {
-  fetchPeriodicTableData: function(context, payload) {
+  fetchUpdatePeriodicTableData: function(context, payload) {
     // Fetch the bulk of the element data (most of the data), which depends on the current tab
-    api.fetchTabAtomsData(context, payload);
+    api.fetchUpdateTabAtomsData(context, payload);
 
-    // Fetch the tabsElementsVariableData (shows up on each element of the periodic table (at the bottom
-    // of the element) and changes on route change, and click on a property (that's looped in ElementInformation.vue)
+    // Fetch the specificAtomsData (shows up on each element of the periodic table (at the bottom
+    // of the element) and changes on route change, and on click of property on side panel (ElementInformation.vue)
     api.fetchSpecificAtomData(context, payload);
   }
 };

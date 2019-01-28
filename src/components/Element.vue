@@ -1,5 +1,5 @@
 <template>
-  <div class="element-inner" @click="updateSelectedElement(atomData.atomicNumber)">
+  <div class="element-inner" @click="updateSelectedAtom(atomData.atomicNumber)">
     <h3>{{ atomData.name }}</h3>
     <p>{{ atomData.atomicNumber }}</p>
   </div>
@@ -11,7 +11,7 @@ import { mapMutations } from "vuex";
 export default {
   name: "Element",
   methods: {
-    ...mapMutations("elementData/", ["updateSelectedElement"])
+    ...mapMutations("elementData/", ["updateSelectedAtom"])
   },
   props: {
     atomData: Object
