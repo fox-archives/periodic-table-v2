@@ -6,7 +6,7 @@ const state = {
   specificAtomsData: [], // Bottom of each element-z
 
   selectedAtom: {
-    Name: "Hydrogen",
+    name: "Hydrogen",
     abbreviation: "H",
     atomicNumber: 1,
     atomicWeight: 1.008

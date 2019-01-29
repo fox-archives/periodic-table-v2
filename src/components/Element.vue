@@ -1,7 +1,7 @@
 <template>
-  <div class="element-inner" @click="updateSelectedAtom(atomData[ATOMIC_NUMBER])">
-    <h3>{{ atomData[NAME] }}</h3>
-    <p>{{ atomData[ATOMIC_NUMBER] }}</p>
+  <div class="element-inner" @click="updateSelectedAtom(atomData.atomicNumber)">
+    <h3>{{ atomData.name }}</h3>
+    <p>{{ atomData.atomicNumber }}</p>
     <p>{{ specificAtomsData[index] }}</p>
   </div>
 </template>
@@ -12,7 +12,6 @@ import { mapState, mapMutations } from "vuex";
 export default {
   name: "Element",
   computed: {
-    ...mapState("variables/", ["ATOMIC_NUMBER", "NAME"]),
     ...mapState("elementData/", ["specificAtomsData"])
   },
   methods: {
