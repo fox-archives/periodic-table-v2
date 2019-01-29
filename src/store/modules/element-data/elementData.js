@@ -1,5 +1,4 @@
 import api from "@/api/fetchData";
-// import helper from "@/store/modules/element-data/helper";
 
 const state = {
   tabAtomsData: [], // Atom data that's dependent on the selected tab
@@ -37,6 +36,14 @@ const mutations = {
 
     state.selectedAtom = {}; // Object.assign does not clear old properties, so this does (inefficient, but works)
     state.selectedAtom = Object.assign({}, state.selectedAtom, elementTab);
+  },
+  updateSpecificAtomsData: function(state, key) {
+    let newSpecificAtomsData = [];
+    for (let i = 0; i < state.tabAtomsData.length; i++) {
+      let property = state.tabAtomsData[i][key];
+      newSpecificAtomsData.push(property);
+    }
+    state.specificAtomsData = newSpecificAtomsData;
   }
 };
 

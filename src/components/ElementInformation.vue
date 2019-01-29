@@ -1,7 +1,7 @@
 <template>
   <div class="information-outer">
     <div class="information-inner">
-      <div class="information" v-for="(property, key) in selectedAtom" :key="property">
+      <div class="information" v-for="(property, key) in selectedAtom" @click="updateSpecificAtomsData(key)" :key="property">
         <div v-if="dataNotBasic(key)" >
           <p>{{ atomKeyInEnglish(key) }}</p>
           <p>{{ property }}</p>
@@ -12,8 +12,8 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-import convertKeyToEnglish from "@/components/atomKeyInEnglish";
+import { mapState, mapMutations } from "vuex";
+import convertKeyToEnglish from "@/components/atomKeyToEnglish";
 
 export default {
   name: "ElementInformation",
@@ -21,6 +21,7 @@ export default {
     ...mapState("elementData/", ["selectedAtom"])
   },
   methods: {
+    ...mapMutations("elementData/", ["updateSpecificAtomsData"]),
     dataNotBasic: function(key) {
       if (
         key === "name" ||
