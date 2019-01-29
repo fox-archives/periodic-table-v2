@@ -2,19 +2,24 @@
   <div class="element-inner" @click="updateSelectedAtom(atomData.atomicNumber)">
     <h3>{{ atomData.name }}</h3>
     <p>{{ atomData.atomicNumber }}</p>
+    <p>{{ specificAtomsData[index] }}</p>
   </div>
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 export default {
   name: "Element",
+  computed: {
+    ...mapGetters("elementData/", ["specificAtomsData"])
+  },
   methods: {
     ...mapMutations("elementData/", ["updateSelectedAtom"])
   },
   props: {
-    atomData: Object
+    atomData: Object,
+    index: Number
   }
 };
 </script>

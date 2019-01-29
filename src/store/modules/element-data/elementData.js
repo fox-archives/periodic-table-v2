@@ -10,11 +10,8 @@ const state = {
     abbreviation: "H",
     atomicNumber: 1,
     atomicWeight: 1.008
-    // radius: 53,
-    // electronegativity: 2.2,
-    // boilingPoint: 20.28,
-    // meltingPoint: 14.01
-    // Add other properties
+
+    // Other property data needs to be fetched on a per-route basis (do NOT add it here)
   }
 };
 
