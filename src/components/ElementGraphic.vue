@@ -2,22 +2,28 @@
   <div class="graphic-outer">
     <div class="graphic">
       <div class="graphic-inner">
-        <p>{{ selectedAtom.atomicNumber }}</p>
-        <p>{{ selectedAtom.abbreviation }}</p>
-        <p>{{ selectedAtom.name }}</p>
-        <p>{{ selectedAtom.atomicWeight }}</p>
+        <p>{{ selectedAtom[ATOMIC_NUMBER] }}</p>
+        <p>{{ selectedAtom[ABBREVIATION] }}</p>
+        <p>{{ selectedAtom[NAME] }}</p>
+        <p>{{ selectedAtom[ATOMIC_WEIGHT] }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapState } from "vuex";
 
 export default {
   name: "ElementGraphic",
   computed: {
-    ...mapGetters("elementData/", ["selectedAtom"])
+    ...mapState("variables/", [
+      "ATOMIC_NUMBER",
+      "ABBREVIATION",
+      "NAME",
+      "ATOMIC_WEIGHT"
+    ]),
+    ...mapState("elementData/", ["selectedAtom"])
   }
 };
 </script>

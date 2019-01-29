@@ -6,11 +6,10 @@ const state = {
   specificAtomsData: [], // Bottom of each element-z
 
   selectedAtom: {
-    name: "Hydrogen",
+    Name: "Hydrogen",
     abbreviation: "H",
     atomicNumber: 1,
     atomicWeight: 1.008
-
     // Other property data needs to be fetched on a per-route basis (do NOT add it here)
   }
 };
