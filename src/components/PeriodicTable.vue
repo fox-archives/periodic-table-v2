@@ -43,7 +43,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 .periodic-table {
   display: grid;
   grid-template-columns: 1fr 1fr;

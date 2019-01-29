@@ -26,6 +26,7 @@ export default {
 .graphic-outer {
   margin: 5px;
 }
+
 .graphic {
   position: relative;
   height: 0;
@@ -33,6 +34,7 @@ export default {
   padding-bottom: 100%;
   background-color: lightblue;
 }
+
 .graphic-inner {
   height: 100%;
   width: 100%;

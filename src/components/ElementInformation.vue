@@ -1,9 +1,11 @@
 <template>
-  <div class="data-outer">
-    <div class="data-inner">
-      <div v-for="(property, key, index) in selectedAtom" :key="property">
-        <p>{{ nameFromSelectedAtomKey[index] }}</p>
-        <p>{{ property }}</p>
+  <div class="information-outer">
+    <div class="information-inner">
+      <div class="information" v-for="(property, key, index) in selectedAtom" :key="property">
+        <div v-if="dataNotBasic(key)" >
+          <p>{{ nameFromSelectedAtomKey[index] }}</p>
+          <p>{{ property }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -50,15 +52,35 @@ export default {
       }
       return selectedAtomKeys;
     }
+  },
+  methods: {
+    dataNotBasic: function(key) {
+      if (
+        key === "name" ||
+        key === "abbreviation" ||
+        key === "atomicNumber" ||
+        key === "atomicWeight"
+      ) {
+        return false;
+      }
+      return true;
+    }
   }
 };
 </script>
 
-<style scoped>
-.data-outer {
+<style scoped lang="scss">
+.information-outer {
   margin: 5px;
   background-color: lightblue;
-  height: 100%;
-  overflow: auto;
+}
+
+.information {
+  margin: 5px;
+  background-color: cornflowerblue;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 </style>

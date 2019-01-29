@@ -1,12 +1,8 @@
 <template>
   <div class="interface">
     <div class="element-information-wrapper">
-      <element-graphic>
-
-      </element-graphic>
-      <element-information>
-
-      </element-information>
+      <element-graphic/>
+      <element-information/>
     </div>
     <periodic-table/>
   </div>
@@ -38,6 +34,5 @@ export default {
   display: flex;
   flex-direction: column;
   width: 17vw;
-  height: 100%;
 }
 </style>
