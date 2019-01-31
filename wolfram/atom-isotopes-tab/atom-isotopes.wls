@@ -2,11 +2,11 @@
 (* ::Package:: *)
 
 (* Sets current directory *)
-x=FileNameSplit@$InputFileName;SetDirectory@FileNameJoin@Delete[x, Length@x];
+SetDirectory@DirectoryName@$InputFileName;
 
-Import["../old-common-methods.wls"];
-Import["../common-methods.wls"];
-deleteExistingFile["atom-isotopes.json"];
+(* Import Common Methods *)
+Import@FileNameJoin[{ParentDirectory[], "common-methods-old.wls"}];
+Import@FileNameJoin[{ParentDirectory[], "common-methods.wls"}];
 
 periodicTable = {};
 	 
@@ -51,6 +51,7 @@ Do[
 	periodicTable = Append[periodicTable, newElement];
 , {i, 1, 118}];
 
+deleteExistingFile["atom-isotopes.json"];
 Export["atom-isotopes.json", periodicTable, "JSON"];
 
 

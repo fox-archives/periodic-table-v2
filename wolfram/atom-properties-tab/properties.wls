@@ -1,10 +1,12 @@
 #!/usr/bin/env wolframscript
 (* ::Package:: *)
 
-(* Setup *)
-SetDirectory["/Users/edwin/Documents/All/Programs/periodic-table/computed/"];
-Import["common-methods.wls"];
-DeleteFile["json/properties.json"];
+(* Sets current directory *)
+SetDirectory@DirectoryName@$InputFileName;
+
+(* Import Common Methods *)
+Import@FileNameJoin[{ParentDirectory[], "common-methods-old.wls"}];
+Import@FileNameJoin[{ParentDirectory[], "common-methods.wls"}];
 
 periodicTable = {};
 	
@@ -221,7 +223,8 @@ Do[
 	periodicTable = Append[periodicTable, newElement];
 , {i, 1, 118}];
 
-Export["json/properties.json", periodicTable, "JSON"];
+deleteExistingFile["atom-properties.json"];
+Export["atom-properties.json", periodicTable, "JSON"];
 
 
 

@@ -2,19 +2,14 @@
 (* ::Package:: *)
 
 (* Sets current directory *)
-(* x=FileNameSplit@$InputFileName;SetDirectory@FileNameJoin@Delete[x, Length@x]; *)
-
-(* Sets current directory *)
 SetDirectory@DirectoryName@$InputFileName;
-Print@$InputFileName;
 
 (* Import Common Methods *)
 Import@FileNameJoin[{ParentDirectory[], "common-methods-old.wls"}];
 Import@FileNameJoin[{ParentDirectory[], "common-methods.wls"}];
 
-
 periodicTable = {};
-(* 
+ 
 For[i = 1, i < 119, i++,
 	block = ElementData[i, "Block"];
 	Switch[
@@ -52,7 +47,7 @@ For[i = 1, i < 119, i++,
 		};
 		periodicTable = Append[periodicTable, act];
 	];
-]; *)
+];
 
 deleteExistingFile["atom-block.json"];
 Export["atom-block.json", periodicTable, "JSON"];

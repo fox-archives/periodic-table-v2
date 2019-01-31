@@ -1,7 +1,7 @@
 #!/usr/bin/env wolframscript
 (* ::Package:: *)
 
-Print["common-methods-old"];
+Print["Import common-methods-old.wls"];
 (* (* Prevent returning units from queries *)
 SetSystemOptions["DataOptions" -> "ReturnQuantities" -> False]; *)
 
