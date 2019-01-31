@@ -1,10 +1,12 @@
 #!/usr/bin/env wolframscript
 (* ::Package:: *)
 
-SetDirectory@ParentDirectory@Directory[];
-Import["common-methods.wls"];
-SetDirectory@Directory[];
-deleteExistingFile@FileNameJoin[{Directory[], "atom-placement.json"}];
+(* Sets current directory *)
+x=FileNameSplit@$InputFileName;SetDirectory@FileNameJoin@Delete[x, Length@x];
+
+Import["../old-common-methods.wls"];
+Import["../common-methods.wls"];
+deleteExistingFile["atom-placement.json"];
 
 periodicTable = {};
 
@@ -89,9 +91,3 @@ For[i = 1, i < 119, i++,
 ];
 
 Export["atom-placement.json", periodicTable, "JSON"];
-
-
-
-
-
-
