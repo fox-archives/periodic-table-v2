@@ -1,23 +1,25 @@
 <template>
 <nav class="navigation">
-  <nav-item>
-    <router-link to="/properties">Properties</router-link>
-  </nav-item>
-  <nav-item>
-    <router-link to="/electrons">Electrons</router-link>
-  </nav-item>
-  <nav-item>
-    <router-link to="/orbitals">Orbitals</router-link>
-  </nav-item>
-  <nav-item>
-    <router-link to="/isotopes">Isotopes</router-link>
-  </nav-item>
-  <nav-item>
-    <router-link to="/explore">Explore</router-link>
-  </nav-item>
-  <nav-item>
-    <router-link to="/trivia">Trivia</router-link>
-  </nav-item>
+  <ul class="navigation-list">
+    <nav-item>
+      <router-link tag="p" to="/properties">Properties</router-link>
+    </nav-item>
+    <nav-item>
+      <router-link tag="p" to="/electrons">Electrons</router-link>
+    </nav-item>
+    <nav-item>
+      <router-link tag="p" to="/orbitals">Orbitals</router-link>
+    </nav-item>
+    <nav-item>
+      <router-link tag="p" to="/isotopes">Isotopes</router-link>
+    </nav-item>
+    <nav-item>
+      <router-link tag="p" to="/expldore">Explore</router-link>
+    </nav-item>
+    <nav-item>
+      <router-link tag="p" to="/trivia">Trivia</router-link>
+    </nav-item>
+  </ul>
 </nav>
 </template>
 
@@ -33,11 +35,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.navigation {
+.navigation-list {
   display: flex;
-
-  & * {
-    margin-right: 10px;
-  }
+  list-style-type: none;
 }
 </style>
