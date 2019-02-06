@@ -1,12 +1,29 @@
 <template>
-  <li class="nav-item-outer">
+  <li
+    class="nav-item-outer"
+    :style="currentTheme.navigationTheme[navItemState]"
+    @mouseenter="navItemState = 'hover'"
+    @mouseleave="navItemState = 'default'"
+    @mousedown="navItemState = 'click'"
+    @mouseup="navItemState = 'hover'"
+  >
     <slot/>
   </li>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
-  name: "NavItem"
+  name: "NavItem",
+  data() {
+    return {
+      navItemState: "default"
+    };
+  },
+  computed: {
+    ...mapState("themes/", ["currentTheme"])
+  }
 };
 </script>
 
@@ -19,7 +36,6 @@ export default {
 
   &:hover {
     cursor: pointer;
-    background-color: aquamarine;
   }
 }
 </style>
