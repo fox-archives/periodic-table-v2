@@ -31,7 +31,6 @@ export default {
 .nav-item-outer {
   padding: 5px;
   margin: 3px;
-  border: 1px solid black;
   border-radius: 5px;
 
   &:hover {
