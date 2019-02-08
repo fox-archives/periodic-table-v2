@@ -11,20 +11,7 @@ Import@FileNameJoin[{ParentDirectory[], "common-methods.wls"}];
 periodicTable = {};
 
 getType[series_]:=
-	(*Switch[
-		ToString@series,
-		"AlkaliMetals",
-		Return["blue"]
-	];*)
 	Return[series];
-	(*Which[
-		ToString@group == "1",
-			Return["red"];,
-		MissingQ@group \[Equal] True,
-			Return["Missing"];,
-		True,
-			Return["Unexpected Values"];
-	];*)
 
 For[i = 1, i < 119, i++,
 	(*type = getType[ElementData[i, "Series"]];*)

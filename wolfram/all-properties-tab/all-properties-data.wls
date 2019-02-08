@@ -100,8 +100,8 @@ For[i = 1, i < 119, i++,
 	periodicTable = Append[periodicTable, newElementObject];
 ];
 
-deleteExistingFile["tab-properties-data.json"];
-Export["tab-properties-data.json", periodicTable, "JSON"];
+deleteExistingFile["all-properties-data.json"];
+Export["all-properties-data.json", periodicTable, "JSON"];
 
 
 
