@@ -69,5 +69,5 @@ For[i = 1, i < 119, i++,
 	];
 ];
 
-deleteExistingFile["atom-classification.json"];
-Export["atom-classification.json", periodicTable, "JSON"];
+deleteExistingFile["classification.json"];
+Export["classification.json", periodicTable, "JSON"];

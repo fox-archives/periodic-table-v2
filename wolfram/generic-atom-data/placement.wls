@@ -90,5 +90,5 @@ For[i = 1, i < 119, i++,
 	];
 ];
 
-deleteExistingFile["atom-placement.json"];
-Export["atom-placement.json", periodicTable, "JSON"];
+deleteExistingFile["placement.json"];
+Export["placement.json", periodicTable, "JSON"];

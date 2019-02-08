@@ -49,5 +49,5 @@ For[i = 1, i < 119, i++,
 	];
 ];
 
-deleteExistingFile["atom-block.json"];
-Export["atom-block.json", periodicTable, "JSON"];
+deleteExistingFile["block.json"];
+Export["block.json", periodicTable, "JSON"];
