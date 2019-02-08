@@ -18,7 +18,9 @@
 		"fusionHeat":0.558,
 		"meltingPoint":-2.5914e2,
 		"neelPoint":"Unknown",
-		"specificHeat":1.43e4
+		"specificHeat":1.43e4,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":0.452
 	},
 	{
 		"name":"Helium",
@@ -39,7 +41,9 @@
 		"fusionHeat":2.0e-2,
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":5.1931e3
+		"specificHeat":5.1931e3,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":8.3e-2
 	},
 	{
 		"name":"Lithium",
@@ -60,7 +64,9 @@
 		"fusionHeat":3.0,
 		"meltingPoint":1.8054e2,
 		"neelPoint":"Unknown",
-		"specificHeat":3.57e3
+		"specificHeat":3.57e3,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.47e2
 	},
 	{
 		"name":"Beryllium",
@@ -81,7 +87,9 @@
 		"fusionHeat":7.95,
 		"meltingPoint":1.287e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.82e3
+		"specificHeat":1.82e3,
+		"superconductingPoint":2.6e-2,
+		"vaporizationHeat":2.97e2
 	},
 	{
 		"name":"Boron",
@@ -102,7 +110,9 @@
 		"fusionHeat":5.0e1,
 		"meltingPoint":2.075e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.03e3
+		"specificHeat":1.03e3,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":5.07e2
 	},
 	{
 		"name":"Carbon",
@@ -123,7 +133,9 @@
 		"fusionHeat":1.05e2,
 		"meltingPoint":3.55e3,
 		"neelPoint":"Unknown",
-		"specificHeat":7.1e2
+		"specificHeat":7.1e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":7.15e2
 	},
 	{
 		"name":"Nitrogen",
@@ -144,7 +156,9 @@
 		"fusionHeat":0.36,
 		"meltingPoint":-2.101e2,
 		"neelPoint":"Unknown",
-		"specificHeat":1.04e3
+		"specificHeat":1.04e3,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.79
 	},
 	{
 		"name":"Oxygen",
@@ -165,7 +179,9 @@
 		"fusionHeat":0.222,
 		"meltingPoint":-2.183e2,
 		"neelPoint":"Unknown",
-		"specificHeat":9.19e2
+		"specificHeat":9.19e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.41
 	},
 	{
 		"name":"Fluorine",
@@ -186,7 +202,9 @@
 		"fusionHeat":0.26,
 		"meltingPoint":-2.196e2,
 		"neelPoint":"Unknown",
-		"specificHeat":8.24e2
+		"specificHeat":8.24e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.27
 	},
 	{
 		"name":"Neon",
@@ -207,7 +225,9 @@
 		"fusionHeat":0.34,
 		"meltingPoint":-2.4859e2,
 		"neelPoint":"Unknown",
-		"specificHeat":1.03e3
+		"specificHeat":1.03e3,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.75
 	},
 	{
 		"name":"Sodium",
@@ -228,7 +248,9 @@
 		"fusionHeat":2.6,
 		"meltingPoint":9.772e1,
 		"neelPoint":"Unknown",
-		"specificHeat":1.23e3
+		"specificHeat":1.23e3,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":9.77e1
 	},
 	{
 		"name":"Magnesium",
@@ -249,7 +271,9 @@
 		"fusionHeat":8.7,
 		"meltingPoint":6.5e2,
 		"neelPoint":"Unknown",
-		"specificHeat":1.02e3
+		"specificHeat":1.02e3,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.28e2
 	},
 	{
 		"name":"Aluminum",
@@ -270,7 +294,9 @@
 		"fusionHeat":1.07e1,
 		"meltingPoint":6.6032e2,
 		"neelPoint":"Unknown",
-		"specificHeat":9.04e2
+		"specificHeat":9.04e2,
+		"superconductingPoint":1.175,
+		"vaporizationHeat":2.93e2
 	},
 	{
 		"name":"Silicon",
@@ -291,7 +317,9 @@
 		"fusionHeat":5.02e1,
 		"meltingPoint":1.414e3,
 		"neelPoint":"Unknown",
-		"specificHeat":7.1e2
+		"specificHeat":7.1e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.59e2
 	},
 	{
 		"name":"Phosphorus",
@@ -312,7 +340,9 @@
 		"fusionHeat":0.64,
 		"meltingPoint":4.42e1,
 		"neelPoint":"Unknown",
-		"specificHeat":7.697e2
+		"specificHeat":7.697e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.24e1
 	},
 	{
 		"name":"Sulfur",
@@ -333,7 +363,9 @@
 		"fusionHeat":1.73,
 		"meltingPoint":1.1521e2,
 		"neelPoint":"Unknown",
-		"specificHeat":7.05e2
+		"specificHeat":7.05e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":9.8
 	},
 	{
 		"name":"Chlorine",
@@ -354,7 +386,9 @@
 		"fusionHeat":3.2,
 		"meltingPoint":-1.015e2,
 		"neelPoint":"Unknown",
-		"specificHeat":4.782e2
+		"specificHeat":4.782e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.02e1
 	},
 	{
 		"name":"Argon",
@@ -375,7 +409,9 @@
 		"fusionHeat":1.18,
 		"meltingPoint":-1.893e2,
 		"neelPoint":"Unknown",
-		"specificHeat":5.2033e2
+		"specificHeat":5.2033e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":6.5
 	},
 	{
 		"name":"Potassium",
@@ -396,7 +432,9 @@
 		"fusionHeat":2.33,
 		"meltingPoint":6.338e1,
 		"neelPoint":"Unknown",
-		"specificHeat":7.57e2
+		"specificHeat":7.57e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":7.69e1
 	},
 	{
 		"name":"Calcium",
@@ -417,7 +455,9 @@
 		"fusionHeat":8.54,
 		"meltingPoint":8.42e2,
 		"neelPoint":"Unknown",
-		"specificHeat":6.31e2
+		"specificHeat":6.31e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.55e2
 	},
 	{
 		"name":"Scandium",
@@ -438,7 +478,9 @@
 		"fusionHeat":1.6e1,
 		"meltingPoint":1.541e3,
 		"neelPoint":"Unknown",
-		"specificHeat":5.67e2
+		"specificHeat":5.67e2,
+		"superconductingPoint":5.0e-2,
+		"vaporizationHeat":3.18e2
 	},
 	{
 		"name":"Titanium",
@@ -459,7 +501,9 @@
 		"fusionHeat":1.87e1,
 		"meltingPoint":1.668e3,
 		"neelPoint":"Unknown",
-		"specificHeat":5.2e2
+		"specificHeat":5.2e2,
+		"superconductingPoint":0.4,
+		"vaporizationHeat":4.25e2
 	},
 	{
 		"name":"Vanadium",
@@ -480,7 +524,9 @@
 		"fusionHeat":2.28e1,
 		"meltingPoint":1.91e3,
 		"neelPoint":"Unknown",
-		"specificHeat":4.89e2
+		"specificHeat":4.89e2,
+		"superconductingPoint":5.4,
+		"vaporizationHeat":4.53e2
 	},
 	{
 		"name":"Chromium",
@@ -501,7 +547,9 @@
 		"fusionHeat":2.05e1,
 		"meltingPoint":1.907e3,
 		"neelPoint":3.93e2,
-		"specificHeat":4.48e2
+		"specificHeat":4.48e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.39e2
 	},
 	{
 		"name":"Manganese",
@@ -522,7 +570,9 @@
 		"fusionHeat":1.32e1,
 		"meltingPoint":1.246e3,
 		"neelPoint":1.0e2,
-		"specificHeat":4.79e2
+		"specificHeat":4.79e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.2e2
 	},
 	{
 		"name":"Iron",
@@ -543,7 +593,9 @@
 		"fusionHeat":1.38e1,
 		"meltingPoint":1.538e3,
 		"neelPoint":"Unknown",
-		"specificHeat":4.49e2
+		"specificHeat":4.49e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.47e2
 	},
 	{
 		"name":"Cobalt",
@@ -564,7 +616,9 @@
 		"fusionHeat":1.62e1,
 		"meltingPoint":1.495e3,
 		"neelPoint":"Unknown",
-		"specificHeat":4.21e2
+		"specificHeat":4.21e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.75e2
 	},
 	{
 		"name":"Nickel",
@@ -585,7 +639,9 @@
 		"fusionHeat":1.72e1,
 		"meltingPoint":1.455e3,
 		"neelPoint":"Unknown",
-		"specificHeat":4.45e2
+		"specificHeat":4.45e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.78e2
 	},
 	{
 		"name":"Copper",
@@ -606,7 +662,9 @@
 		"fusionHeat":1.31e1,
 		"meltingPoint":1.08462e3,
 		"neelPoint":"Unknown",
-		"specificHeat":3.844e2
+		"specificHeat":3.844e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.0e2
 	},
 	{
 		"name":"Zinc",
@@ -627,7 +685,9 @@
 		"fusionHeat":7.35,
 		"meltingPoint":4.1953e2,
 		"neelPoint":"Unknown",
-		"specificHeat":3.88e2
+		"specificHeat":3.88e2,
+		"superconductingPoint":0.85,
+		"vaporizationHeat":1.19e2
 	},
 	{
 		"name":"Gallium",
@@ -648,7 +708,9 @@
 		"fusionHeat":5.59,
 		"meltingPoint":2.976e1,
 		"neelPoint":"Unknown",
-		"specificHeat":3.71e2
+		"specificHeat":3.71e2,
+		"superconductingPoint":1.083,
+		"vaporizationHeat":2.56e2
 	},
 	{
 		"name":"Germanium",
@@ -669,7 +731,9 @@
 		"fusionHeat":3.18e1,
 		"meltingPoint":9.383e2,
 		"neelPoint":"Unknown",
-		"specificHeat":3.214e2
+		"specificHeat":3.214e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.34e2
 	},
 	{
 		"name":"Arsenic",
@@ -690,7 +754,9 @@
 		"fusionHeat":2.77e1,
 		"meltingPoint":8.17e2,
 		"neelPoint":"Unknown",
-		"specificHeat":3.28e2
+		"specificHeat":3.28e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.24e1
 	},
 	{
 		"name":"Selenium",
@@ -711,7 +777,9 @@
 		"fusionHeat":5.4,
 		"meltingPoint":2.21e2,
 		"neelPoint":"Unknown",
-		"specificHeat":3.212e2
+		"specificHeat":3.212e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.6e1
 	},
 	{
 		"name":"Bromine",
@@ -732,7 +800,9 @@
 		"fusionHeat":5.8,
 		"meltingPoint":-7.3,
 		"neelPoint":"Unknown",
-		"specificHeat":9.473e2
+		"specificHeat":9.473e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.48e1
 	},
 	{
 		"name":"Krypton",
@@ -753,7 +823,9 @@
 		"fusionHeat":1.64,
 		"meltingPoint":-1.5736e2,
 		"neelPoint":"Unknown",
-		"specificHeat":2.4805e2
+		"specificHeat":2.4805e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":9.02
 	},
 	{
 		"name":"Rubidium",
@@ -774,7 +846,9 @@
 		"fusionHeat":2.19,
 		"meltingPoint":3.931e1,
 		"neelPoint":"Unknown",
-		"specificHeat":3.64e2
+		"specificHeat":3.64e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":7.1e1
 	},
 	{
 		"name":"Strontium",
@@ -795,7 +869,9 @@
 		"fusionHeat":8.0,
 		"meltingPoint":7.77e2,
 		"neelPoint":"Unknown",
-		"specificHeat":3.0e2
+		"specificHeat":3.0e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.37e2
 	},
 	{
 		"name":"Yttrium",
@@ -816,7 +892,9 @@
 		"fusionHeat":1.14e1,
 		"meltingPoint":1.526e3,
 		"neelPoint":"Unknown",
-		"specificHeat":2.98e2
+		"specificHeat":2.98e2,
+		"superconductingPoint":1.3,
+		"vaporizationHeat":3.8e2
 	},
 	{
 		"name":"Zirconium",
@@ -837,7 +915,9 @@
 		"fusionHeat":2.1e1,
 		"meltingPoint":1.855e3,
 		"neelPoint":"Unknown",
-		"specificHeat":2.78e2
+		"specificHeat":2.78e2,
+		"superconductingPoint":0.61,
+		"vaporizationHeat":5.8e2
 	},
 	{
 		"name":"Niobium",
@@ -858,7 +938,9 @@
 		"fusionHeat":2.68e1,
 		"meltingPoint":2.477e3,
 		"neelPoint":"Unknown",
-		"specificHeat":2.65e2
+		"specificHeat":2.65e2,
+		"superconductingPoint":9.25,
+		"vaporizationHeat":6.9e2
 	},
 	{
 		"name":"Molybdenum",
@@ -879,7 +961,9 @@
 		"fusionHeat":3.6e1,
 		"meltingPoint":2.623e3,
 		"neelPoint":"Unknown",
-		"specificHeat":2.51e2
+		"specificHeat":2.51e2,
+		"superconductingPoint":0.915,
+		"vaporizationHeat":6.0e2
 	},
 	{
 		"name":"Technetium",
@@ -900,7 +984,9 @@
 		"fusionHeat":2.3e1,
 		"meltingPoint":2.157e3,
 		"neelPoint":"Unknown",
-		"specificHeat":6.3e1
+		"specificHeat":6.3e1,
+		"superconductingPoint":7.7,
+		"vaporizationHeat":5.5e2
 	},
 	{
 		"name":"Ruthenium",
@@ -921,7 +1007,9 @@
 		"fusionHeat":2.57e1,
 		"meltingPoint":2.334e3,
 		"neelPoint":"Unknown",
-		"specificHeat":2.38e2
+		"specificHeat":2.38e2,
+		"superconductingPoint":0.49,
+		"vaporizationHeat":5.8e2
 	},
 	{
 		"name":"Rhodium",
@@ -942,7 +1030,9 @@
 		"fusionHeat":2.17e1,
 		"meltingPoint":1.964e3,
 		"neelPoint":"Unknown",
-		"specificHeat":2.4e2
+		"specificHeat":2.4e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":4.95e2
 	},
 	{
 		"name":"Palladium",
@@ -963,7 +1053,9 @@
 		"fusionHeat":1.67e1,
 		"meltingPoint":1.5549e3,
 		"neelPoint":"Unknown",
-		"specificHeat":2.4e2
+		"specificHeat":2.4e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.8e2
 	},
 	{
 		"name":"Silver",
@@ -984,7 +1076,9 @@
 		"fusionHeat":1.13e1,
 		"meltingPoint":9.6178e2,
 		"neelPoint":"Unknown",
-		"specificHeat":2.35e2
+		"specificHeat":2.35e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.55e2
 	},
 	{
 		"name":"Cadmium",
@@ -1005,7 +1099,9 @@
 		"fusionHeat":6.3,
 		"meltingPoint":3.2107e2,
 		"neelPoint":"Unknown",
-		"specificHeat":2.3e2
+		"specificHeat":2.3e2,
+		"superconductingPoint":0.517,
+		"vaporizationHeat":1.0e2
 	},
 	{
 		"name":"Indium",
@@ -1026,7 +1122,9 @@
 		"fusionHeat":3.26,
 		"meltingPoint":1.566e2,
 		"neelPoint":"Unknown",
-		"specificHeat":2.33e2
+		"specificHeat":2.33e2,
+		"superconductingPoint":3.41,
+		"vaporizationHeat":2.3e2
 	},
 	{
 		"name":"Tin",
@@ -1047,7 +1145,9 @@
 		"fusionHeat":7.0,
 		"meltingPoint":2.3193e2,
 		"neelPoint":"Unknown",
-		"specificHeat":2.17e2
+		"specificHeat":2.17e2,
+		"superconductingPoint":3.72,
+		"vaporizationHeat":2.9e2
 	},
 	{
 		"name":"Antimony",
@@ -1068,7 +1168,9 @@
 		"fusionHeat":1.97e1,
 		"meltingPoint":6.3063e2,
 		"neelPoint":"Unknown",
-		"specificHeat":2.07e2
+		"specificHeat":2.07e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":6.7e1
 	},
 	{
 		"name":"Tellurium",
@@ -1089,7 +1191,9 @@
 		"fusionHeat":1.75e1,
 		"meltingPoint":4.4951e2,
 		"neelPoint":"Unknown",
-		"specificHeat":2.01e2
+		"specificHeat":2.01e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":4.8e1
 	},
 	{
 		"name":"Iodine",
@@ -1110,7 +1214,9 @@
 		"fusionHeat":7.76,
 		"meltingPoint":1.137e2,
 		"neelPoint":"Unknown",
-		"specificHeat":4.29e2
+		"specificHeat":4.29e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.09e1
 	},
 	{
 		"name":"Xenon",
@@ -1131,7 +1237,9 @@
 		"fusionHeat":2.3,
 		"meltingPoint":-1.118e2,
 		"neelPoint":"Unknown",
-		"specificHeat":1.5832e2
+		"specificHeat":1.5832e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.264e1
 	},
 	{
 		"name":"Cesium",
@@ -1152,7 +1260,9 @@
 		"fusionHeat":2.09,
 		"meltingPoint":2.844e1,
 		"neelPoint":"Unknown",
-		"specificHeat":2.42e2
+		"specificHeat":2.42e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":6.4e1
 	},
 	{
 		"name":"Barium",
@@ -1173,7 +1283,9 @@
 		"fusionHeat":8.0,
 		"meltingPoint":7.27e2,
 		"neelPoint":"Unknown",
-		"specificHeat":2.05e2
+		"specificHeat":2.05e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.4e2
 	},
 	{
 		"name":"Lanthanum",
@@ -1194,7 +1306,9 @@
 		"fusionHeat":6.3,
 		"meltingPoint":9.19e2,
 		"neelPoint":"Unknown",
-		"specificHeat":1.95e2
+		"specificHeat":1.95e2,
+		"superconductingPoint":4.88,
+		"vaporizationHeat":4.0e2
 	},
 	{
 		"name":"Cerium",
@@ -1215,7 +1329,9 @@
 		"fusionHeat":5.5,
 		"meltingPoint":7.98e2,
 		"neelPoint":1.25e1,
-		"specificHeat":1.92e2
+		"specificHeat":1.92e2,
+		"superconductingPoint":2.2e-2,
+		"vaporizationHeat":3.5e2
 	},
 	{
 		"name":"Praseodymium",
@@ -1236,7 +1352,9 @@
 		"fusionHeat":6.9,
 		"meltingPoint":9.31e2,
 		"neelPoint":"Unknown",
-		"specificHeat":1.93e2
+		"specificHeat":1.93e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.3e2
 	},
 	{
 		"name":"Neodymium",
@@ -1257,7 +1375,9 @@
 		"fusionHeat":7.1,
 		"meltingPoint":1.021e3,
 		"neelPoint":1.92e1,
-		"specificHeat":1.9e2
+		"specificHeat":1.9e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.85e2
 	},
 	{
 		"name":"Promethium",
@@ -1278,7 +1398,9 @@
 		"fusionHeat":7.7,
 		"meltingPoint":1.1e3,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.9e2
 	},
 	{
 		"name":"Samarium",
@@ -1299,7 +1421,9 @@
 		"fusionHeat":8.5,
 		"meltingPoint":1.072e3,
 		"neelPoint":1.06e2,
-		"specificHeat":1.96e2
+		"specificHeat":1.96e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.75e2
 	},
 	{
 		"name":"Europium",
@@ -1320,7 +1444,9 @@
 		"fusionHeat":9.3,
 		"meltingPoint":8.22e2,
 		"neelPoint":9.05e1,
-		"specificHeat":1.82e2
+		"specificHeat":1.82e2,
+		"superconductingPoint":1.8,
+		"vaporizationHeat":1.75e2
 	},
 	{
 		"name":"Gadolinium",
@@ -1341,7 +1467,9 @@
 		"fusionHeat":1.0e1,
 		"meltingPoint":1.313e3,
 		"neelPoint":"Unknown",
-		"specificHeat":2.4e2
+		"specificHeat":2.4e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.05e2
 	},
 	{
 		"name":"Terbium",
@@ -1362,7 +1490,9 @@
 		"fusionHeat":1.08e1,
 		"meltingPoint":1.356e3,
 		"neelPoint":2.3e2,
-		"specificHeat":1.82e2
+		"specificHeat":1.82e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.95e2
 	},
 	{
 		"name":"Dysprosium",
@@ -1383,7 +1513,9 @@
 		"fusionHeat":1.11e1,
 		"meltingPoint":1.412e3,
 		"neelPoint":1.78e2,
-		"specificHeat":1.67e2
+		"specificHeat":1.67e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.8e2
 	},
 	{
 		"name":"Holmium",
@@ -1404,7 +1536,9 @@
 		"fusionHeat":1.7e1,
 		"meltingPoint":1.474e3,
 		"neelPoint":1.32e2,
-		"specificHeat":1.65e2
+		"specificHeat":1.65e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.65e2
 	},
 	{
 		"name":"Erbium",
@@ -1425,7 +1559,9 @@
 		"fusionHeat":1.99e1,
 		"meltingPoint":1.497e3,
 		"neelPoint":8.2e1,
-		"specificHeat":1.68e2
+		"specificHeat":1.68e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.85e2
 	},
 	{
 		"name":"Thulium",
@@ -1446,7 +1582,9 @@
 		"fusionHeat":1.68e1,
 		"meltingPoint":1.545e3,
 		"neelPoint":5.6e1,
-		"specificHeat":1.6e2
+		"specificHeat":1.6e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":2.5e2
 	},
 	{
 		"name":"Ytterbium",
@@ -1467,7 +1605,9 @@
 		"fusionHeat":7.7,
 		"meltingPoint":8.19e2,
 		"neelPoint":"Unknown",
-		"specificHeat":1.54e2
+		"specificHeat":1.54e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.6e2
 	},
 	{
 		"name":"Lutetium",
@@ -1488,7 +1628,9 @@
 		"fusionHeat":2.2e1,
 		"meltingPoint":1.663e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.54e2
+		"specificHeat":1.54e2,
+		"superconductingPoint":0.1,
+		"vaporizationHeat":4.15e2
 	},
 	{
 		"name":"Hafnium",
@@ -1509,7 +1651,9 @@
 		"fusionHeat":2.55e1,
 		"meltingPoint":2.233e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.44e2
+		"specificHeat":1.44e2,
+		"superconductingPoint":0.128,
+		"vaporizationHeat":6.3e2
 	},
 	{
 		"name":"Tantalum",
@@ -1530,7 +1674,9 @@
 		"fusionHeat":3.6e1,
 		"meltingPoint":3.017e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.4e2
+		"specificHeat":1.4e2,
+		"superconductingPoint":4.47,
+		"vaporizationHeat":7.36e2
 	},
 	{
 		"name":"Tungsten",
@@ -1551,7 +1697,9 @@
 		"fusionHeat":3.5e1,
 		"meltingPoint":3.422e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.32e2
+		"specificHeat":1.32e2,
+		"superconductingPoint":1.5e-2,
+		"vaporizationHeat":8.0e2
 	},
 	{
 		"name":"Rhenium",
@@ -1572,7 +1720,9 @@
 		"fusionHeat":3.3e1,
 		"meltingPoint":3.186e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.37e2
+		"specificHeat":1.37e2,
+		"superconductingPoint":1.7,
+		"vaporizationHeat":7.05e2
 	},
 	{
 		"name":"Osmium",
@@ -1593,7 +1743,9 @@
 		"fusionHeat":3.1e1,
 		"meltingPoint":3.033e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.3e2
+		"specificHeat":1.3e2,
+		"superconductingPoint":0.66,
+		"vaporizationHeat":6.3e2
 	},
 	{
 		"name":"Iridium",
@@ -1614,7 +1766,9 @@
 		"fusionHeat":2.6e1,
 		"meltingPoint":2.466e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.31e2
+		"specificHeat":1.31e2,
+		"superconductingPoint":0.11,
+		"vaporizationHeat":5.6e2
 	},
 	{
 		"name":"Platinum",
@@ -1635,7 +1789,9 @@
 		"fusionHeat":2.0e1,
 		"meltingPoint":1.7683e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.33e2
+		"specificHeat":1.33e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":4.9e2
 	},
 	{
 		"name":"Gold",
@@ -1656,7 +1812,9 @@
 		"fusionHeat":1.25e1,
 		"meltingPoint":1.06418e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.291e2
+		"specificHeat":1.291e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.3e2
 	},
 	{
 		"name":"Mercury",
@@ -1677,7 +1835,9 @@
 		"fusionHeat":2.29,
 		"meltingPoint":-3.883e1,
 		"neelPoint":"Unknown",
-		"specificHeat":1.395e2
+		"specificHeat":1.395e2,
+		"superconductingPoint":4.154,
+		"vaporizationHeat":5.92e1
 	},
 	{
 		"name":"Thallium",
@@ -1698,7 +1858,9 @@
 		"fusionHeat":4.2,
 		"meltingPoint":3.04e2,
 		"neelPoint":"Unknown",
-		"specificHeat":1.29e2
+		"specificHeat":1.29e2,
+		"superconductingPoint":2.38,
+		"vaporizationHeat":1.65e2
 	},
 	{
 		"name":"Lead",
@@ -1719,7 +1881,9 @@
 		"fusionHeat":4.77,
 		"meltingPoint":3.2746e2,
 		"neelPoint":"Unknown",
-		"specificHeat":1.27e2
+		"specificHeat":1.27e2,
+		"superconductingPoint":7.2,
+		"vaporizationHeat":1.78e2
 	},
 	{
 		"name":"Bismuth",
@@ -1740,7 +1904,9 @@
 		"fusionHeat":1.09e1,
 		"meltingPoint":2.713e2,
 		"neelPoint":"Unknown",
-		"specificHeat":1.22e2
+		"specificHeat":1.22e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.6e2
 	},
 	{
 		"name":"Polonium",
@@ -1761,7 +1927,9 @@
 		"fusionHeat":1.3e1,
 		"meltingPoint":2.54e2,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.0e2
 	},
 	{
 		"name":"Astatine",
@@ -1782,7 +1950,9 @@
 		"fusionHeat":6.0,
 		"meltingPoint":3.02e2,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":4.0e1
 	},
 	{
 		"name":"Radon",
@@ -1803,7 +1973,9 @@
 		"fusionHeat":3.0,
 		"meltingPoint":-7.1e1,
 		"neelPoint":"Unknown",
-		"specificHeat":9.365e1
+		"specificHeat":9.365e1,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.7e1
 	},
 	{
 		"name":"Francium",
@@ -1824,7 +1996,9 @@
 		"fusionHeat":2.0,
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":6.4e1
 	},
 	{
 		"name":"Radium",
@@ -1845,7 +2019,9 @@
 		"fusionHeat":8.0,
 		"meltingPoint":7.0e2,
 		"neelPoint":"Unknown",
-		"specificHeat":9.2e1
+		"specificHeat":9.2e1,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":1.25e2
 	},
 	{
 		"name":"Actinium",
@@ -1866,7 +2042,9 @@
 		"fusionHeat":1.4e1,
 		"meltingPoint":1.05e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.2e2
+		"specificHeat":1.2e2,
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":4.0e2
 	},
 	{
 		"name":"Thorium",
@@ -1887,7 +2065,9 @@
 		"fusionHeat":1.6e1,
 		"meltingPoint":1.75e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.18e2
+		"specificHeat":1.18e2,
+		"superconductingPoint":1.38,
+		"vaporizationHeat":5.3e2
 	},
 	{
 		"name":"Protactinium",
@@ -1908,7 +2088,9 @@
 		"fusionHeat":1.5e1,
 		"meltingPoint":1.572e3,
 		"neelPoint":"Unknown",
-		"specificHeat":9.91e1
+		"specificHeat":9.91e1,
+		"superconductingPoint":1.4055484858563863,
+		"vaporizationHeat":4.7e2
 	},
 	{
 		"name":"Uranium",
@@ -1929,7 +2111,9 @@
 		"fusionHeat":1.4e1,
 		"meltingPoint":1.135e3,
 		"neelPoint":"Unknown",
-		"specificHeat":1.16e2
+		"specificHeat":1.16e2,
+		"superconductingPoint":0.69,
+		"vaporizationHeat":4.2e2
 	},
 	{
 		"name":"Neptunium",
@@ -1950,7 +2134,9 @@
 		"fusionHeat":1.0e1,
 		"meltingPoint":6.44e2,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.35e2
 	},
 	{
 		"name":"Plutonium",
@@ -1971,7 +2157,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":6.4e2,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":3.25e2
 	},
 	{
 		"name":"Americium",
@@ -1992,7 +2180,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":1.176e3,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":0.6,
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Curium",
@@ -2013,7 +2203,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":1.345e3,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Berkelium",
@@ -2034,7 +2226,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":1.05e3,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Californium",
@@ -2055,7 +2249,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":9.0e2,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Einsteinium",
@@ -2076,7 +2272,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":8.6e2,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Fermium",
@@ -2097,7 +2295,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":1.527e3,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Mendelevium",
@@ -2118,7 +2318,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":8.28e2,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Nobelium",
@@ -2139,7 +2341,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":8.28e2,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Lawrencium",
@@ -2160,7 +2364,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":1.627e3,
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Rutherfordium",
@@ -2181,7 +2387,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Dubnium",
@@ -2202,7 +2410,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Seaborgium",
@@ -2223,7 +2433,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Bohrium",
@@ -2244,7 +2456,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Hassium",
@@ -2265,7 +2479,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Meitnerium",
@@ -2286,7 +2502,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Darmstadtium",
@@ -2307,7 +2525,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Roentgenium",
@@ -2328,7 +2548,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Copernicium",
@@ -2349,7 +2571,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Nihonium",
@@ -2370,7 +2594,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Flerovium",
@@ -2391,7 +2617,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Moscovium",
@@ -2412,7 +2640,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Livermorium",
@@ -2433,7 +2663,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Tennessine",
@@ -2454,7 +2686,9 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	},
 	{
 		"name":"Oganesson",
@@ -2475,6 +2709,8 @@
 		"fusionHeat":"Unknown",
 		"meltingPoint":"Unknown",
 		"neelPoint":"Unknown",
-		"specificHeat":"Unknown"
+		"specificHeat":"Unknown",
+		"superconductingPoint":"Unknown",
+		"vaporizationHeat":"Unknown"
 	}
 ]

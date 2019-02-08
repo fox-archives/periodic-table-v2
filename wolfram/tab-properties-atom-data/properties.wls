@@ -8,7 +8,7 @@ SetDirectory@DirectoryName@$InputFileName;
 Import@FileNameJoin[{ParentDirectory[], "common-methods-old.wls"}];
 Import@FileNameJoin[{ParentDirectory[], "common-methods.wls"}];
 
-fixAtomicRadiusValue[x_]:= (
+fixAtomicRadius[x_]:= (
 	If[FailureQ[x],
 		Return["Failed"];
 	];
@@ -18,7 +18,7 @@ fixAtomicRadiusValue[x_]:= (
 	];
 )
 
-fixValenceValue[x_]:= (
+fixValence[x_]:= (
 	If[FailureQ[x],
 		Return["Failed"];
 	];
@@ -28,7 +28,6 @@ fixValenceValue[x_]:= (
 	];
 )
 
-
 periodicTable = {};
 
 elementList = EntityList[Entity["Element"]];
@@ -36,54 +35,49 @@ Print["Properties.wls creating properties"];
 For[i = 1, i < 119, i++,
 	myElementEntity = elementList[[i]];
 
-	nameValue = CanonicalName@myElementEntity;
-
-	abbreviationValue = ElementData[myElementEntity, "Abbreviation"];
-
-	atomicNumberValue = ElementData[myElementEntity, "AtomicNumber"];
+	name = CanonicalName@myElementEntity;
+	abbreviation = ElementData[myElementEntity, "Abbreviation"];
+	atomicNumber = ElementData[myElementEntity, "AtomicNumber"];
 
 	(* ATOMIC PROPERTIES *)
-	atomicRadiusValue = ElementData[myElementEntity, "AtomicRadius"] // fixAtomicRadiusValue;
+	atomicRadius = ElementData[myElementEntity, "AtomicRadius"] // fixAtomicRadius;
+	covalentRadius = ElementData[myElementEntity, "CovalentRadius"] // fixAtomicRadius;
+	inizationEnergies = ElementData[myElementEntity, "IonizationEnergies"] // fixAtomicRadius;
+	vanDerWaalsRadius = ElementData[myElementEntity, "VanDerWaalsRadius"] // fixAtomicRadius;
+	neuronCount = "";
+	electronCount = "";
+	valence = ElementData[myElementEntity, "Valence"] // fixValence;
+	electronegativity = ElementData[myElementEntity, "Electronegativity"] // fixAtomicRadius;
+	electronAffinity = ElementData[myElementEntity, "ElectronAffinity"] // fixAtomicRadius;
 
-	covalentRadiusValue = ElementData[myElementEntity, "CovalentRadius"] // fixAtomicRadiusValue;
-
-	vanDerWaalsRadiusValue = ElementData[myElementEntity, "VanDerWaalsRadius"] // fixAtomicRadiusValue;
-
-	(* protonCountValue = ElementData[myElementEntity, "ProtonCount"] // fixAtomicRadiusValue; *)
-	neuronCountValue = "";
-	electronCountValue = "";
-	valenceValue = ElementData[myElementEntity, "Valence"] // fixValenceValue;
-
-	electronegativityValue = ElementData[myElementEntity, "Electronegativity"] // fixAtomicRadiusValue;
-
-	electronAffinityValue = ElementData[myElementEntity, "ElectronAffinity"] // fixAtomicRadiusValue;
-
-	(* Divide *)
 
 	(* THERMODYNAMIC PROPERTIES *)
-	abiabaticIndex = ElementData[myElementEntity, "AdiabaticIndex"] // fixAtomicRadiusValue;
-	boilingPoint = ElementData[myElementEntity, "BoilingPoint"] // fixAtomicRadiusValue;
-	meltingPoint = ElementData[myElementEntity, "MeltingPoint"] // fixAtomicRadiusValue;
-	criticalPressure = ElementData[myElementEntity, "CriticalPressure"] // fixAtomicRadiusValue;
-	criticalTemperature = ElementData[myElementEntity, "CriticalTemperature"] // fixAtomicRadiusValue;
-	curiePoint = ElementData[myElementEntity, "CuriePoint"] // fixAtomicRadiusValue;
-	fusionHeat = ElementData[myElementEntity, "FusionHeat"] // fixAtomicRadiusValue;
-	meltingPoint = ElementData[myElementEntity, "MeltingPoint"] // fixAtomicRadiusValue;
-	neelPoint = ElementData[myElementEntity, "NeelPoint"] // fixAtomicRadiusValue;
-	(* phase = ElementData[myElementEntity, "Phase"] // fixAtomicRadiusValue; *)
-	specificHeat = ElementData[myElementEntity, "SpecificHeat"] // fixAtomicRadiusValue;
+	abiabaticIndex = ElementData[myElementEntity, "AdiabaticIndex"] // fixAtomicRadius;
+	boilingPoint = ElementData[myElementEntity, "BoilingPoint"] // fixAtomicRadius;
+	meltingPoint = ElementData[myElementEntity, "MeltingPoint"] // fixAtomicRadius;
+	criticalPressure = ElementData[myElementEntity, "CriticalPressure"] // fixAtomicRadius;
+	criticalTemperature = ElementData[myElementEntity, "CriticalTemperature"] // fixAtomicRadius;
+	curiePoint = ElementData[myElementEntity, "CuriePoint"] // fixAtomicRadius;
+	fusionHeat = ElementData[myElementEntity, "FusionHeat"] // fixAtomicRadius;
+	meltingPoint = ElementData[myElementEntity, "MeltingPoint"] // fixAtomicRadius;
+	neelPoint = ElementData[myElementEntity, "NeelPoint"] // fixAtomicRadius;
+	(* phase = ElementData[myElementEntity, "Phase"] // fixAtomicRadius; *)
+	specificHeat = ElementData[myElementEntity, "SpecificHeat"] // fixAtomicRadius;
+	superconductingPoint = ElementData[myElementEntity, "SuperconductingPoint"] // fixAtomicRadius;
+	vaporizationHeat = ElementData[myElementEntity, "VaporizationHeat"] // fixAtomicRadius;
+	(* Skipping Some *)
 
 	newElementObject = {
-		"name" -> nameValue,
-		"abbreviation" -> abbreviationValue,
-		"atomicNumber" -> atomicNumberValue,
-		"atomicRadius" -> atomicRadiusValue,
-		"covalentRadius" -> covalentRadiusValue,
-		"vanDerWaalsRadius" -> vanDerWaalsRadiusValue,
-		(* "protonCount" -> protonCountValue *)
-		"valence" -> valenceValue,
-		"electronegativity" -> electronegativityValue,
-		"electronAffinity" -> electronAffinityValue,
+		"name" -> name,
+		"abbreviation" -> abbreviation,
+		"atomicNumber" -> atomicNumber,
+		"atomicRadius" -> atomicRadius,
+		"covalentRadius" -> covalentRadius,
+		(* "inizationEnergies" - inizationEnergies, *)
+		"vanDerWaalsRadius" -> vanDerWaalsRadius,
+		"valence" -> valence,
+		"electronegativity" -> electronegativity,
+		"electronAffinity" -> electronAffinity,
 
 		(* THERMODYNAMIC PROPERTIES *)
 		"adiabaticIndex" -> abiabaticIndex,
@@ -96,7 +90,9 @@ For[i = 1, i < 119, i++,
 		"meltingPoint" -> meltingPoint,
 		"neelPoint" -> neelPoint,
 		(* "phase" -> phase *)
-		"specificHeat" -> specificHeat
+		"specificHeat" -> specificHeat,
+		"superconductingPoint" -> superconductingPoint,
+		"vaporizationHeat" -> vaporizationHeat
 	};
 
 	Print@newElementObject;
