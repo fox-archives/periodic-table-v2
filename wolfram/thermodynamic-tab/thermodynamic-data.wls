@@ -31,27 +31,14 @@ fixValence[x_]:= (
 periodicTable = {};
 
 elementList = EntityList[Entity["Element"]];
-Print["all-properties-data.wls creating properties"];
+Print["Thermodynamic-Data.wls creating properties"];
 For[i = 1, i < 119, i++,
 	myElementEntity = elementList[[i]];
 
-	(* COMMON PROPERTIES *)
 	name = CanonicalName@myElementEntity;
 	abbreviation = ElementData[myElementEntity, "Abbreviation"];
 	atomicNumber = ElementData[myElementEntity, "AtomicNumber"];
-	atomicMass = ElementData[myElementEntity, "AtomicMass"] // fixAtomicRadius;
-
-	(* ATOMIC PROPERTIES *)
-	atomicRadius = ElementData[myElementEntity, "AtomicRadius"] // fixAtomicRadius;
-	covalentRadius = ElementData[myElementEntity, "CovalentRadius"] // fixAtomicRadius;
-	inizationEnergies = ElementData[myElementEntity, "IonizationEnergies"] // fixAtomicRadius;
-	vanDerWaalsRadius = ElementData[myElementEntity, "VanDerWaalsRadius"] // fixAtomicRadius;
-	neuronCount = "";
-	electronCount = "";
-	valence = ElementData[myElementEntity, "Valence"] // fixValence;
-	electronegativity = ElementData[myElementEntity, "Electronegativity"] // fixAtomicRadius;
-	electronAffinity = ElementData[myElementEntity, "ElectronAffinity"] // fixAtomicRadius;
-
+	atomicMass = ElementData[myElementEntity, "AtomicMass"];
 
 	(* THERMODYNAMIC PROPERTIES *)
 	abiabaticIndex = ElementData[myElementEntity, "AdiabaticIndex"] // fixAtomicRadius;
@@ -67,21 +54,12 @@ For[i = 1, i < 119, i++,
 	specificHeat = ElementData[myElementEntity, "SpecificHeat"] // fixAtomicRadius;
 	superconductingPoint = ElementData[myElementEntity, "SuperconductingPoint"] // fixAtomicRadius;
 	vaporizationHeat = ElementData[myElementEntity, "VaporizationHeat"] // fixAtomicRadius;
-	(* Skipping Some *)
 
 	newElementObject = {
 		"name" -> name,
 		"abbreviation" -> abbreviation,
 		"atomicNumber" -> atomicNumber,
 		"atomicMass" -> atomicMass,
-
-		"atomicRadius" -> atomicRadius,
-		"covalentRadius" -> covalentRadius,
-		(* "inizationEnergies" - inizationEnergies, *)
-		"vanDerWaalsRadius" -> vanDerWaalsRadius,
-		"valence" -> valence,
-		"electronegativity" -> electronegativity,
-		"electronAffinity" -> electronAffinity,
 
 		(* THERMODYNAMIC PROPERTIES *)
 		"adiabaticIndex" -> abiabaticIndex,
@@ -104,8 +82,8 @@ For[i = 1, i < 119, i++,
 	periodicTable = Append[periodicTable, newElementObject];
 ];
 
-deleteExistingFile["all-properties-data.json"];
-Export["all-properties-data.json", periodicTable, "JSON"];
+deleteExistingFile["thermodynamic-data.json"];
+Export["thermodynamic-data.json", periodicTable, "JSON"];
 
 
 

@@ -10,3 +10,11 @@ deleteExistingFile[myFile_]:= (
 		DeleteFile[myFile]
 	];
 )
+
+catchErrorsQuantityMagnitude[data_]:= (
+
+)
+
+catchErorrsQuantityMagnitude[data_]:= (
+
+)
