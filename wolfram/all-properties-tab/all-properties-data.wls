@@ -5,68 +5,62 @@
 SetDirectory@DirectoryName@$InputFileName;
 
 (* Import Common Methods *)
-Import@FileNameJoin[{ParentDirectory[], "common-methods-old.wls"}];
 Import@FileNameJoin[{ParentDirectory[], "common-methods.wls"}];
 
-fixAtomicRadius[x_]:= (
-	If[FailureQ[x],
-		Return["Failed"];
-	];
-	If[MissingQ[x],
-		Return["Unknown"];,
-		Return[UnitConvert@N@QuantityMagnitude[x]];
-	];
-)
+toHTMLSuperScript[i_, fn_]:= (
+	(* Unprotects Mathematica's Superscript method, so it can be overriden *)
+	Unprotect[Superscript];
+	Superscript[x_, y_] := Return[StringJoin[ToString[x], "<sup>", ToString[y], "</sup>", " "]];
+	Subscript[x_, y_] := Return[StringJoin[ToString[x], "<sub>", ToString[y], "</sub>", " "]];
 
-fixValence[x_]:= (
-	If[FailureQ[x],
-		Return["Failed"];
-	];
-	If[MissingQ[x],
-		Return["Unknown"];,
-		Return[UnitConvert@QuantityMagnitude[x]];
-	];
+	newProp = ToString@ElementData[i, fn];
+	(* Restores Mathematica's Superscript method *)
+	Superscript[x_, y_]=.;
+	Subscript[x_, y_]=.;
+
+	newProp = StringReplace[newProp, "]" -> "] ", 1];
+	Return[newProp];
 )
 
 periodicTable = {};
 
-elementList = EntityList[Entity["Element"]];
+(* elementList = EntityList[Entity["Element"]]; *)
 Print["all-properties-data.wls creating properties"];
 For[i = 1, i < 119, i++,
-	myElementEntity = elementList[[i]];
+	(* i = elementList[[i]]; *)
 
 	(* COMMON PROPERTIES *)
-	name = CanonicalName@myElementEntity;
-	abbreviation = ElementData[myElementEntity, "Abbreviation"];
-	atomicNumber = ElementData[myElementEntity, "AtomicNumber"];
-	atomicMass = ElementData[myElementEntity, "AtomicMass"] // fixAtomicRadius;
+	name = ElementData[i, "Name"];
+	abbreviation = ElementData[i, "Abbreviation"];
+	atomicNumber = ElementData[i, "AtomicNumber"];
+	atomicMass = ElementData[i, "AtomicMass"] // catchErrorsAndNumConvertAndUnitConvert;
 
 	(* ATOMIC PROPERTIES *)
-	atomicRadius = ElementData[myElementEntity, "AtomicRadius"] // fixAtomicRadius;
-	covalentRadius = ElementData[myElementEntity, "CovalentRadius"] // fixAtomicRadius;
-	inizationEnergies = ElementData[myElementEntity, "IonizationEnergies"] // fixAtomicRadius;
-	vanDerWaalsRadius = ElementData[myElementEntity, "VanDerWaalsRadius"] // fixAtomicRadius;
+	atomicRadius = ElementData[i, "AtomicRadius"] // catchErrorsAndNumConvertAndUnitConvert;
+	covalentRadius = ElementData[i, "CovalentRadius"] // catchErrorsAndNumConvertAndUnitConvert;
+	inizationEnergies = ElementData[i, "IonizationEnergies"] // catchErrorsAndNumConvertAndUnitConvert;
+	vanDerWaalsRadius = ElementData[i, "VanDerWaalsRadius"] // catchErrorsAndNumConvertAndUnitConvert;
 	neuronCount = "";
 	electronCount = "";
-	valence = ElementData[myElementEntity, "Valence"] // fixValence;
-	electronegativity = ElementData[myElementEntity, "Electronegativity"] // fixAtomicRadius;
-	electronAffinity = ElementData[myElementEntity, "ElectronAffinity"] // fixAtomicRadius;
+	valence = ElementData[i, "Valence"] // catchErrorsAndUnitConvert;
+	electronegativity = ElementData[i, "Electronegativity"] // catchErrorsAndNumConvertAndUnitConvert;
+	electronAffinity = ElementData[i, "ElectronAffinity"] // catchErrorsAndNumConvertAndUnitConvert;
 
 
 	(* THERMODYNAMIC PROPERTIES *)
-	abiabaticIndex = ElementData[myElementEntity, "AdiabaticIndex"] // fixAtomicRadius;
-	boilingPoint = ElementData[myElementEntity, "BoilingPoint"] // fixAtomicRadius;
-	meltingPoint = ElementData[myElementEntity, "MeltingPoint"] // fixAtomicRadius;
-	criticalPressure = ElementData[myElementEntity, "CriticalPressure"] // fixAtomicRadius;
-	criticalTemperature = ElementData[myElementEntity, "CriticalTemperature"] // fixAtomicRadius;
-	curiePoint = ElementData[myElementEntity, "CuriePoint"] // fixAtomicRadius;
-	fusionHeat = ElementData[myElementEntity, "FusionHeat"] // fixAtomicRadius;
-	meltingPoint = ElementData[myElementEntity, "MeltingPoint"] // fixAtomicRadius;
-	neelPoint = ElementData[myElementEntity, "NeelPoint"] // fixAtomicRadius;
-	(* phase = ElementData[myElementEntity, "Phase"] // fixAtomicRadius; *)
-	specificHeat = ElementData[myElementEntity, "SpecificHeat"] // fixAtomicRadius;
-	superconductingPoint = ElementData[myElementEntity, "SuperconductingPoint"] // fixAtomicRadius;
-	vaporizationHeat = ElementData[myElementEntity, "VaporizationHeat"] // fixAtomicRadius;
+	abiabaticIndex = ElementData[i, "AdiabaticIndex"] // catchErrorsAndNumConvertAndUnitConvert;
+	boilingPoint = ElementData[i, "BoilingPoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	meltingPoint = ElementData[i, "MeltingPoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	criticalPressure = ElementData[i, "CriticalPressure"] // catchErrorsAndNumConvertAndUnitConvert;
+	criticalTemperature = ElementData[i, "CriticalTemperature"] // catchErrorsAndNumConvertAndUnitConvert;
+	curiePoint = ElementData[i, "CuriePoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	fusionHeat = ElementData[i, "FusionHeat"] // catchErrorsAndNumConvertAndUnitConvert;
+	meltingPoint = ElementData[i, "MeltingPoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	neelPoint = ElementData[i, "NeelPoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	(* phase = ElementData[i, "Phase"] // catchErrorsAndNumConvertAndUnitConvert; *)
+	specificHeat = ElementData[i, "SpecificHeat"] // catchErrorsAndNumConvertAndUnitConvert;
+	superconductingPoint = ElementData[i, "SuperconductingPoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	vaporizationHeat = ElementData[i, "VaporizationHeat"] // catchErrorsAndNumConvertAndUnitConvert;
 	(* Skipping Some *)
 
 	newElementObject = {
@@ -99,7 +93,7 @@ For[i = 1, i < 119, i++,
 		"vaporizationHeat" -> vaporizationHeat
 	};
 
-	Print@newElementObject;
+	Print@newElementObject;Print[" "];
 
 	periodicTable = Append[periodicTable, newElementObject];
 ];

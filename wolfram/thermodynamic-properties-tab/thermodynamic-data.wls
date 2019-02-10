@@ -5,28 +5,7 @@
 SetDirectory@DirectoryName@$InputFileName;
 
 (* Import Common Methods *)
-Import@FileNameJoin[{ParentDirectory[], "common-methods-old.wls"}];
 Import@FileNameJoin[{ParentDirectory[], "common-methods.wls"}];
-
-fixAtomicRadius[x_]:= (
-	If[FailureQ[x],
-		Return["Failed"];
-	];
-	If[MissingQ[x],
-		Return["Unknown"];,
-		Return[UnitConvert@N@QuantityMagnitude[x]];
-	];
-)
-
-fixValence[x_]:= (
-	If[FailureQ[x],
-		Return["Failed"];
-	];
-	If[MissingQ[x],
-		Return["Unknown"];,
-		Return[UnitConvert@QuantityMagnitude[x]];
-	];
-)
 
 periodicTable = {};
 
@@ -41,19 +20,19 @@ For[i = 1, i < 119, i++,
 	atomicMass = ElementData[myElementEntity, "AtomicMass"];
 
 	(* THERMODYNAMIC PROPERTIES *)
-	abiabaticIndex = ElementData[myElementEntity, "AdiabaticIndex"] // fixAtomicRadius;
-	boilingPoint = ElementData[myElementEntity, "BoilingPoint"] // fixAtomicRadius;
-	meltingPoint = ElementData[myElementEntity, "MeltingPoint"] // fixAtomicRadius;
-	criticalPressure = ElementData[myElementEntity, "CriticalPressure"] // fixAtomicRadius;
-	criticalTemperature = ElementData[myElementEntity, "CriticalTemperature"] // fixAtomicRadius;
-	curiePoint = ElementData[myElementEntity, "CuriePoint"] // fixAtomicRadius;
-	fusionHeat = ElementData[myElementEntity, "FusionHeat"] // fixAtomicRadius;
-	meltingPoint = ElementData[myElementEntity, "MeltingPoint"] // fixAtomicRadius;
-	neelPoint = ElementData[myElementEntity, "NeelPoint"] // fixAtomicRadius;
-	(* phase = ElementData[myElementEntity, "Phase"] // fixAtomicRadius; *)
-	specificHeat = ElementData[myElementEntity, "SpecificHeat"] // fixAtomicRadius;
-	superconductingPoint = ElementData[myElementEntity, "SuperconductingPoint"] // fixAtomicRadius;
-	vaporizationHeat = ElementData[myElementEntity, "VaporizationHeat"] // fixAtomicRadius;
+	abiabaticIndex = ElementData[myElementEntity, "AdiabaticIndex"] // catchErrorsAndNumConvertAndUnitConvert;
+	boilingPoint = ElementData[myElementEntity, "BoilingPoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	meltingPoint = ElementData[myElementEntity, "MeltingPoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	criticalPressure = ElementData[myElementEntity, "CriticalPressure"] // catchErrorsAndNumConvertAndUnitConvert;
+	criticalTemperature = ElementData[myElementEntity, "CriticalTemperature"] // catchErrorsAndNumConvertAndUnitConvert;
+	curiePoint = ElementData[myElementEntity, "CuriePoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	fusionHeat = ElementData[myElementEntity, "FusionHeat"] // catchErrorsAndNumConvertAndUnitConvert;
+	meltingPoint = ElementData[myElementEntity, "MeltingPoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	neelPoint = ElementData[myElementEntity, "NeelPoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	(* phase = ElementData[myElementEntity, "Phase"] // catchErrorsAndNumConvertAndUnitConvert; *)
+	specificHeat = ElementData[myElementEntity, "SpecificHeat"] // catchErrorsAndNumConvertAndUnitConvert;
+	superconductingPoint = ElementData[myElementEntity, "SuperconductingPoint"] // catchErrorsAndNumConvertAndUnitConvert;
+	vaporizationHeat = ElementData[myElementEntity, "VaporizationHeat"] // catchErrorsAndNumConvertAndUnitConvert;
 
 	newElementObject = {
 		"name" -> name,

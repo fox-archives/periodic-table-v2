@@ -5,7 +5,6 @@
 SetDirectory@DirectoryName@$InputFileName;
 
 (* Import Common Methods *)
-Import@FileNameJoin[{ParentDirectory[], "common-methods-old.wls"}];
 Import@FileNameJoin[{ParentDirectory[], "common-methods.wls"}];
 
 periodicTable = {};
