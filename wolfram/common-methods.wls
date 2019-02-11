@@ -41,7 +41,7 @@ catchErrors[data_]:= (
 	];
 )
 
-toHTMLSuperScript[i_, fn_]:= (
+(* toHTMLSuperScript[i_, fn_]:= (
 	(* Unprotects Mathematica's Superscript method, so it can be overriden *)
 	Unprotect[Superscript];
 	Superscript[x_, y_] := Return[StringJoin[ToString[x], "<sup>", ToString[y], "</sup>", " "]];
@@ -54,4 +54,4 @@ toHTMLSuperScript[i_, fn_]:= (
 
 	newProp = StringReplace[newProp, "]" -> "] ", 1];
 	Return[newProp];
-)
+) *)

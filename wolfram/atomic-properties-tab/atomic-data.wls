@@ -12,26 +12,27 @@ elementList = EntityList[Entity["Element"]];
 Print["atomic-data.wls creating properties"];
 
 For[i = 1, i < 119, i++,
-	myElementEntity = elementList[[i]];
+	(* i = elementList[[i]]; *)
 
 	(* COMMON PROPERTIES *)
-	name = CanonicalName@myElementEntity;
-	abbreviation = ElementData[myElementEntity, "Abbreviation"];
-	atomicNumber = ElementData[myElementEntity, "AtomicNumber"];
-	atomicMass = ElementData[myElementEntity, "AtomicMass"] // catchErrors;
+	(* name = CanonicalName@i; *)
+	abbreviation = ElementData[i, "Abbreviation"];
+	atomicNumber = ElementData[i, "AtomicNumber"];
+	atomicMass = ElementData[i, "AtomicMass"] // catchErrors;
 
 	(* ATOMIC PROPERTIES *)
-	atomicRadius = ElementData[myElementEntity, "AtomicRadius"] // catchErrorsAndNumConvertAndUnitConvert;
-	covalentRadius = ElementData[myElementEntity, "CovalentRadius"] // catchErrorsAndNumConvertAndUnitConvert;
-	electronConfiguration = ElementData[myElementEntity, "ElectronConfiguration"];
-	ionizationEnergies = Map[catchErrorsAndNumConvertAndUnitConvert, ElementData[myElementEntity, "IonizationEnergies"]];
+	atomicRadius = ElementData[i, "AtomicRadius"] // catchErrorsAndNumConvertAndUnitConvert;
+	covalentRadius = ElementData[i, "CovalentRadius"] // catchErrorsAndNumConvertAndUnitConvert;
+	electronConfiguration = ElementData[i, "ElectronConfiguration"];
+	(* electronShellConfiguration = ElementData[i, "ElectronShellConfiguration"]; *)
+	ionizationEnergies = Map[catchErrorsAndNumConvertAndUnitConvert, ElementData[i, "IonizationEnergies"]];
 
 	(* quantumNumbers*)
-	vanDerWaalsRadius = ElementData[myElementEntity, "VanDerWaalsRadius"] // catchErrorsAndNumConvertAndUnitConvert;
-	electronAffinity = ElementData[myElementEntity, "ElectronAffinity"] // catchErrorsAndNumConvertAndUnitConvert;
-	electronegativity = ElementData[myElementEntity, "Electronegativity"] // catchErrorsAndNumConvertAndUnitConvert;
+	vanDerWaalsRadius = ElementData[i, "VanDerWaalsRadius"] // catchErrorsAndNumConvertAndUnitConvert;
+	electronAffinity = ElementData[i, "ElectronAffinity"] // catchErrorsAndNumConvertAndUnitConvert;
+	electronegativity = ElementData[i, "Electronegativity"] // catchErrorsAndNumConvertAndUnitConvert;
 	(* gasAtomicMultiplicities *)
-	valence = ElementData[myElementEntity, "Valence"] // catchErrorsAndUnitConvert;
+	valence = ElementData[i, "Valence"] // catchErrorsAndUnitConvert;
 
 	newElementObject = {
 		"name" -> name,
@@ -42,6 +43,7 @@ For[i = 1, i < 119, i++,
 		"atomicRadius" -> atomicRadius,
 		"covalentRadius" -> covalentRadius,
 		"electronConfiguration" -> electronConfiguration,
+		"electronShellConfiguration" -> electronShellConfiguration,
 		"ionizationEnergies" -> ionizationEnergies,
 		"vanDerWaalsRadius" -> vanDerWaalsRadius,	
 		"electronAffinity" -> electronAffinity,
