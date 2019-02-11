@@ -12,10 +12,8 @@ elementList = EntityList[Entity["Element"]];
 Print["atomic-data.wls creating properties"];
 
 For[i = 1, i < 119, i++,
-	(* i = elementList[[i]]; *)
-
 	(* COMMON PROPERTIES *)
-	(* name = CanonicalName@i; *)
+	name = elementList[[i]] // CanonicalName;
 	abbreviation = ElementData[i, "Abbreviation"];
 	atomicNumber = ElementData[i, "AtomicNumber"];
 	atomicMass = ElementData[i, "AtomicMass"] // catchErrors;
@@ -24,30 +22,35 @@ For[i = 1, i < 119, i++,
 	atomicRadius = ElementData[i, "AtomicRadius"] // catchErrorsAndNumConvertAndUnitConvert;
 	covalentRadius = ElementData[i, "CovalentRadius"] // catchErrorsAndNumConvertAndUnitConvert;
 	electronConfiguration = ElementData[i, "ElectronConfiguration"];
-	(* electronShellConfiguration = ElementData[i, "ElectronShellConfiguration"]; *)
+	(* ElectronConfigurationString *)
+	electronShellConfiguration = ElementData[i, "ElectronShellConfiguration"];
 	ionizationEnergies = Map[catchErrorsAndNumConvertAndUnitConvert, ElementData[i, "IonizationEnergies"]];
-
-	(* quantumNumbers*)
+	(* QuantumNumbers *)
 	vanDerWaalsRadius = ElementData[i, "VanDerWaalsRadius"] // catchErrorsAndNumConvertAndUnitConvert;
 	electronAffinity = ElementData[i, "ElectronAffinity"] // catchErrorsAndNumConvertAndUnitConvert;
 	electronegativity = ElementData[i, "Electronegativity"] // catchErrorsAndNumConvertAndUnitConvert;
-	(* gasAtomicMultiplicities *)
+	(* GasAtomicMultiplicities *)
 	valence = ElementData[i, "Valence"] // catchErrorsAndUnitConvert;
 
 	newElementObject = {
+		(* COMMON PROPERTIES *)
 		"name" -> name,
 		"abbreviation" -> abbreviation,
 		"atomicNumber" -> atomicNumber,
 		"atomicMass" -> atomicMass,
 
+		(* ATOMIC PROPERTIES *)
 		"atomicRadius" -> atomicRadius,
 		"covalentRadius" -> covalentRadius,
 		"electronConfiguration" -> electronConfiguration,
+		(* ElectronConfigurationString *)
 		"electronShellConfiguration" -> electronShellConfiguration,
 		"ionizationEnergies" -> ionizationEnergies,
+		(* QuantumNumbers *)
 		"vanDerWaalsRadius" -> vanDerWaalsRadius,	
 		"electronAffinity" -> electronAffinity,
 		"electronegativity" -> electronegativity,
+		(* GasAtomicMultiplicities *)
 		"valence" -> valence
 
 	};

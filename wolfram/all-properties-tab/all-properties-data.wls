@@ -23,9 +23,8 @@ toHTMLSuperScript[i_, fn_]:= (
 )
 
 periodicTable = {};
-
-(* elementList = EntityList[Entity["Element"]]; *)
 Print["all-properties-data.wls creating properties"];
+
 For[i = 1, i < 119, i++,
 	(* i = elementList[[i]]; *)
 
