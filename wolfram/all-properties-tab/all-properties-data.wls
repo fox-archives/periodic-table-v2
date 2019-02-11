@@ -7,21 +7,6 @@ SetDirectory@DirectoryName@$InputFileName;
 (* Import Common Methods *)
 Import@FileNameJoin[{ParentDirectory[], "common-methods.wls"}];
 
-toHTMLSuperScript[i_, fn_]:= (
-	(* Unprotects Mathematica's Superscript method, so it can be overriden *)
-	Unprotect[Superscript];
-	Superscript[x_, y_] := Return[StringJoin[ToString[x], "<sup>", ToString[y], "</sup>", " "]];
-	Subscript[x_, y_] := Return[StringJoin[ToString[x], "<sub>", ToString[y], "</sub>", " "]];
-
-	newProp = ToString@ElementData[i, fn];
-	(* Restores Mathematica's Superscript method *)
-	Superscript[x_, y_]=.;
-	Subscript[x_, y_]=.;
-
-	newProp = StringReplace[newProp, "]" -> "] ", 1];
-	Return[newProp];
-)
-
 periodicTable = {};
 Print["all-properties-data.wls creating properties"];
 
@@ -29,7 +14,7 @@ For[i = 1, i < 119, i++,
 	(* i = elementList[[i]]; *)
 
 	(* COMMON PROPERTIES *)
-	name = ElementData[i, "Name"];
+	name = ElementData[i, "Name"] // Capitalize;
 	abbreviation = ElementData[i, "Abbreviation"];
 	atomicNumber = ElementData[i, "AtomicNumber"];
 	atomicMass = ElementData[i, "AtomicMass"] // catchErrorsAndNumConvertAndUnitConvert;

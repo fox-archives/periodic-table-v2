@@ -8,12 +8,11 @@ SetDirectory@DirectoryName@$InputFileName;
 Import@FileNameJoin[{ParentDirectory[], "common-methods.wls"}];
 
 periodicTable = {};
-elementList = EntityList[Entity["Element"]];
 Print["atomic-data.wls creating properties"];
 
 For[i = 1, i < 119, i++,
 	(* COMMON PROPERTIES *)
-	name = elementList[[i]] // CanonicalName;
+	name = ElementData[i, "Name"] // Capitalize;
 	abbreviation = ElementData[i, "Abbreviation"];
 	atomicNumber = ElementData[i, "AtomicNumber"];
 	atomicMass = ElementData[i, "AtomicMass"] // catchErrors;
@@ -60,8 +59,8 @@ For[i = 1, i < 119, i++,
 	periodicTable = Append[periodicTable, newElementObject];
 ];
 
-deleteExistingFile["all-atomic-data.json"];
-Export["all-atomic-data.json", periodicTable, "JSON"];
+deleteExistingFile["atomic-data.json"];
+Export["atomic-data.json", periodicTable, "JSON"];
 
 
 
