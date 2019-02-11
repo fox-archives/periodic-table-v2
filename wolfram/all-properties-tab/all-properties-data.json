@@ -1,6 +1,6 @@
 [
 	{
-		"name":"hydrogen",
+		"name":"Hydrogen",
 		"abbreviation":"H",
 		"atomicNumber":1,
 		"atomicMass":1.008,
@@ -24,7 +24,7 @@
 		"vaporizationHeat":0.452
 	},
 	{
-		"name":"helium",
+		"name":"Helium",
 		"abbreviation":"He",
 		"atomicNumber":2,
 		"atomicMass":4.002602,
@@ -48,7 +48,7 @@
 		"vaporizationHeat":8.3e-2
 	},
 	{
-		"name":"lithium",
+		"name":"Lithium",
 		"abbreviation":"Li",
 		"atomicNumber":3,
 		"atomicMass":6.94,
@@ -72,7 +72,7 @@
 		"vaporizationHeat":1.47e2
 	},
 	{
-		"name":"beryllium",
+		"name":"Beryllium",
 		"abbreviation":"Be",
 		"atomicNumber":4,
 		"atomicMass":9.0121831,
@@ -96,7 +96,7 @@
 		"vaporizationHeat":2.97e2
 	},
 	{
-		"name":"boron",
+		"name":"Boron",
 		"abbreviation":"B",
 		"atomicNumber":5,
 		"atomicMass":1.081e1,
@@ -120,7 +120,7 @@
 		"vaporizationHeat":5.07e2
 	},
 	{
-		"name":"carbon",
+		"name":"Carbon",
 		"abbreviation":"C",
 		"atomicNumber":6,
 		"atomicMass":1.2011e1,
@@ -144,7 +144,7 @@
 		"vaporizationHeat":7.15e2
 	},
 	{
-		"name":"nitrogen",
+		"name":"Nitrogen",
 		"abbreviation":"N",
 		"atomicNumber":7,
 		"atomicMass":1.4007e1,
@@ -168,7 +168,7 @@
 		"vaporizationHeat":2.79
 	},
 	{
-		"name":"oxygen",
+		"name":"Oxygen",
 		"abbreviation":"O",
 		"atomicNumber":8,
 		"atomicMass":1.5999e1,
@@ -192,7 +192,7 @@
 		"vaporizationHeat":3.41
 	},
 	{
-		"name":"fluorine",
+		"name":"Fluorine",
 		"abbreviation":"F",
 		"atomicNumber":9,
 		"atomicMass":1.8998403163e1,
@@ -216,7 +216,7 @@
 		"vaporizationHeat":3.27
 	},
 	{
-		"name":"neon",
+		"name":"Neon",
 		"abbreviation":"Ne",
 		"atomicNumber":10,
 		"atomicMass":2.01797e1,
@@ -240,7 +240,7 @@
 		"vaporizationHeat":1.75
 	},
 	{
-		"name":"sodium",
+		"name":"Sodium",
 		"abbreviation":"Na",
 		"atomicNumber":11,
 		"atomicMass":2.298976928e1,
@@ -264,7 +264,7 @@
 		"vaporizationHeat":9.77e1
 	},
 	{
-		"name":"magnesium",
+		"name":"Magnesium",
 		"abbreviation":"Mg",
 		"atomicNumber":12,
 		"atomicMass":2.4305e1,
@@ -288,7 +288,7 @@
 		"vaporizationHeat":1.28e2
 	},
 	{
-		"name":"aluminum",
+		"name":"Aluminum",
 		"abbreviation":"Al",
 		"atomicNumber":13,
 		"atomicMass":2.69815385e1,
@@ -312,7 +312,7 @@
 		"vaporizationHeat":2.93e2
 	},
 	{
-		"name":"silicon",
+		"name":"Silicon",
 		"abbreviation":"Si",
 		"atomicNumber":14,
 		"atomicMass":2.8085e1,
@@ -336,7 +336,7 @@
 		"vaporizationHeat":3.59e2
 	},
 	{
-		"name":"phosphorus",
+		"name":"Phosphorus",
 		"abbreviation":"P",
 		"atomicNumber":15,
 		"atomicMass":3.0973761998e1,
@@ -360,7 +360,7 @@
 		"vaporizationHeat":1.24e1
 	},
 	{
-		"name":"sulfur",
+		"name":"Sulfur",
 		"abbreviation":"S",
 		"atomicNumber":16,
 		"atomicMass":3.206e1,
@@ -384,7 +384,7 @@
 		"vaporizationHeat":9.8
 	},
 	{
-		"name":"chlorine",
+		"name":"Chlorine",
 		"abbreviation":"Cl",
 		"atomicNumber":17,
 		"atomicMass":3.545e1,
@@ -408,7 +408,7 @@
 		"vaporizationHeat":1.02e1
 	},
 	{
-		"name":"argon",
+		"name":"Argon",
 		"abbreviation":"Ar",
 		"atomicNumber":18,
 		"atomicMass":3.9948e1,
@@ -432,7 +432,7 @@
 		"vaporizationHeat":6.5
 	},
 	{
-		"name":"potassium",
+		"name":"Potassium",
 		"abbreviation":"K",
 		"atomicNumber":19,
 		"atomicMass":3.90983e1,
@@ -456,7 +456,7 @@
 		"vaporizationHeat":7.69e1
 	},
 	{
-		"name":"calcium",
+		"name":"Calcium",
 		"abbreviation":"Ca",
 		"atomicNumber":20,
 		"atomicMass":4.0078e1,
@@ -480,7 +480,7 @@
 		"vaporizationHeat":1.55e2
 	},
 	{
-		"name":"scandium",
+		"name":"Scandium",
 		"abbreviation":"Sc",
 		"atomicNumber":21,
 		"atomicMass":4.4955908e1,
@@ -504,7 +504,7 @@
 		"vaporizationHeat":3.18e2
 	},
 	{
-		"name":"titanium",
+		"name":"Titanium",
 		"abbreviation":"Ti",
 		"atomicNumber":22,
 		"atomicMass":4.7867e1,
@@ -528,7 +528,7 @@
 		"vaporizationHeat":4.25e2
 	},
 	{
-		"name":"vanadium",
+		"name":"Vanadium",
 		"abbreviation":"V",
 		"atomicNumber":23,
 		"atomicMass":5.09415e1,
@@ -552,7 +552,7 @@
 		"vaporizationHeat":4.53e2
 	},
 	{
-		"name":"chromium",
+		"name":"Chromium",
 		"abbreviation":"Cr",
 		"atomicNumber":24,
 		"atomicMass":5.19961e1,
@@ -576,7 +576,7 @@
 		"vaporizationHeat":3.39e2
 	},
 	{
-		"name":"manganese",
+		"name":"Manganese",
 		"abbreviation":"Mn",
 		"atomicNumber":25,
 		"atomicMass":5.4938044e1,
@@ -600,7 +600,7 @@
 		"vaporizationHeat":2.2e2
 	},
 	{
-		"name":"iron",
+		"name":"Iron",
 		"abbreviation":"Fe",
 		"atomicNumber":26,
 		"atomicMass":5.5845e1,
@@ -624,7 +624,7 @@
 		"vaporizationHeat":3.47e2
 	},
 	{
-		"name":"cobalt",
+		"name":"Cobalt",
 		"abbreviation":"Co",
 		"atomicNumber":27,
 		"atomicMass":5.8933194e1,
@@ -648,7 +648,7 @@
 		"vaporizationHeat":3.75e2
 	},
 	{
-		"name":"nickel",
+		"name":"Nickel",
 		"abbreviation":"Ni",
 		"atomicNumber":28,
 		"atomicMass":5.86934e1,
@@ -672,7 +672,7 @@
 		"vaporizationHeat":3.78e2
 	},
 	{
-		"name":"copper",
+		"name":"Copper",
 		"abbreviation":"Cu",
 		"atomicNumber":29,
 		"atomicMass":6.3546e1,
@@ -696,7 +696,7 @@
 		"vaporizationHeat":3.0e2
 	},
 	{
-		"name":"zinc",
+		"name":"Zinc",
 		"abbreviation":"Zn",
 		"atomicNumber":30,
 		"atomicMass":6.538e1,
@@ -720,7 +720,7 @@
 		"vaporizationHeat":1.19e2
 	},
 	{
-		"name":"gallium",
+		"name":"Gallium",
 		"abbreviation":"Ga",
 		"atomicNumber":31,
 		"atomicMass":6.9723e1,
@@ -744,7 +744,7 @@
 		"vaporizationHeat":2.56e2
 	},
 	{
-		"name":"germanium",
+		"name":"Germanium",
 		"abbreviation":"Ge",
 		"atomicNumber":32,
 		"atomicMass":7.263e1,
@@ -768,7 +768,7 @@
 		"vaporizationHeat":3.34e2
 	},
 	{
-		"name":"arsenic",
+		"name":"Arsenic",
 		"abbreviation":"As",
 		"atomicNumber":33,
 		"atomicMass":7.4921595e1,
@@ -792,7 +792,7 @@
 		"vaporizationHeat":3.24e1
 	},
 	{
-		"name":"selenium",
+		"name":"Selenium",
 		"abbreviation":"Se",
 		"atomicNumber":34,
 		"atomicMass":7.8971e1,
@@ -816,7 +816,7 @@
 		"vaporizationHeat":2.6e1
 	},
 	{
-		"name":"bromine",
+		"name":"Bromine",
 		"abbreviation":"Br",
 		"atomicNumber":35,
 		"atomicMass":7.9904e1,
@@ -840,7 +840,7 @@
 		"vaporizationHeat":1.48e1
 	},
 	{
-		"name":"krypton",
+		"name":"Krypton",
 		"abbreviation":"Kr",
 		"atomicNumber":36,
 		"atomicMass":8.3798e1,
@@ -864,7 +864,7 @@
 		"vaporizationHeat":9.02
 	},
 	{
-		"name":"rubidium",
+		"name":"Rubidium",
 		"abbreviation":"Rb",
 		"atomicNumber":37,
 		"atomicMass":8.54678e1,
@@ -888,7 +888,7 @@
 		"vaporizationHeat":7.1e1
 	},
 	{
-		"name":"strontium",
+		"name":"Strontium",
 		"abbreviation":"Sr",
 		"atomicNumber":38,
 		"atomicMass":8.762e1,
@@ -912,7 +912,7 @@
 		"vaporizationHeat":1.37e2
 	},
 	{
-		"name":"yttrium",
+		"name":"Yttrium",
 		"abbreviation":"Y",
 		"atomicNumber":39,
 		"atomicMass":8.890584e1,
@@ -936,7 +936,7 @@
 		"vaporizationHeat":3.8e2
 	},
 	{
-		"name":"zirconium",
+		"name":"Zirconium",
 		"abbreviation":"Zr",
 		"atomicNumber":40,
 		"atomicMass":9.1224e1,
@@ -960,7 +960,7 @@
 		"vaporizationHeat":5.8e2
 	},
 	{
-		"name":"niobium",
+		"name":"Niobium",
 		"abbreviation":"Nb",
 		"atomicNumber":41,
 		"atomicMass":9.290637e1,
@@ -984,7 +984,7 @@
 		"vaporizationHeat":6.9e2
 	},
 	{
-		"name":"molybdenum",
+		"name":"Molybdenum",
 		"abbreviation":"Mo",
 		"atomicNumber":42,
 		"atomicMass":9.595e1,
@@ -1008,7 +1008,7 @@
 		"vaporizationHeat":6.0e2
 	},
 	{
-		"name":"technetium",
+		"name":"Technetium",
 		"abbreviation":"Tc",
 		"atomicNumber":43,
 		"atomicMass":9.7e1,
@@ -1032,7 +1032,7 @@
 		"vaporizationHeat":5.5e2
 	},
 	{
-		"name":"ruthenium",
+		"name":"Ruthenium",
 		"abbreviation":"Ru",
 		"atomicNumber":44,
 		"atomicMass":1.0107e2,
@@ -1056,7 +1056,7 @@
 		"vaporizationHeat":5.8e2
 	},
 	{
-		"name":"rhodium",
+		"name":"Rhodium",
 		"abbreviation":"Rh",
 		"atomicNumber":45,
 		"atomicMass":1.029055e2,
@@ -1080,7 +1080,7 @@
 		"vaporizationHeat":4.95e2
 	},
 	{
-		"name":"palladium",
+		"name":"Palladium",
 		"abbreviation":"Pd",
 		"atomicNumber":46,
 		"atomicMass":1.0642e2,
@@ -1104,7 +1104,7 @@
 		"vaporizationHeat":3.8e2
 	},
 	{
-		"name":"silver",
+		"name":"Silver",
 		"abbreviation":"Ag",
 		"atomicNumber":47,
 		"atomicMass":1.078682e2,
@@ -1128,7 +1128,7 @@
 		"vaporizationHeat":2.55e2
 	},
 	{
-		"name":"cadmium",
+		"name":"Cadmium",
 		"abbreviation":"Cd",
 		"atomicNumber":48,
 		"atomicMass":1.12414e2,
@@ -1152,7 +1152,7 @@
 		"vaporizationHeat":1.0e2
 	},
 	{
-		"name":"indium",
+		"name":"Indium",
 		"abbreviation":"In",
 		"atomicNumber":49,
 		"atomicMass":1.14818e2,
@@ -1176,7 +1176,7 @@
 		"vaporizationHeat":2.3e2
 	},
 	{
-		"name":"tin",
+		"name":"Tin",
 		"abbreviation":"Sn",
 		"atomicNumber":50,
 		"atomicMass":1.1871e2,
@@ -1200,7 +1200,7 @@
 		"vaporizationHeat":2.9e2
 	},
 	{
-		"name":"antimony",
+		"name":"Antimony",
 		"abbreviation":"Sb",
 		"atomicNumber":51,
 		"atomicMass":1.2176e2,
@@ -1224,7 +1224,7 @@
 		"vaporizationHeat":6.7e1
 	},
 	{
-		"name":"tellurium",
+		"name":"Tellurium",
 		"abbreviation":"Te",
 		"atomicNumber":52,
 		"atomicMass":1.276e2,
@@ -1248,7 +1248,7 @@
 		"vaporizationHeat":4.8e1
 	},
 	{
-		"name":"iodine",
+		"name":"Iodine",
 		"abbreviation":"I",
 		"atomicNumber":53,
 		"atomicMass":1.2690447e2,
@@ -1272,7 +1272,7 @@
 		"vaporizationHeat":2.09e1
 	},
 	{
-		"name":"xenon",
+		"name":"Xenon",
 		"abbreviation":"Xe",
 		"atomicNumber":54,
 		"atomicMass":1.31293e2,
@@ -1296,7 +1296,7 @@
 		"vaporizationHeat":1.264e1
 	},
 	{
-		"name":"cesium",
+		"name":"Cesium",
 		"abbreviation":"Cs",
 		"atomicNumber":55,
 		"atomicMass":1.3290545196e2,
@@ -1320,7 +1320,7 @@
 		"vaporizationHeat":6.4e1
 	},
 	{
-		"name":"barium",
+		"name":"Barium",
 		"abbreviation":"Ba",
 		"atomicNumber":56,
 		"atomicMass":1.37327e2,
@@ -1344,7 +1344,7 @@
 		"vaporizationHeat":1.4e2
 	},
 	{
-		"name":"lanthanum",
+		"name":"Lanthanum",
 		"abbreviation":"La",
 		"atomicNumber":57,
 		"atomicMass":1.3890547e2,
@@ -1368,7 +1368,7 @@
 		"vaporizationHeat":4.0e2
 	},
 	{
-		"name":"cerium",
+		"name":"Cerium",
 		"abbreviation":"Ce",
 		"atomicNumber":58,
 		"atomicMass":1.40116e2,
@@ -1392,7 +1392,7 @@
 		"vaporizationHeat":3.5e2
 	},
 	{
-		"name":"praseodymium",
+		"name":"Praseodymium",
 		"abbreviation":"Pr",
 		"atomicNumber":59,
 		"atomicMass":1.4090766e2,
@@ -1416,7 +1416,7 @@
 		"vaporizationHeat":3.3e2
 	},
 	{
-		"name":"neodymium",
+		"name":"Neodymium",
 		"abbreviation":"Nd",
 		"atomicNumber":60,
 		"atomicMass":1.44242e2,
@@ -1440,7 +1440,7 @@
 		"vaporizationHeat":2.85e2
 	},
 	{
-		"name":"promethium",
+		"name":"Promethium",
 		"abbreviation":"Pm",
 		"atomicNumber":61,
 		"atomicMass":1.45e2,
@@ -1464,7 +1464,7 @@
 		"vaporizationHeat":2.9e2
 	},
 	{
-		"name":"samarium",
+		"name":"Samarium",
 		"abbreviation":"Sm",
 		"atomicNumber":62,
 		"atomicMass":1.5036e2,
@@ -1488,7 +1488,7 @@
 		"vaporizationHeat":1.75e2
 	},
 	{
-		"name":"europium",
+		"name":"Europium",
 		"abbreviation":"Eu",
 		"atomicNumber":63,
 		"atomicMass":1.51964e2,
@@ -1512,7 +1512,7 @@
 		"vaporizationHeat":1.75e2
 	},
 	{
-		"name":"gadolinium",
+		"name":"Gadolinium",
 		"abbreviation":"Gd",
 		"atomicNumber":64,
 		"atomicMass":1.5725e2,
@@ -1536,7 +1536,7 @@
 		"vaporizationHeat":3.05e2
 	},
 	{
-		"name":"terbium",
+		"name":"Terbium",
 		"abbreviation":"Tb",
 		"atomicNumber":65,
 		"atomicMass":1.5892535e2,
@@ -1560,7 +1560,7 @@
 		"vaporizationHeat":2.95e2
 	},
 	{
-		"name":"dysprosium",
+		"name":"Dysprosium",
 		"abbreviation":"Dy",
 		"atomicNumber":66,
 		"atomicMass":1.625e2,
@@ -1584,7 +1584,7 @@
 		"vaporizationHeat":2.8e2
 	},
 	{
-		"name":"holmium",
+		"name":"Holmium",
 		"abbreviation":"Ho",
 		"atomicNumber":67,
 		"atomicMass":1.6493033e2,
@@ -1608,7 +1608,7 @@
 		"vaporizationHeat":2.65e2
 	},
 	{
-		"name":"erbium",
+		"name":"Erbium",
 		"abbreviation":"Er",
 		"atomicNumber":68,
 		"atomicMass":1.67259e2,
@@ -1632,7 +1632,7 @@
 		"vaporizationHeat":2.85e2
 	},
 	{
-		"name":"thulium",
+		"name":"Thulium",
 		"abbreviation":"Tm",
 		"atomicNumber":69,
 		"atomicMass":1.6893422e2,
@@ -1656,7 +1656,7 @@
 		"vaporizationHeat":2.5e2
 	},
 	{
-		"name":"ytterbium",
+		"name":"Ytterbium",
 		"abbreviation":"Yb",
 		"atomicNumber":70,
 		"atomicMass":1.73045e2,
@@ -1680,7 +1680,7 @@
 		"vaporizationHeat":1.6e2
 	},
 	{
-		"name":"lutetium",
+		"name":"Lutetium",
 		"abbreviation":"Lu",
 		"atomicNumber":71,
 		"atomicMass":1.749668e2,
@@ -1704,7 +1704,7 @@
 		"vaporizationHeat":4.15e2
 	},
 	{
-		"name":"hafnium",
+		"name":"Hafnium",
 		"abbreviation":"Hf",
 		"atomicNumber":72,
 		"atomicMass":1.7849e2,
@@ -1728,7 +1728,7 @@
 		"vaporizationHeat":6.3e2
 	},
 	{
-		"name":"tantalum",
+		"name":"Tantalum",
 		"abbreviation":"Ta",
 		"atomicNumber":73,
 		"atomicMass":1.8094788e2,
@@ -1752,7 +1752,7 @@
 		"vaporizationHeat":7.36e2
 	},
 	{
-		"name":"tungsten",
+		"name":"Tungsten",
 		"abbreviation":"W",
 		"atomicNumber":74,
 		"atomicMass":1.8384e2,
@@ -1776,7 +1776,7 @@
 		"vaporizationHeat":8.0e2
 	},
 	{
-		"name":"rhenium",
+		"name":"Rhenium",
 		"abbreviation":"Re",
 		"atomicNumber":75,
 		"atomicMass":1.86207e2,
@@ -1800,7 +1800,7 @@
 		"vaporizationHeat":7.05e2
 	},
 	{
-		"name":"osmium",
+		"name":"Osmium",
 		"abbreviation":"Os",
 		"atomicNumber":76,
 		"atomicMass":1.9023e2,
@@ -1824,7 +1824,7 @@
 		"vaporizationHeat":6.3e2
 	},
 	{
-		"name":"iridium",
+		"name":"Iridium",
 		"abbreviation":"Ir",
 		"atomicNumber":77,
 		"atomicMass":1.92217e2,
@@ -1848,7 +1848,7 @@
 		"vaporizationHeat":5.6e2
 	},
 	{
-		"name":"platinum",
+		"name":"Platinum",
 		"abbreviation":"Pt",
 		"atomicNumber":78,
 		"atomicMass":1.95084e2,
@@ -1872,7 +1872,7 @@
 		"vaporizationHeat":4.9e2
 	},
 	{
-		"name":"gold",
+		"name":"Gold",
 		"abbreviation":"Au",
 		"atomicNumber":79,
 		"atomicMass":1.96966569e2,
@@ -1896,7 +1896,7 @@
 		"vaporizationHeat":3.3e2
 	},
 	{
-		"name":"mercury",
+		"name":"Mercury",
 		"abbreviation":"Hg",
 		"atomicNumber":80,
 		"atomicMass":2.00592e2,
@@ -1920,7 +1920,7 @@
 		"vaporizationHeat":5.92e1
 	},
 	{
-		"name":"thallium",
+		"name":"Thallium",
 		"abbreviation":"Tl",
 		"atomicNumber":81,
 		"atomicMass":2.0438e2,
@@ -1944,7 +1944,7 @@
 		"vaporizationHeat":1.65e2
 	},
 	{
-		"name":"lead",
+		"name":"Lead",
 		"abbreviation":"Pb",
 		"atomicNumber":82,
 		"atomicMass":2.072e2,
@@ -1968,7 +1968,7 @@
 		"vaporizationHeat":1.78e2
 	},
 	{
-		"name":"bismuth",
+		"name":"Bismuth",
 		"abbreviation":"Bi",
 		"atomicNumber":83,
 		"atomicMass":2.089804e2,
@@ -1992,7 +1992,7 @@
 		"vaporizationHeat":1.6e2
 	},
 	{
-		"name":"polonium",
+		"name":"Polonium",
 		"abbreviation":"Po",
 		"atomicNumber":84,
 		"atomicMass":2.09e2,
@@ -2016,7 +2016,7 @@
 		"vaporizationHeat":1.0e2
 	},
 	{
-		"name":"astatine",
+		"name":"Astatine",
 		"abbreviation":"At",
 		"atomicNumber":85,
 		"atomicMass":2.1e2,
@@ -2040,7 +2040,7 @@
 		"vaporizationHeat":4.0e1
 	},
 	{
-		"name":"radon",
+		"name":"Radon",
 		"abbreviation":"Rn",
 		"atomicNumber":86,
 		"atomicMass":2.22e2,
@@ -2064,7 +2064,7 @@
 		"vaporizationHeat":1.7e1
 	},
 	{
-		"name":"francium",
+		"name":"Francium",
 		"abbreviation":"Fr",
 		"atomicNumber":87,
 		"atomicMass":2.23e2,
@@ -2088,7 +2088,7 @@
 		"vaporizationHeat":6.4e1
 	},
 	{
-		"name":"radium",
+		"name":"Radium",
 		"abbreviation":"Ra",
 		"atomicNumber":88,
 		"atomicMass":2.26e2,
@@ -2112,7 +2112,7 @@
 		"vaporizationHeat":1.25e2
 	},
 	{
-		"name":"actinium",
+		"name":"Actinium",
 		"abbreviation":"Ac",
 		"atomicNumber":89,
 		"atomicMass":2.27e2,
@@ -2136,7 +2136,7 @@
 		"vaporizationHeat":4.0e2
 	},
 	{
-		"name":"thorium",
+		"name":"Thorium",
 		"abbreviation":"Th",
 		"atomicNumber":90,
 		"atomicMass":2.320377e2,
@@ -2160,7 +2160,7 @@
 		"vaporizationHeat":5.3e2
 	},
 	{
-		"name":"protactinium",
+		"name":"Protactinium",
 		"abbreviation":"Pa",
 		"atomicNumber":91,
 		"atomicMass":2.3103588e2,
@@ -2184,7 +2184,7 @@
 		"vaporizationHeat":4.7e2
 	},
 	{
-		"name":"uranium",
+		"name":"Uranium",
 		"abbreviation":"U",
 		"atomicNumber":92,
 		"atomicMass":2.3802891e2,
@@ -2208,7 +2208,7 @@
 		"vaporizationHeat":4.2e2
 	},
 	{
-		"name":"neptunium",
+		"name":"Neptunium",
 		"abbreviation":"Np",
 		"atomicNumber":93,
 		"atomicMass":2.37e2,
@@ -2232,7 +2232,7 @@
 		"vaporizationHeat":3.35e2
 	},
 	{
-		"name":"plutonium",
+		"name":"Plutonium",
 		"abbreviation":"Pu",
 		"atomicNumber":94,
 		"atomicMass":2.44e2,
@@ -2256,7 +2256,7 @@
 		"vaporizationHeat":3.25e2
 	},
 	{
-		"name":"americium",
+		"name":"Americium",
 		"abbreviation":"Am",
 		"atomicNumber":95,
 		"atomicMass":2.43e2,
@@ -2280,7 +2280,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"curium",
+		"name":"Curium",
 		"abbreviation":"Cm",
 		"atomicNumber":96,
 		"atomicMass":2.47e2,
@@ -2304,7 +2304,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"berkelium",
+		"name":"Berkelium",
 		"abbreviation":"Bk",
 		"atomicNumber":97,
 		"atomicMass":2.47e2,
@@ -2328,7 +2328,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"californium",
+		"name":"Californium",
 		"abbreviation":"Cf",
 		"atomicNumber":98,
 		"atomicMass":2.51e2,
@@ -2352,7 +2352,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"einsteinium",
+		"name":"Einsteinium",
 		"abbreviation":"Es",
 		"atomicNumber":99,
 		"atomicMass":2.52e2,
@@ -2376,7 +2376,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"fermium",
+		"name":"Fermium",
 		"abbreviation":"Fm",
 		"atomicNumber":100,
 		"atomicMass":2.57e2,
@@ -2400,7 +2400,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"mendelevium",
+		"name":"Mendelevium",
 		"abbreviation":"Md",
 		"atomicNumber":101,
 		"atomicMass":2.58e2,
@@ -2424,7 +2424,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"nobelium",
+		"name":"Nobelium",
 		"abbreviation":"No",
 		"atomicNumber":102,
 		"atomicMass":2.59e2,
@@ -2448,7 +2448,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"lawrencium",
+		"name":"Lawrencium",
 		"abbreviation":"Lr",
 		"atomicNumber":103,
 		"atomicMass":2.62e2,
@@ -2472,7 +2472,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"rutherfordium",
+		"name":"Rutherfordium",
 		"abbreviation":"Rf",
 		"atomicNumber":104,
 		"atomicMass":2.67e2,
@@ -2496,7 +2496,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"dubnium",
+		"name":"Dubnium",
 		"abbreviation":"Db",
 		"atomicNumber":105,
 		"atomicMass":2.7e2,
@@ -2520,7 +2520,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"seaborgium",
+		"name":"Seaborgium",
 		"abbreviation":"Sg",
 		"atomicNumber":106,
 		"atomicMass":2.69e2,
@@ -2544,7 +2544,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"bohrium",
+		"name":"Bohrium",
 		"abbreviation":"Bh",
 		"atomicNumber":107,
 		"atomicMass":2.7e2,
@@ -2568,7 +2568,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"hassium",
+		"name":"Hassium",
 		"abbreviation":"Hs",
 		"atomicNumber":108,
 		"atomicMass":2.7e2,
@@ -2592,7 +2592,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"meitnerium",
+		"name":"Meitnerium",
 		"abbreviation":"Mt",
 		"atomicNumber":109,
 		"atomicMass":2.78e2,
@@ -2616,7 +2616,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"darmstadtium",
+		"name":"Darmstadtium",
 		"abbreviation":"Ds",
 		"atomicNumber":110,
 		"atomicMass":2.81e2,
@@ -2640,7 +2640,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"roentgenium",
+		"name":"Roentgenium",
 		"abbreviation":"Rg",
 		"atomicNumber":111,
 		"atomicMass":2.81e2,
@@ -2664,7 +2664,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"copernicium",
+		"name":"Copernicium",
 		"abbreviation":"Cn",
 		"atomicNumber":112,
 		"atomicMass":2.85e2,
@@ -2688,7 +2688,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"nihonium",
+		"name":"Nihonium",
 		"abbreviation":"Nh",
 		"atomicNumber":113,
 		"atomicMass":2.86e2,
@@ -2712,7 +2712,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"flerovium",
+		"name":"Flerovium",
 		"abbreviation":"Fl",
 		"atomicNumber":114,
 		"atomicMass":2.89e2,
@@ -2736,7 +2736,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"moscovium",
+		"name":"Moscovium",
 		"abbreviation":"Mc",
 		"atomicNumber":115,
 		"atomicMass":2.89e2,
@@ -2760,7 +2760,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"livermorium",
+		"name":"Livermorium",
 		"abbreviation":"Lv",
 		"atomicNumber":116,
 		"atomicMass":2.93e2,
@@ -2784,7 +2784,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"tennessine",
+		"name":"Tennessine",
 		"abbreviation":"Ts",
 		"atomicNumber":117,
 		"atomicMass":2.93e2,
@@ -2808,7 +2808,7 @@
 		"vaporizationHeat":"Unknown"
 	},
 	{
-		"name":"oganesson",
+		"name":"Oganesson",
 		"abbreviation":"Og",
 		"atomicNumber":118,
 		"atomicMass":2.94e2,
