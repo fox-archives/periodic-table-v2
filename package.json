@@ -1,0 +1,22 @@
+{
+  "name": "periodic-table-v2",
+  "version": "1.0.0",
+  "description": "Global scripts for entire project",
+  "main": "index.js",
+  "scripts": {
+    "test": "git status"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EanKeen/periodic-table-v2.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/EanKeen/periodic-table-v2/issues"
+  },
+  "homepage": "https://github.com/EanKeen/periodic-table-v2#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0"
+  }
+}
