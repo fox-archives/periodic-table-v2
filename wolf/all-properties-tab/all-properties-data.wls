@@ -53,6 +53,7 @@ For[i = 1, i < 119, i++,
 		"atomicNumber" -> atomicNumber,
 		"atomicMass" -> atomicMass,
 
+    (* ATOMIC PROPERTIES *)
 		"atomicRadius" -> atomicRadius,
 		"covalentRadius" -> covalentRadius,
 		(* "inizationEnergies" - inizationEnergies, *)
@@ -64,7 +65,6 @@ For[i = 1, i < 119, i++,
 		(* THERMODYNAMIC PROPERTIES *)
 		"adiabaticIndex" -> abiabaticIndex,
 		"boilingPoint" -> boilingPoint,
-		"meltingPoint" -> meltingPoint,
 		"criticalPressure" -> criticalPressure,
 		"criticalTemperature" -> criticalTemperature,
 		"curiePoint" -> curiePoint,
