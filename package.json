@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/EanKeen/periodic-table-v2#readme",
   "devDependencies": {
-    "gulp": "^4.0.0"
-  }
+    "gulp": "^4.0.0",
+    "gzip": "^0.1.0",
+    "jsonminify": "^0.4.1",
+    "prettier": "^1.16.4"
+  },
+  "dependencies": {}
 }
