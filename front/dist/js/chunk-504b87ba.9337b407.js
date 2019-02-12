@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-504b87ba"],{3782:function(e,a,n){},"8ae7":function(e,a,n){"use strict";var t=n("3782"),i=n.n(t);i.a},ee3e:function(e,a,n){"use strict";n.r(a);var t=function(){var e=this,a=e.$createElement,n=e._self._c||a;return n("h1",[e._v("Orbitals")])},i=[],s={name:"OrbitalsTab"},r=s,u=(n("8ae7"),n("2877")),c=Object(u["a"])(r,t,i,!1,null,"3a239b4a",null);c.options.__file="OrbitalsTab.vue";a["default"]=c.exports}}]);
+//# sourceMappingURL=chunk-504b87ba.9337b407.js.map

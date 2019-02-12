@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "Global scripts for entire project",
   "main": "index.js",
-  "scripts": {
-    "test": "git status"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EanKeen/periodic-table-v2.git"
@@ -17,7 +15,9 @@
   },
   "homepage": "https://github.com/EanKeen/periodic-table-v2#readme",
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "^4.0.0",
+    "gulp-run": "^1.7.1",
     "gzip": "^0.1.0",
     "jsonminify": "^0.4.1",
     "prettier": "^1.16.4"

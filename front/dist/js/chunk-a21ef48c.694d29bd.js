@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-a21ef48c"],{1345:function(e,n,t){"use strict";var o=t("e07a"),s=t.n(o);s.a},"43ce":function(e,n,t){"use strict";t.r(n);var o=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("h1",[e._v("Isotopes")])},s=[],a={name:"IsotopesTab"},c=a,u=(t("1345"),t("2877")),i=Object(u["a"])(c,o,s,!1,null,"5079558a",null);i.options.__file="IsotopesTab.vue";n["default"]=i.exports},e07a:function(e,n,t){}}]);
+//# sourceMappingURL=chunk-a21ef48c.694d29bd.js.map
