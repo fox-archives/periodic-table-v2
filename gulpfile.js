@@ -11,15 +11,17 @@ let getFolders = dir => fs.readdirSync(dir).filter(file => {
   return fs.statSync(path.join(dir, file)).isDirectory();
 });
 
-gulp.task("copy-front-to-back", done => {
-  del([path.join("back", "public"), "!/json"]);
-  // gulp.src("front/dist/**/*")
-  //   .pipe(gulp.dest(path.join("back", "public")));
-  // done();
+gulp.task("copyFrontToBack", done => {
+  // Remove current files (except Mathematica files in JSON folder)
+  del(["back/public/**/*", "!back/public/json", "!back/public/json/*"]);
+
+  // Copy over the front dist directory
+  gulp.src("front/dist/**/*")
+    .pipe(gulp.dest(path.join("back", "public")));
+  done();
 });
 
-
-gulp.task("copy-wolf-to-back", done => {
+gulp.task("copyWolfToBack", done => {
   let dirs = getFolders("wolf");
 
   // Why doesn't path.join seem to be effective

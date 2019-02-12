@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-5175c8b6"],{"6bd1":function(e,n,a){"use strict";a.r(n);var i=function(){var e=this,n=e.$createElement,a=e._self._c||n;return a("h1",[e._v("Trivia")])},t=[],c={name:"TriviaTab"},r=c,u=(a("eeaa"),a("2877")),f=Object(u["a"])(r,i,t,!1,null,"4374fdcf",null);f.options.__file="TriviaTab.vue";n["default"]=f.exports},bf24:function(e,n,a){},eeaa:function(e,n,a){"use strict";var i=a("bf24"),t=a.n(i);t.a}}]);
+//# sourceMappingURL=chunk-5175c8b6.f1279cf5.js.map
