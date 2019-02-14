@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Properties from "./views/PropertiesTab.vue";
+import PropertiesTab from "@/views/PropertiesTab";
 
 Vue.use(Router);
 
@@ -11,10 +11,14 @@ export default new Router({
     {
       path: "/",
       redirect: "/properties"
+      // component: PropertiesTab,
+      // meta: {
+      //   tab: "properties"
+      // }
     },
     {
       path: "/properties",
-      component: Properties,
+      component: () => import("@/views/PropertiesTab"),
       meta: {
         tab: "properties"
       }

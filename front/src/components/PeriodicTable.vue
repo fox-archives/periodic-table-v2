@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="tabAtomsData == false">
+    <div v-if="!tabAtomsData">
       <p>LOADING DATA HERE</p>
     </div>
     <section class="periodic-table" v-if="tabAtomsData">

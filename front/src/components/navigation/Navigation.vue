@@ -1,24 +1,24 @@
 <template>
 <nav class="navigation">
   <ul class="navigation-list">
-    <nav-item>
-      <router-link tag="p" to="/properties">Properties</router-link>
-    </nav-item>
-    <nav-item>
-      <router-link tag="p" to="/electrons">Electrons</router-link>
-    </nav-item>
-    <nav-item>
-      <router-link tag="p" to="/orbitals">Orbitals</router-link>
-    </nav-item>
-    <nav-item>
-      <router-link tag="p" to="/isotopes">Isotopes</router-link>
-    </nav-item>
-    <nav-item>
-      <router-link tag="p" to="/expldore">Explore</router-link>
-    </nav-item>
-    <nav-item>
-      <router-link tag="p" to="/trivia">Trivia</router-link>
-    </nav-item>
+    <router-link tag="p" to="/properties">
+      <nav-item>PRoperties Normal</nav-item>
+    </router-link>
+    <router-link tag="p" to="/electrons">
+      <nav-item>Electrons</nav-item>
+    </router-link>
+    <router-link tag="p" to="/orbitals">
+      <nav-item>Orbitals</nav-item>
+    </router-link>
+    <router-link tag="p" to="/isotopes">
+      <nav-item>Isotopes</nav-item>
+    </router-link>
+    <router-link tag="p" to="/">
+      <nav-item>Explore</nav-item>
+    </router-link>
+    <router-link tag="p" to="/trivia">
+      <nav-item>Trivia</nav-item>
+    </router-link>
   </ul>
 </nav>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="element-inner" @mousedown="updateSelectedAtom(atomData.atomicNumber)">
+  <div class="element-inner" @mouseover="updateSelectedAtom(atomData.atomicNumber)">
     <h3>{{ atomData.name }}</h3>
     <p>{{ atomData.atomicNumber }}</p>
     <p>{{ specificAtomsData[index] }}</p>

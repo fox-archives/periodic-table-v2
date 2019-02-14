@@ -2,12 +2,11 @@ export default {
   fetchUpdateTabAtomsData: function(context, payload) {
     let route = "propertiesTabAtomData";
     if (payload.tab === "properties") {
-      route = "propertiesTabAtomData";
+      route = "api/json/thermodynamic-data.json";
     } else if (payload.tab === "electrons") {
-      route = "electronsTabAtomData";
+      route = "api/json/atomic-data.json";
     }
-
-    fetch("http://localhost:3000/" + route)
+    fetch(route)
       .then(response => {
         return response.json();
       })
@@ -18,22 +17,28 @@ export default {
       .then(() => {
         let selectedAtomAtomicNumber = context.state.selectedAtom.atomicNumber;
         context.commit("updateSelectedAtom", selectedAtomAtomicNumber);
+      })
+      .catch(err => {
+        // console.log(err);
       });
   },
   fetchSpecificAtomData: function(context, payload) {
     let route = "propertiesSpecificAtomsData";
     if (payload.tab === "properties") {
-      route = "propertiesSpecificAtomsData";
+      route = "api/json/propertiesSpecificAtomsData";
     } else if (payload.tab === "electrons") {
-      route = "electronsSpecificAtomsData";
+      route = "api/json/electronsSpecificAtomsData";
     }
 
-    fetch("http://localhost:3000/" + route)
+    fetch(route)
       .then(response => {
         return response.json();
       })
       .then(myJson => {
         context.state.specificAtomsData = myJson;
+      })
+      .catch(err => {
+        // console.log(err);
       });
   }
 };
