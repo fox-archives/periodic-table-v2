@@ -29,9 +29,10 @@ export default {
 
 <style scoped lang="scss">
 .nav-item-outer {
-  padding: 5px;
-  margin: 3px;
+  padding: 4px 8px;
+  margin: 3px 4px;
   border-radius: 5px;
+  font-size: 1.33rem;
 
   &:hover {
     cursor: pointer;

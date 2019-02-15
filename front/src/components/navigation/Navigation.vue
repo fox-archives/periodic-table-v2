@@ -34,9 +34,10 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
 .navigation-list {
   display: flex;
   list-style-type: none;
+  padding-top: 2px;
 }
 </style>
