@@ -1,16 +1,16 @@
-import v from "@/store/modules/themes/commonThemeVariables";
+import oc from "@/store/modules/themes/commonThemeVariables";
 
 export default {
   default: {
-    backgroundColor: v.ocGray1,
+    backgroundColor: oc.gray1,
     border: "1px solid black"
   },
   hover: {
-    backgroundColor: v.ocGray3,
+    backgroundColor: oc.gray3,
     border: "1px solid brown"
   },
   click: {
-    backgroundColor: v.ocGray5,
+    backgroundColor: oc.gray5,
     border: "1px solid brown"
   }
 };

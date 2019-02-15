@@ -1,7 +1,5 @@
-import lightTheme from "@/store/modules/themes/lightTheme.js";
-let ocGray1 = "#f1f3f5";
-let ocGray3 = "#dee2e6";
-let ocGray5 = "#adb5bd";
+import lightTheme from "@/store/modules/themes/lightTheme";
+import darkTheme from "@/store/modules/themes/darkTheme";
 
 const state = {
   // For now, add lightTheme in currentTheme. Do replacing, etc. later
@@ -11,8 +9,8 @@ const state = {
     name: "Light Theme",
     navigationTheme: lightTheme
   },
-  lightTheme: {},
-  darkTheme: {},
+  lightTheme: lightTheme,
+  darkTheme: darkTheme,
   outlineTheme: {}
 };
 
