@@ -2,7 +2,7 @@
 <nav class="navigation">
   <ul class="navigation-list">
     <router-link tag="p" to="/properties">
-      <nav-item>PRoperties Normal</nav-item>
+      <nav-item>Properties</nav-item>
     </router-link>
     <router-link tag="p" to="/electrons">
       <nav-item>Electrons</nav-item>
@@ -13,7 +13,7 @@
     <router-link tag="p" to="/isotopes">
       <nav-item>Isotopes</nav-item>
     </router-link>
-    <router-link tag="p" to="/">
+    <router-link tag="p" to="/explore">
       <nav-item>Explore</nav-item>
     </router-link>
     <router-link tag="p" to="/trivia">
