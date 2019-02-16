@@ -50,11 +50,13 @@ export default {
 <style scoped>
 .periodic-table {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(18, 1fr);
+  max-width: 100%;
 }
 
 .element-outer {
   margin: 5px;
+  padding: 1px;
+  overflow: hidden;
 }
 </style>

@@ -31,7 +31,7 @@ export default {
 .element-inner {
   height: 100%;
   width: 100%;
-  background-color: lightsalmon;
+  background-color: lightgoldenrodyellow;
 
   &:hover {
     cursor: pointer;
