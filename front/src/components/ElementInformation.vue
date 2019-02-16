@@ -1,8 +1,13 @@
 <template>
   <div class="information-outer">
     <div class="information-inner">
-      <div class="information" v-for="(property, key) in selectedAtom" @mousedown="updateSpecificAtomsData(key)" :key="key">
-        <div v-if="dataNotBasic(key)" >
+      <div
+        class="information"
+        v-for="(property, key) in selectedAtom"
+        @mousedown="updateSpecificAtomsData(key)"
+        :key="key"
+      >
+        <div v-if="dataNotBasic(key)">
           <p>{{ atomKeyInEnglish(key) }}</p>
           <p>{{ property }}</p>
         </div>

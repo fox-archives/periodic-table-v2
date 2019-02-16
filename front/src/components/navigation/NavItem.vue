@@ -7,7 +7,7 @@
     @mousedown="navItemState = 'click'"
     @mouseup="navItemState = 'hover'"
   >
-    <slot/>
+    <slot />
   </li>
 </template>
 

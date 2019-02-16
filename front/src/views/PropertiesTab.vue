@@ -1,6 +1,6 @@
 <template>
   <div>
-    <interface-z/>
+    <interface-z />
   </div>
 </template>
 

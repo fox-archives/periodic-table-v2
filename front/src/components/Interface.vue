@@ -1,10 +1,10 @@
 <template>
   <div class="interface">
     <div class="element-information-wrapper">
-      <element-graphic/>
-      <element-information/>
+      <element-graphic />
+      <element-information />
     </div>
-    <periodic-table/>
+    <periodic-table />
   </div>
 </template>
 

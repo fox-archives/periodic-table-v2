@@ -11,14 +11,10 @@ export default new Router({
     {
       path: "/",
       redirect: "/properties"
-      // component: PropertiesTab,
-      // meta: {
-      //   tab: "properties"
-      // }
     },
     {
       path: "/properties",
-      component: () => import("@/views/PropertiesTab"),
+      component: PropertiesTab,
       meta: {
         tab: "properties"
       }

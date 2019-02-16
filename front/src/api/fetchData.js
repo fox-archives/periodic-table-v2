@@ -17,10 +17,10 @@ export default {
       .then(() => {
         let selectedAtomAtomicNumber = context.state.selectedAtom.atomicNumber;
         context.commit("updateSelectedAtom", selectedAtomAtomicNumber);
-      })
-      .catch(err => {
-        // console.log(err);
       });
+    // .catch(err => {
+    //   // console.log(err);
+    // });
   },
   fetchSpecificAtomData: function(context, payload) {
     let route = "propertiesSpecificAtomsData";
@@ -36,9 +36,9 @@ export default {
       })
       .then(myJson => {
         context.state.specificAtomsData = myJson;
-      })
-      .catch(err => {
-        // console.log(err);
       });
+    // .catch(err => {
+    //   // console.log(err);
+    // });
   }
 };
