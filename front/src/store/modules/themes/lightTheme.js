@@ -2,18 +2,20 @@ import oc from "@/store/modules/themes/commonThemeVariables";
 
 export default {
   default: {
-    backgroundColor: "lightskyblue",
-    boxShadow: "5px 5px 5px " + oc.yellow4,
-    border: "1px solid black"
+    backgroundColor: oc.white,
+    // boxShadow: "5px 5px 5px " + oc.gray2,
+    border: "1px solid " + oc.gray2,
+    transition: "all .1s"
   },
   hover: {
-    backgroundColor: oc.gray3,
-    border: "1px solid brown",
-    boxShadow: "5px 5px 5px " + oc.blue2,
+    backgroundColor: oc.gray2,
+    // boxShadow: "5px 5px 5px " + oc.gray4,
+    border: "1px solid " + oc.gray2,
     transition: "all .1s"
   },
   click: {
-    backgroundColor: oc.gray5,
-    border: "1px solid brown"
+    backgroundColor: oc.gray4,
+    border: "1px solid " + oc.gray2,
+    transition: "all .1s"
   }
 };

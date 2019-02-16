@@ -29,8 +29,8 @@ export default {
 
 <style scoped lang="scss">
 .nav-item-outer {
-  padding: 4px 8px;
-  margin: 3px 4px;
+  padding: 7px 9px;
+  margin: 3px 3px;
   border-radius: 5px;
   font-size: 1.33rem;
 
