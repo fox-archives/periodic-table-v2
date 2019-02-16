@@ -1,13 +1,22 @@
 <template>
-  <div class="information-outer">
+  <div
+    class="information-outer"
+    :style="
+      currentTheme.elementInformationTheme.information[mouseStateInformation]
+    "
+    @mouseenter="mouseStateInformation = 'hover'"
+    @mouseleave="mouseStateInformation = 'default'"
+  >
     <div class="information-inner">
-      <div
-        class="information"
-        v-for="(property, key) in selectedAtom"
-        @mousedown="updateSpecificAtomsData(key)"
-        :key="key"
-      >
-        <div v-if="dataNotBasic(key)">
+      <div v-for="(property, key) in selectedAtom" :key="key">
+        <div
+          v-if="dataNotBasic(key)"
+          class="box"
+          :style="currentTheme.elementInformationTheme.box[mouseStateBox]"
+          @mouseenter="mouseStateBox = 'hover'"
+          @mouseleave="mouseStateBox = 'default'"
+          @mousedown="updateSpecificAtomsData(key)"
+        >
           <p>{{ atomKeyInEnglish(key) }}</p>
           <p>{{ property }}</p>
         </div>
@@ -22,7 +31,14 @@ import convertKeyToEnglish from "@/components/atomKeyToEnglish";
 
 export default {
   name: "ElementInformation",
+  data() {
+    return {
+      mouseStateInformation: "default",
+      mouseStateBox: "default"
+    };
+  },
   computed: {
+    ...mapState("themes/", ["currentTheme"]),
     ...mapState("elementData/", ["selectedAtom"])
   },
   methods: {
@@ -32,7 +48,7 @@ export default {
         key === "name" ||
         key === "abbreviation" ||
         key === "atomicNumber" ||
-        key === "atomicWeight"
+        key === "atomicMass"
       ) {
         return false;
       }
@@ -48,12 +64,11 @@ export default {
 <style scoped lang="scss">
 .information-outer {
   margin: 5px;
-  background-color: lightblue;
+  border-radius: 4px;
 }
 
-.information {
+.box {
   margin: 5px;
-  background-color: cornflowerblue;
 
   &:hover {
     cursor: pointer;

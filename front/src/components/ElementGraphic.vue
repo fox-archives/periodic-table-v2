@@ -1,9 +1,9 @@
 <template>
   <div
     class="graphic-outer"
-    :style="currentTheme.elementGraphicTheme[navItemState]"
-    @mouseenter="navItemState = 'hover'"
-    @mouseleave="navItemState = 'default'"
+    :style="currentTheme.elementGraphicTheme[mouseState]"
+    @mouseenter="mouseState = 'hover'"
+    @mouseleave="mouseState = 'default'"
   >
     <div class="graphic">
       <div class="graphic-inner">
@@ -23,7 +23,7 @@ export default {
   name: "ElementGraphic",
   data() {
     return {
-      navItemState: "default"
+      mouseState: "default"
     };
   },
   computed: {

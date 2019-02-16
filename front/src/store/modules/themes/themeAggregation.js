@@ -10,7 +10,12 @@ const state = {
     elementGraphicTheme: lightTheme.elementGraphic,
     elementInformationTheme: lightTheme.elementInformation
   },
-  lightTheme: {},
+  lightTheme: {
+    name: "Light Theme",
+    navigationTheme: lightTheme.navigation,
+    elementGraphicTheme: lightTheme.elementGraphic,
+    elementInformationTheme: lightTheme.elementInformation
+  },
   darkTheme: {},
   outlineTheme: {}
 };

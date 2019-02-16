@@ -1,11 +1,11 @@
 <template>
   <li
     class="nav-item-outer"
-    :style="currentTheme.navigationTheme[navItemState]"
-    @mouseenter="navItemState = 'hover'"
-    @mouseleave="navItemState = 'default'"
-    @mousedown="navItemState = 'click'"
-    @mouseup="navItemState = 'hover'"
+    :style="currentTheme.navigationTheme[mouseState]"
+    @mouseenter="mouseState = 'hover'"
+    @mouseleave="mouseState = 'default'"
+    @mousedown="mouseState = 'click'"
+    @mouseup="mouseState = 'hover'"
   >
     <slot />
   </li>
@@ -18,7 +18,7 @@ export default {
   name: "NavItem",
   data() {
     return {
-      navItemState: "default"
+      mouseState: "default"
     };
   },
   computed: {
