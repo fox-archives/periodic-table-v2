@@ -6,15 +6,11 @@ const state = {
 
   currentTheme: {
     name: "Light Theme",
-    navigationTheme: lightTheme.navigation,
-    elementGraphicTheme: lightTheme.elementGraphic,
-    elementInformationTheme: lightTheme.elementInformation
+    ...lightTheme
   },
   lightTheme: {
     name: "Light Theme",
-    navigationTheme: lightTheme.navigation,
-    elementGraphicTheme: lightTheme.elementGraphic,
-    elementInformationTheme: lightTheme.elementInformation
+    ...lightTheme
   },
   darkTheme: {},
   outlineTheme: {}

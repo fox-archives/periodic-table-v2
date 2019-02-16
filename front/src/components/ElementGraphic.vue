@@ -1,7 +1,7 @@
 <template>
   <div
     class="graphic-outer"
-    :style="currentTheme.elementGraphicTheme[mouseState]"
+    :style="currentTheme.elementGraphic[mouseState]"
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
   >

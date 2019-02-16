@@ -1,7 +1,7 @@
 <template>
   <li
     class="nav-item-outer"
-    :style="currentTheme.navigationTheme[mouseState]"
+    :style="currentTheme.navigation[mouseState]"
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
     @mousedown="mouseState = 'click'"

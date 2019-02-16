@@ -1,9 +1,7 @@
 <template>
   <div
     class="information-outer"
-    :style="
-      currentTheme.elementInformationTheme.information[mouseStateInformation]
-    "
+    :style="currentTheme.elementInformation.information[mouseStateInformation]"
     @mouseenter="mouseStateInformation = 'hover'"
     @mouseleave="mouseStateInformation = 'default'"
   >
@@ -12,7 +10,7 @@
         <div
           v-if="dataNotBasic(key)"
           class="box"
-          :style="currentTheme.elementInformationTheme.box[mouseStateBox]"
+          :style="currentTheme.elementInformation.box[mouseStateBox]"
           @mouseenter="mouseStateBox = 'hover'"
           @mouseleave="mouseStateBox = 'default'"
           @mousedown="updateSpecificAtomsData(key)"
