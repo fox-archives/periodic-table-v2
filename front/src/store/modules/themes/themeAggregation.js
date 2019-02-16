@@ -1,5 +1,4 @@
-import lightNavigationTheme from "@/store/modules/themes/lightNavigationTheme";
-import lightGraphicTheme from "@/store/modules/themes/lightGraphicTheme";
+import lightTheme from "@/store/modules/themes/lightTheme";
 
 const state = {
   // For now, add lightTheme in currentTheme. Do replacing, etc. later
@@ -7,8 +6,9 @@ const state = {
 
   currentTheme: {
     name: "Light Theme",
-    navigationTheme: lightNavigationTheme,
-    elementGraphicTheme: lightGraphicTheme
+    navigationTheme: lightTheme.navigation,
+    elementGraphicTheme: lightTheme.elementGraphic,
+    elementInformationTheme: lightTheme.elementInformation
   },
   lightTheme: {},
   darkTheme: {},
