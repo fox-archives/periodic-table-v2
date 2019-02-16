@@ -1,5 +1,10 @@
 <template>
-  <div class="graphic-outer">
+  <div
+    class="graphic-outer"
+    :style="currentTheme.elementGraphicTheme[navItemState]"
+    @mouseenter="navItemState = 'hover'"
+    @mouseleave="navItemState = 'default'"
+  >
     <div class="graphic">
       <div class="graphic-inner">
         <p>{{ selectedAtom.atomicNumber }}</p>
@@ -16,7 +21,13 @@ import { mapState } from "vuex";
 
 export default {
   name: "ElementGraphic",
+  data() {
+    return {
+      navItemState: "default"
+    };
+  },
   computed: {
+    ...mapState("themes/", ["currentTheme"]),
     ...mapState("elementData/", ["selectedAtom"])
   }
 };
@@ -25,6 +36,7 @@ export default {
 <style scoped>
 .graphic-outer {
   margin: 5px;
+  border-radius: 5px;
 }
 
 .graphic {
@@ -32,7 +44,6 @@ export default {
   height: 0;
   width: 100%;
   padding-bottom: 100%;
-  background-color: lightblue;
 }
 
 .graphic-inner {

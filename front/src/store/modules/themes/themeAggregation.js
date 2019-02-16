@@ -1,5 +1,5 @@
-import lightTheme from "@/store/modules/themes/lightTheme";
-import darkTheme from "@/store/modules/themes/darkTheme";
+import lightNavigationTheme from "@/store/modules/themes/lightNavigationTheme";
+import lightGraphicTheme from "@/store/modules/themes/lightGraphicTheme";
 
 const state = {
   // For now, add lightTheme in currentTheme. Do replacing, etc. later
@@ -7,23 +7,15 @@ const state = {
 
   currentTheme: {
     name: "Light Theme",
-    navigationTheme: lightTheme
+    navigationTheme: lightNavigationTheme,
+    elementGraphicTheme: lightGraphicTheme
   },
-  lightTheme: lightTheme,
-  darkTheme: darkTheme,
+  lightTheme: {},
+  darkTheme: {},
   outlineTheme: {}
 };
 
-const getters = {};
-
-const mutations = {};
-
-const actions = {};
-
 export default {
   namespaced: true,
-  state,
-  getters,
-  mutations,
-  actions
+  state
 };
