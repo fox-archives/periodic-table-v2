@@ -61,5 +61,31 @@ export default {
         boxShadow: "0px 0px 0px " + oc.gray1 // Enabling this causes *all* the boxes to have hover
       }
     }
+  },
+
+  // The periodic table in general
+  periodicTable: {
+    default: {
+      border: "1px solid " + oc.gray2,
+      transition: "box-shadow .15s"
+    },
+    hover: {
+      border: "1px solid " + oc.gray2,
+      boxShadow: "2px 2px 4px " + oc.gray1,
+      transition: "box-shadow .15s"
+    }
+  },
+
+  // Each single element (element-inner) styling
+  element: {
+    default: {
+      border: "1px solid " + oc.gray2,
+      transition: "box-shadow .15s"
+    },
+    hover: {
+      border: "1px solid " + oc.gray2,
+      boxShadow: "2px 2px 4px " + oc.gray8,
+      transition: "box-shadow .15s"
+    }
   }
 };

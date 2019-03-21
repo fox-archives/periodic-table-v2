@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 .graphic-outer {
-  margin: 0px 5px 5px 5px;
+  margin: 0 0 5px 5px;
   border-radius: 5px;
 }
 

@@ -28,6 +28,7 @@ export default {
   display: grid;
   grid-template-columns: max-content 1fr;
   height: 100%;
+  width: 100vw;
 }
 
 .element-information-wrapper {

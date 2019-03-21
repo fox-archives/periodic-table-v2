@@ -1,7 +1,10 @@
-<template>
+  <template>
   <div
     class="element-inner"
     @mouseover="updateSelectedAtom(atomData.atomicNumber)"
+    :style="currentTheme.element[mouseState]"
+    @mouseenter="mouseState = 'hover'"
+    @mouseleave="mouseState = 'default'"
   >
     <h3>{{ atomData.name }}</h3>
     <p>{{ atomData.atomicNumber }}</p>
@@ -14,7 +17,13 @@ import { mapState, mapMutations } from "vuex";
 
 export default {
   name: "Element",
+  data() {
+    return {
+      mouseState: "default"
+    };
+  },
   computed: {
+    ...mapState("themes/", ["currentTheme"]),
     ...mapState("elementData/", ["specificAtomsData"])
   },
   methods: {
@@ -28,13 +37,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.element-inner {
-  height: 100%;
-  width: 100%;
-  background-color: lightgoldenrodyellow;
+// .element-inner {
+//   height: 100%;
+//   width: 100%;
+//   overflow: hidden;
 
-  &:hover {
-    cursor: pointer;
-  }
-}
+//   &:hover {
+//     cursor: pointer;
+//   }
+// }
 </style>

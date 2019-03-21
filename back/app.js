@@ -17,7 +17,8 @@ app.get("/", (req, res) => {
 
 // Catch-all request (if user goes to a URL that only the client can resolve (AKA vue-router),
 // Send the user the .html file, rather than trying to resolve the URL server-side
-// If this is disabled, would get something like 'Cannot GET /orbitals, if client navigates to /orbitals tab'
+// If this is disabled, would get something like 'Cannot GET /orbitals, if client navigates
+// to /orbitals tab'
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"), err => console.log(err));
 });
