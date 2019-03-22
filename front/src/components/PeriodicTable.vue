@@ -86,14 +86,12 @@ export default {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(18, 1fr);
-  grid-template-rows: repeat(9, 1fr) calc(1fr / 2) repeat(3, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   height: 100%;
   width: 100%;
 }
 
 .element-outer {
   overflow: hidden;
-  margin: 2px;
 }
 </style>
