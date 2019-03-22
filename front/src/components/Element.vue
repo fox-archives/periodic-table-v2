@@ -1,4 +1,4 @@
-  <template>
+<template>
   <div
     class="element-inner"
     @mouseover="updateSelectedAtom(atomData.atomicNumber)"
@@ -37,13 +37,16 @@ export default {
 </script>
 
 <style scoped lang="scss">
-h3, p {
+h3,
+p {
   overflow: hidden;
 }
 .element-inner {
   margin: 5px;
-  background-color: blue;
   overflow: visible;
-  // overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 </style>

@@ -74,7 +74,6 @@ export default {
   max-width: 100%;
   height: 0;
   padding-bottom: 60%;
-  background-color: forestgreen;
 }
 
 .grid-container {
@@ -90,11 +89,9 @@ export default {
   grid-template-columns: repeat(10, 1fr);
   height: 100%;
   width: 100%;
-  background-color: lime;
 }
 
 .element-outer {
   overflow: hidden;
 }
-
 </style>
