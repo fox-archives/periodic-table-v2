@@ -31,7 +31,7 @@ export default {
     },
     hover: {
       backgroundColor: oc.white,
-      boxShadow: "2px 2px 4px " + oc.gray1,
+      boxShadow: "2px 2px 4px " + oc.gray8,
       border: "1px solid " + oc.gray2,
       transition: "box-shadow .15s"
     }
@@ -84,7 +84,7 @@ export default {
     },
     hover: {
       border: "1px solid " + oc.gray2,
-      boxShadow: "2px 2px 4px " + oc.gray8,
+      boxShadow: "2px 2px 4px " + oc.gray1,
       transition: "box-shadow .15s"
     }
   }

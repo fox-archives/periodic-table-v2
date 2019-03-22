@@ -42,8 +42,9 @@ p {
   overflow: hidden;
 }
 .element-inner {
-  margin: 5px;
+  // margin: 5px;
   overflow: visible;
+  height: 100%;
 
   &:hover {
     cursor: pointer;
