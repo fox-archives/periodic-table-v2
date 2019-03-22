@@ -37,13 +37,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-// .element-inner {
-//   height: 100%;
-//   width: 100%;
-//   overflow: hidden;
-
-//   &:hover {
-//     cursor: pointer;
-//   }
-// }
+h3, p {
+  overflow: hidden;
+}
+.element-inner {
+  margin: 5px;
+  background-color: blue;
+  overflow: visible;
+  // overflow: hidden;
+}
 </style>

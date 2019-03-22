@@ -9,7 +9,7 @@
       @mouseenter="mouseState = 'hover'"
       @mouseleave="mouseState = 'default'"
     >
-      <!-- <div class="grid-container">
+      <div class="grid-container">
         <section class="grid" v-if="tabAtomsData">
           <div
             class="element-outer"
@@ -19,7 +19,7 @@
             <element-z :atomData="atomData" :index="index"></element-z>
           </div>
         </section>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
@@ -62,12 +62,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="css">
 .periodic-table-outer {
   overflow: auto;
 }
 
 .grid-outer {
+  position: relative;
   border-radius: 4px;
   margin: 0 5px 0 5px;
   max-width: 100%;
@@ -76,20 +77,24 @@ export default {
   background-color: forestgreen;
 }
 
-/* .grid-container {
+.grid-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .grid {
-  background-color: lime;
   display: grid;
-
-  grid-template-columns: repeat(18, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  height: 100%;
+  width: 100%;
+  background-color: lime;
 }
 
 .element-outer {
-  background-color: purple;
-  margin: 3px;
-  overflow: visible;
-} */
+  overflow: hidden;
+}
+
 </style>
