@@ -46,7 +46,7 @@ export default {
   },
   props: {
     myKey: String,
-    myProperty: [String, Number]
+    myProperty: [String, Number, Array]
   }
 };
 </script>

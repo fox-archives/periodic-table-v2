@@ -1,4 +1,5 @@
-import bareLightTheme from "@/store/modules/themes/bareLightTheme";
+import lightThemeBare from "@/store/modules/themes/lightThemeBare";
+import lightThemeRegular from "@/store/modules/themes/lightThemeRegular";
 
 const state = {
   // For now, add lightTheme in currentTheme. Do replacing, etc. later
@@ -6,11 +7,15 @@ const state = {
 
   currentTheme: {
     name: "Bare Theme",
-    ...bareLightTheme
+    ...lightThemeRegular
   },
-  lightTheme: {
+  lightThemeBare: {
     name: "Bare Theme",
-    ...bareLightTheme
+    ...lightThemeBare
+  },
+  lightThemeRegular: {
+    name: "Light Theme Regular",
+    ...lightThemeRegular
   },
   darkTheme: {},
   outlineTheme: {}
