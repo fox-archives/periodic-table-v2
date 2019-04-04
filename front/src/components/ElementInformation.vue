@@ -7,54 +7,29 @@
   >
     <div class="information-inner">
       <div v-for="(property, key) in selectedAtom" :key="key">
-        <div
-          v-if="dataNotBasic(key)"
-          class="box"
-          :style="currentTheme.elementInformation.box[mouseStateBox]"
-          @mouseenter="mouseStateBox = 'hover'"
-          @mouseleave="mouseStateBox = 'default'"
-          @mousedown="updateSpecificAtomsData(key)"
-        >
-          <p>{{ atomKeyInEnglish(key) }}</p>
-          <p>{{ property }}</p>
-        </div>
+        <element-information-box :myProperty="property" :myKey="key"></element-information-box>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState, mapMutations } from "vuex";
-import convertKeyToEnglish from "@/components/atomKeyToEnglish";
+import { mapState } from "vuex";
+import ElementInformationBox from "@/components/ElementInformationBox";
 
 export default {
   name: "ElementInformation",
   data() {
     return {
-      mouseStateInformation: "default",
-      mouseStateBox: "default"
+      mouseStateInformation: "default"
     };
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
     ...mapState("elementData/", ["selectedAtom"])
   },
-  methods: {
-    ...mapMutations("elementData/", ["updateSpecificAtomsData"]),
-    dataNotBasic: function(key) {
-      if (
-        key === "name" ||
-        key === "abbreviation" ||
-        key === "atomicNumber" ||
-        key === "atomicMass"
-      ) {
-        return false;
-      }
-      return true;
-    },
-    atomKeyInEnglish: function(key) {
-      return convertKeyToEnglish(key);
-    }
+  components: {
+    "element-information-box": ElementInformationBox
   }
 };
 </script>

@@ -58,7 +58,7 @@ export default {
       },
       hover: {
         border: "1px solid " + oc.gray2,
-        boxShadow: "0px 0px 0px " + oc.gray1 // Enabling this causes *all* the boxes to have hover
+        boxShadow: "2px 2px 2px " + oc.gray1 // Enabling this causes *all* the boxes to have hover
       }
     }
   },
