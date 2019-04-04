@@ -42,7 +42,7 @@ p {
   overflow: hidden;
 }
 .element-inner {
-  margin: 5px;
+  margin: 3px;
   overflow: visible;
 
   &:hover {

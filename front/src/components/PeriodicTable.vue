@@ -4,7 +4,7 @@
       <p>LOADING DATA HERE</p>
     </div>
     <div
-      class="grid-outer"
+      class="grid-container-outer"
       :style="currentTheme.periodicTable[mouseState]"
       @mouseenter="mouseState = 'hover'"
       @mouseleave="mouseState = 'default'"
@@ -64,10 +64,10 @@ export default {
 
 <style scoped lang="css">
 .periodic-table-outer {
-  overflow: auto;
+  overflow: hidden;
 }
 
-.grid-outer {
+.grid-container-outer {
   position: relative;
   border-radius: 4px;
   margin: 0 5px 0 5px;
