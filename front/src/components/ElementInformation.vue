@@ -7,7 +7,10 @@
   >
     <div class="information-inner">
       <div v-for="(property, key) in selectedAtom" :key="key">
-        <element-information-box :myProperty="property" :myKey="key"></element-information-box>
+        <element-information-box
+          :myProperty="property"
+          :myKey="key"
+        ></element-information-box>
       </div>
     </div>
   </div>
