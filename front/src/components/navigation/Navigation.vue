@@ -38,6 +38,5 @@ export default {
 .navigation-list {
   display: flex;
   list-style-type: none;
-  padding: 2px 5px 0 5px;
 }
 </style>

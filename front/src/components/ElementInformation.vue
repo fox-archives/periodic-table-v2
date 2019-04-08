@@ -39,7 +39,6 @@ export default {
 
 <style scoped lang="scss">
 .information-outer {
-  margin: 0 0 0 5px;
   border-radius: 4px;
 }
 

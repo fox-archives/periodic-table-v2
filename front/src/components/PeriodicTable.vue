@@ -70,7 +70,6 @@ export default {
 .grid-container-outer {
   position: relative;
   border-radius: 4px;
-  margin: 0 5px 0 5px;
   max-width: 100%;
   height: 0;
   padding-bottom: 60%;

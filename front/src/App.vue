@@ -1,10 +1,10 @@
 <template>
-  <div class="app"
-    :style="currentTheme.app.default"
-  >
-    <navigation />
-    <router-view class="router-view" />
-    <foot />
+  <div class="app-outer" :style="currentTheme.app.default">
+    <div class="app" >
+      <navigation />
+      <router-view class="router-view" />
+      <foot />
+    </div>
   </div>
 </template>
 
@@ -32,9 +32,18 @@ export default {
   margin: 0;
   font-family: Arial; //TODO: Temp
 }
+
+.app-outer {
+  height: 100vh;
+  width: 100vw;
+}
+
 .app {
   display: grid;
   grid-template-rows: max-content 1fr max-content;
-  height: 100vh;
+  margin: 0 10px;
+  height: 100%;
+  // If this is enabled, then scrollbar appears (since margin is added to the width of 100%
+  /*width: 100%;*/
 }
 </style>
