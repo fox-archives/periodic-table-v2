@@ -1,5 +1,7 @@
 <template>
-  <div class="app">
+  <div class="app"
+    :style="currentTheme.app.default"
+  >
     <navigation />
     <router-view class="router-view" />
     <foot />
@@ -7,11 +9,15 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import Navigation from "@/components/navigation/Navigation";
 import Foot from "@/components/foot/Foot";
 
 export default {
   name: "App",
+  computed: {
+    ...mapState("themes", ["currentTheme"])
+  },
   components: {
     navigation: Navigation,
     foot: Foot

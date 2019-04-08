@@ -1,24 +1,28 @@
-import lightThemeBare from "@/store/modules/themes/lightThemeBare";
 import lightThemeRegular from "@/store/modules/themes/lightThemeRegular";
+import lightThemeOutline from "@/store/modules/themes/lightThemeOutline";
+import darkThemeRegular from "@/store/modules/themes/darkThemeRegular";
 
 const state = {
   // For now, add lightTheme in currentTheme. Do replacing, etc. later
   // When naming descriptions of themes, omit color, because it should be implied by default
 
   currentTheme: {
-    name: "Bare Theme",
+    name: "Light Theme Regular",
     ...lightThemeRegular
-  },
-  lightThemeBare: {
-    name: "Bare Theme",
-    ...lightThemeBare
   },
   lightThemeRegular: {
     name: "Light Theme Regular",
     ...lightThemeRegular
   },
-  darkTheme: {},
-  outlineTheme: {}
+  lightThemeOutline: {
+    name: "Bare Theme",
+    ...lightThemeOutline
+  },
+  darkThemeRegular: {
+    name: "Dark Theme Regular",
+    ...darkThemeRegular
+  },
+  darkThemeOutline: {}
 };
 
 export default {

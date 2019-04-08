@@ -1,28 +1,30 @@
 import oc from "@/store/modules/themes/commonThemeVariables";
 
 export default {
+  // The overall app, like the background and stuff
   app: {
     default: {
-      backgroundColor: oc.white
+      backgroundColor: oc.black
     }
   },
-
   // The navigation bar
   navigation: {
     default: {
-      backgroundColor: oc.gray0,
-      boxShadow: "2px 2px 4px " + oc.gray1,
-      // boxShadow: "2px 2px 2px " + oc.gray2,
+      backgroundColor: oc.gray9,
+      // boxShadow: "2px 2px 4px " + oc.gray9,
+      color: oc.gray3,
       transition: "box-shadow .15s"
     },
     hover: {
-      backgroundColor: oc.gray1,
-      boxShadow: "2px 2px 4px " + oc.gray3,
+      backgroundColor: oc.gray8,
+      boxShadow: "2px 2px 4px " + oc.gray7,
+      color: oc.gray3,
       transition: "box-shadow .15s"
     },
     click: {
-      backgroundColor: oc.gray2,
-      boxShadow: "2px 2px 4px " + oc.gray4,
+      backgroundColor: oc.gray8,
+      boxShadow: "2px 2px 4px " + oc.gray6,
+      color: oc.gray3,
       transition: "box-shadow .15s"
     }
   },
@@ -30,13 +32,15 @@ export default {
   // The large icon text or graphic, enlarged view of basic atom data
   elementGraphic: {
     default: {
-      backgroundColor: oc.gray0,
-      boxShadow: "2px 2px 4px " + oc.gray1,
+      backgroundColor: oc.gray9,
+      boxShadow: "2px 2px 4px " + oc.gray7,
+      color: oc.gray3,
       transition: "box-shadow .15s"
     },
     hover: {
-      backgroundColor: oc.gray0,
-      boxShadow: "2px 2px 4px " + oc.gray2,
+      backgroundColor: oc.gray9,
+      boxShadow: "2px 2px 4px " + oc.gray6,
+      color: oc.gray3,
       transition: "box-shadow .15s"
     }
   },
@@ -46,27 +50,29 @@ export default {
     // Box that surrounds all the boxes of information. It contains all elementInformation
     information: {
       default: {
-        backgroundColor: oc.gray0,
-        boxShadow: "2px 2px 4px " + oc.gray1,
+        backgroundColor: oc.gray9,
+        boxShadow: "2px 2px 4px " + oc.gray7,
+        color: oc.gray3,
         transition: "box-shadow .15s"
       },
       hover: {
-        backgroundColor: oc.gray0,
-        boxShadow: "2px 2px 4px " + oc.gray2,
+        backgroundColor: oc.gray9,
+        boxShadow: "2px 2px 4px " + oc.gray6,
+        color: oc.gray3,
         transition: "box-shadow .15s"
       }
     },
     // The actual box with one piece of information
     box: {
       default: {
-        backgroundColor: oc.gray1,
-        // border: "1px solid " + oc.gray2
+        backgroundColor: oc.gray8,
+        color: oc.gray3,
         transition: "box-shadow .15s"
       },
       hover: {
-        backgroundColor: oc.gray1,
-        // border: "1px solid " + oc.gray2,
-        boxShadow: "2px 2px 2px " + oc.gray3
+        backgroundColor: oc.gray7,
+        color: oc.gray3,
+        boxShadow: "2px 2px 2px " + oc.gray8
       }
     }
   },
@@ -74,13 +80,13 @@ export default {
   // The periodic table in general
   periodicTable: {
     default: {
-      backgroundColor: oc.gray0,
-      boxShadow: "2px 2px 4px " + oc.gray1,
+      backgroundColor: oc.gray9,
+      boxShadow: "2px 2px 4px " + oc.gray7,
       transition: "box-shadow .15s"
     },
     hover: {
-      backgroundColor: oc.gray0,
-      boxShadow: "2px 2px 4px " + oc.gray2,
+      backgroundColor: oc.gray9,
+      boxShadow: "2px 2px 4px " + oc.gray6,
       transition: "box-shadow .15s"
     }
   },
@@ -88,15 +94,17 @@ export default {
   // Each single element (element-inner) styling
   element: {
     default: {
-      backgroundColor: oc.gray1,
-      boxShadow: "2px 2px 4px " + oc.gray2,
+      backgroundColor: oc.gray8,
+      boxShadow: "2px 2px 4px " + oc.gray7,
       // border: "1px solid " + oc.gray2,
+      color: oc.gray3,
       transition: "box-shadow .15s"
     },
     hover: {
-      backgroundColor: oc.gray1,
+      backgroundColor: oc.gray8,
       // border: "1px solid " + oc.gray2,
-      boxShadow: "2px 2px 4px " + oc.gray8,
+      boxShadow: "2px 2px 4px " + oc.gray6,
+      color: oc.gray3,
       transition: "box-shadow .15s"
     }
   }
