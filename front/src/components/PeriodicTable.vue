@@ -84,7 +84,9 @@ export default {
 /* Actual grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(7, 1fr) 1.5vh repeat(2, 1fr);
+  grid-gap: 2px;
   height: 100%;
   width: 100%;
 }
