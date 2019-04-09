@@ -1,6 +1,7 @@
 import lightThemeRegular from "@/store/modules/themes/lightThemeRegular";
 import lightThemeOutline from "@/store/modules/themes/lightThemeOutline";
 import darkThemeRegular from "@/store/modules/themes/darkThemeRegular";
+import debugTheme from "@/store/modules/themes/debugTheme";
 
 const state = {
   // For now, add lightTheme in currentTheme. Do replacing, etc. later
@@ -8,7 +9,7 @@ const state = {
 
   currentTheme: {
     name: "Light Theme Regular",
-    ...lightThemeRegular
+    ...debugTheme
   },
   lightThemeRegular: {
     name: "Light Theme Regular",
