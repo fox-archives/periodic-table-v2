@@ -49,7 +49,7 @@ export default {
   left: 0;
   display: grid;
   width: 17vw;
-  grid-template-rows: 20vh 1fr;
+  grid-template-rows: max-content 1fr;
   grid-row-gap: 10px;
 
 }
