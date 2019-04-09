@@ -6,9 +6,10 @@
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
   >
-    <h3>{{ atomData.name }}</h3>
-    <p>{{ atomData.atomicNumber }}</p>
-    <p>{{ specificAtomsData[index] }}</p>
+    <p class="atomic-number" :style="fontSize.atomicNumber">{{ atomData.atomicNumber }}</p>
+    <p class="abbreviation" :style="fontSize.abbreviation"><b>{{ atomData.abbreviation }}</b></p>
+    <h3 class="name" :style="fontSize.name">{{ atomData.name }}</h3>
+    <p class="dynamic" :style="fontSize.dynamic">{{ specificAtomsData[index] }}</p>
   </div>
 </template>
 
@@ -24,7 +25,17 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("elementData/", ["specificAtomsData"])
+    ...mapState("elementData/", ["specificAtomsData"]),
+    // Sets the font
+    fontSize: function() {
+      // CHECK THAT THIS WORKS
+      return {
+        atomicNumber: { fontSize: "1rem" },
+        abbreviation: { fontSize: "1.3rem" },
+        name: { fontSize: "0.8rem" },
+        dynamic: { fontSize: "2rem" }
+      }
+    }
   },
   methods: {
     ...mapMutations("elementData/", ["updateSelectedAtom"])
@@ -37,18 +48,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-h3,
-p {
-  overflow: hidden;
-}
 .element-inner {
-  overflow: visible;
-  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  overflow: hidden;
 
   &:hover {
     cursor: pointer;
