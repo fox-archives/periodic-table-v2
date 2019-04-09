@@ -35,14 +35,11 @@ export default {
   grid-column-gap: 10px;
   grid-template-columns: max-content 1fr;
   height: 100%;
-  /*width: 100%;*/
 }
 
 .element-information-wrapper {
   position: relative;
   width: 17vw;
-  /*height: 100%;*/
-  /*width: 100%;*/
 }
 
 .element-information-wrapper-inner {
