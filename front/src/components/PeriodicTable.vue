@@ -1,15 +1,15 @@
 <template>
-  <div class="periodic-table-outer">
+  <div>
     <div v-if="!tabAtomsData">
       <p>LOADING DATA HERE</p>
     </div>
     <div
-      class="grid-container-outer"
+      class="grid-wrapper-outer"
       :style="currentTheme.periodicTable[mouseState]"
       @mouseenter="mouseState = 'hover'"
       @mouseleave="mouseState = 'default'"
     >
-      <div class="grid-container">
+      <div class="grid-wrapper">
         <section class="grid" v-if="tabAtomsData">
           <div
             class="element-outer"
@@ -63,13 +63,8 @@ export default {
 </script>
 
 <style scoped lang="css">
-.periodic-table-outer {
-  overflow: hidden;
-  position: relative;
-  display: grid;
-}
-
-.grid-container-outer {
+/* For aspect ratio */
+.grid-wrapper-outer {
   position: relative;
   border-radius: 4px;
   max-width: 100%;
@@ -77,7 +72,8 @@ export default {
   padding-bottom: 60%;
 }
 
-.grid-container {
+/* For aspect ratio */
+.grid-wrapper {
   position: absolute;
   top: 0;
   right: 0;
@@ -85,6 +81,7 @@ export default {
   left: 0;
 }
 
+/* Actual grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
