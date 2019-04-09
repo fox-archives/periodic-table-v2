@@ -89,9 +89,11 @@ export default {
   grid-gap: 2px;
   height: 100%;
   width: 100%;
+  /* If atoms overflow and exceed available width, this overflow adds scrolling */
+  overflow: auto;
 }
 
 .element-outer {
-  overflow: hidden;
+  position: relative;
 }
 </style>
