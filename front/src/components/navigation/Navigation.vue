@@ -35,6 +35,10 @@ export default {
 </script>
 
 <style scoped lang="css">
+.navigation {
+  margin-bottom: 5px;
+}
+
 .navigation-list {
   display: flex;
   list-style-type: none;

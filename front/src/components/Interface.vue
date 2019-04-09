@@ -6,7 +6,11 @@
         <element-information class="element-information" />
       </div>
     </div>
-    <periodic-table class="periodic-table" />
+    <div class="periodic-table-wrapper">
+      <div class="periodic-table-wrapper-inner">
+        <periodic-table />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -28,15 +32,15 @@ export default {
 <style scoped>
 .interface {
   display: grid;
-  grid-template-columns: 17vw 1fr;
   grid-column-gap: 10px;
-  /*grid-template-columns: max-content 1fr;*/
+  grid-template-columns: max-content 1fr;
   height: 100%;
   /*width: 100%;*/
 }
 
 .element-information-wrapper {
   position: relative;
+  width: 17vw;
   /*height: 100%;*/
   /*width: 100%;*/
 }
@@ -48,7 +52,6 @@ export default {
   bottom: 0;
   left: 0;
   display: grid;
-  width: 17vw;
   grid-template-rows: max-content 1fr;
   grid-row-gap: 10px;
 
@@ -58,8 +61,10 @@ export default {
   overflow: auto;
 }
 
-.periodic-table {
-  position: relative;
-  display: grid;
+.periodic-table-wrapper {
+  overflow: auto;
+}
+.periodic-table-wrapper-inner {
+
 }
 </style>

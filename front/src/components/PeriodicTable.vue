@@ -65,6 +65,8 @@ export default {
 <style scoped lang="css">
 .periodic-table-outer {
   overflow: hidden;
+  position: relative;
+  display: grid;
 }
 
 .grid-container-outer {
