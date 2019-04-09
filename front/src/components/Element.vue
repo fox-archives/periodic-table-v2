@@ -6,10 +6,16 @@
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
   >
-    <p class="atomic-number" :style="fontSize.atomicNumber">{{ atomData.atomicNumber }}</p>
-    <p class="abbreviation" :style="fontSize.abbreviation"><b>{{ atomData.abbreviation }}</b></p>
+    <p class="atomic-number" :style="fontSize.atomicNumber">
+      {{ atomData.atomicNumber }}
+    </p>
+    <p class="abbreviation" :style="fontSize.abbreviation">
+      <b>{{ atomData.abbreviation }}</b>
+    </p>
     <h3 class="name" :style="fontSize.name">{{ atomData.name }}</h3>
-    <p class="dynamic" :style="fontSize.dynamic">{{ specificAtomsData[index] }}</p>
+    <p class="dynamic" :style="fontSize.dynamic">
+      {{ specificAtomsData[index] }}
+    </p>
   </div>
 </template>
 
@@ -26,15 +32,14 @@ export default {
   computed: {
     ...mapState("themes/", ["currentTheme"]),
     ...mapState("elementData/", ["specificAtomsData"]),
-    // Sets the font
+    // CHECK THAT THIS WORKS
     fontSize: function() {
-      // CHECK THAT THIS WORKS
       return {
         atomicNumber: { fontSize: "1rem" },
         abbreviation: { fontSize: "1.3rem" },
         name: { fontSize: "0.8rem" },
         dynamic: { fontSize: "2rem" }
-      }
+      };
     }
   },
   methods: {
