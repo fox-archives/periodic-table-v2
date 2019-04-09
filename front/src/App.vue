@@ -1,6 +1,6 @@
 <template>
   <div class="app-outer" :style="currentTheme.app.default">
-    <div class="app" >
+    <div class="app">
       <navigation />
       <router-view class="router-view" />
       <foot />
