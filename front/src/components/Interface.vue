@@ -54,7 +54,6 @@ export default {
   display: grid;
   grid-template-rows: max-content 1fr;
   grid-row-gap: 10px;
-
 }
 
 .element-information {
@@ -62,9 +61,14 @@ export default {
 }
 
 .periodic-table-wrapper {
-  overflow: auto;
+  position: relative;
 }
 .periodic-table-wrapper-inner {
-
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
 }
 </style>
