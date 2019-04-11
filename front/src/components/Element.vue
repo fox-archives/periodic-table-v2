@@ -38,7 +38,7 @@ export default {
         atomicNumber: { fontSize: "1rem" },
         abbreviation: { fontSize: "1.3rem" },
         name: { fontSize: "0.8rem" },
-        dynamic: { fontSize: "2rem" }
+        dynamic: { fontSize: "1rem" }
       };
     }
   },

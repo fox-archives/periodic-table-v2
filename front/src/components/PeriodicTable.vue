@@ -18,6 +18,12 @@
           >
             <element-z :atomData="atomData" :index="index"></element-z>
           </div>
+          <div class="label-period">
+            <label-period></label-period>
+          </div>
+          <div class="label-group">
+            <label-group></label-group>
+          </div>
         </section>
       </div>
     </div>
@@ -27,6 +33,8 @@
 <script>
 import { mapState, mapGetters, mapActions } from "vuex";
 import Element from "@/components/Element";
+import LabelPeriod from "@/components/LabelPeriod";
+import LabelGroup from "@/components/LabelGroup";
 
 export default {
   name: "PeriodicTable",
@@ -57,7 +65,9 @@ export default {
     this.fetchUpdatePeriodicTableData(dataToFetch);
   },
   components: {
-    "element-z": Element
+    "element-z": Element,
+    "label-period": LabelPeriod,
+    "label-group": LabelGroup
   }
 };
 </script>
