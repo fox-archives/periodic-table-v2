@@ -30,7 +30,7 @@ export default {
   },
 
   // The large icon text or graphic, enlarged view of basic atom data
-  elementGraphic: {
+  atomGraphic: {
     default: {
       backgroundColor: oc.gray9,
       boxShadow: "2px 2px 4px " + oc.gray7,
@@ -46,8 +46,8 @@ export default {
   },
 
   // List of all information of a particular atom
-  elementInformation: {
-    // Box that surrounds all the boxes of information. It contains all elementInformation
+  atomInformation: {
+    // Box that surrounds all the boxes of information. It contains all atomInformation
     information: {
       default: {
         backgroundColor: oc.gray9,
@@ -91,8 +91,8 @@ export default {
     }
   },
 
-  // Each single element (element-inner) styling
-  element: {
+  // Each single atom (atom-inner) styling
+  atom: {
     default: {
       backgroundColor: oc.gray8,
       boxShadow: "2px 2px 4px " + oc.gray7,

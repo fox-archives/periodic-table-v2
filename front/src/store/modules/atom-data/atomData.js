@@ -2,7 +2,7 @@ import api from "@/api/fetchData";
 
 const state = {
   tabAtomsData: [], // Atom data that's dependent on the selected tab
-  specificAtomsData: [], // Bottom of each element-z
+  specificAtomsData: [], // Bottom of each atom-z
 
   selectedAtom: {
     name: "Hydrogen",
@@ -32,10 +32,10 @@ const mutations = {
     let index = atomicNumber - 1;
 
     // Extract atom from list of tabAtomsData
-    let elementTab = state.tabAtomsData[index];
+    let atomTab = state.tabAtomsData[index];
 
     state.selectedAtom = {}; // Object.assign does not clear old properties, so this does (inefficient, but works)
-    state.selectedAtom = Object.assign({}, state.selectedAtom, elementTab);
+    state.selectedAtom = Object.assign({}, state.selectedAtom, atomTab);
   },
   updateSpecificAtomsData: function(state, key) {
     let newSpecificAtomsData = [];
@@ -49,11 +49,11 @@ const mutations = {
 
 const actions = {
   fetchUpdatePeriodicTableData: function(context, payload) {
-    // Fetch the bulk of the element data (most of the data), which depends on the current tab
+    // Fetch the bulk of the atom data (most of the data), which depends on the current tab
     api.fetchUpdateTabAtomsData(context, payload);
 
-    // Fetch the specificAtomsData (shows up on each element of the periodic table (at the bottom
-    // of the element) and changes on route change, and on click of property on side panel (ElementInformation.vue)
+    // Fetch the specificAtomsData (shows up on each atom of the periodic table (at the bottom
+    // of the atom) and changes on route change, and on click of property on side panel (AtomInformation.vue)
     api.fetchSpecificAtomData(context, payload);
   }
 };

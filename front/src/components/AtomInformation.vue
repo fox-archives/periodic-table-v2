@@ -1,16 +1,16 @@
 <template>
   <div
     class="information-outer"
-    :style="currentTheme.elementInformation.information[mouseStateInformation]"
+    :style="currentTheme.atomInformation.information[mouseStateInformation]"
     @mouseenter="mouseStateInformation = 'hover'"
     @mouseleave="mouseStateInformation = 'default'"
   >
     <div class="information-inner">
       <div v-for="(property, key) in selectedAtom" :key="key">
-        <element-information-box
+        <atom-information-box
           :myProperty="property"
           :myKey="key"
-        ></element-information-box>
+        ></atom-information-box>
       </div>
     </div>
   </div>
@@ -18,10 +18,10 @@
 
 <script>
 import { mapState } from "vuex";
-import ElementInformationBox from "@/components/ElementInformationBox";
+import AtomInformationBox from "@/components/AtomInformationBox";
 
 export default {
-  name: "ElementInformation",
+  name: "AtomInformation",
   data() {
     return {
       mouseStateInformation: "default"
@@ -29,10 +29,10 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("elementData/", ["selectedAtom"])
+    ...mapState("atomData/", ["selectedAtom"])
   },
   components: {
-    "element-information-box": ElementInformationBox
+    "atom-information-box": AtomInformationBox
   }
 };
 </script>

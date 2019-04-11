@@ -1,9 +1,9 @@
 <template>
   <div class="interface">
-    <div class="element-information-wrapper">
-      <div class="element-information-wrapper-inner">
-        <element-graphic class="element-graphic" />
-        <element-information class="element-information" />
+    <div class="atom-information-wrapper">
+      <div class="atom-information-wrapper-inner">
+        <atom-graphic class="atom-graphic" />
+        <atom-information class="atom-information" />
       </div>
     </div>
     <div class="periodic-table-wrapper">
@@ -15,15 +15,15 @@
 </template>
 
 <script>
-import ElementGraphic from "@/components/ElementGraphic";
-import ElementInformation from "@/components/ElementInformation";
+import AtomGraphic from "@/components/AtomGraphic";
+import AtomInformation from "@/components/AtomInformation";
 import PeriodicTable from "@/components/PeriodicTable";
 
 export default {
   name: "Interface",
   components: {
-    "element-graphic": ElementGraphic,
-    "element-information": ElementInformation,
+    "atom-graphic": AtomGraphic,
+    "atom-information": AtomInformation,
     "periodic-table": PeriodicTable
   }
 };
@@ -37,12 +37,12 @@ export default {
   height: 100%;
 }
 
-.element-information-wrapper {
+.atom-information-wrapper {
   position: relative;
   width: 17vw;
 }
 
-.element-information-wrapper-inner {
+.atom-information-wrapper-inner {
   position: absolute;
   top: 0;
   right: 0;
@@ -53,7 +53,7 @@ export default {
   grid-row-gap: 10px;
 }
 
-.element-information {
+.atom-information {
   overflow: auto;
 }
 

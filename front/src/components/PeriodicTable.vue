@@ -12,11 +12,11 @@
       <div class="grid-wrapper">
         <section class="grid" v-if="tabAtomsData">
           <div
-            class="element-outer"
+            class="atom-outer"
             v-for="(atomData, index) in tabAtomsData"
             v-bind:key="atomData.name"
           >
-            <element-z :atomData="atomData" :index="index"></element-z>
+            <atom-z :atomData="atomData" :index="index"></atom-z>
           </div>
           <div class="label-period">
             <label-period></label-period>
@@ -32,7 +32,7 @@
 
 <script>
 import { mapState, mapGetters, mapActions } from "vuex";
-import Element from "@/components/Element";
+import Atom from "@/components/Atom";
 import LabelPeriod from "@/components/LabelPeriod";
 import LabelGroup from "@/components/LabelGroup";
 
@@ -45,10 +45,10 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapGetters("elementData/", ["tabAtomsData", "specificAtomsData"])
+    ...mapGetters("atomData/", ["tabAtomsData", "specificAtomsData"])
   },
   methods: {
-    ...mapActions("elementData/", ["fetchUpdatePeriodicTableData"])
+    ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"])
   },
   watch: {
     $route() {
@@ -65,7 +65,7 @@ export default {
     this.fetchUpdatePeriodicTableData(dataToFetch);
   },
   components: {
-    "element-z": Element,
+    "atom-z": Atom,
     "label-period": LabelPeriod,
     "label-group": LabelGroup
   }
@@ -103,7 +103,7 @@ export default {
   overflow: auto;
 }
 
-.element-outer {
+.atom-outer {
   position: relative;
 }
 </style>

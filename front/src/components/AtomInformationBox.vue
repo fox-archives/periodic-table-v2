@@ -2,7 +2,7 @@
   <div
     v-if="dataNotBasic(myKey)"
     class="box"
-    :style="currentTheme.elementInformation.box[mouseStateBox]"
+    :style="currentTheme.atomInformation.box[mouseStateBox]"
     @mouseenter="mouseStateBox = 'hover'"
     @mouseleave="mouseStateBox = 'default'"
     @mousedown="updateSpecificAtomsData(myKey)"
@@ -17,7 +17,7 @@ import { mapState, mapMutations } from "vuex";
 import convertKeyToEnglish from "@/components/atomKeyToEnglish";
 
 export default {
-  name: "ElementInformationBox",
+  name: "AtomInformationBox",
   data() {
     return {
       mouseStateBox: "default"
@@ -25,10 +25,10 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("elementData", ["selectedAtom"])
+    ...mapState("atomData/", ["selectedAtom"])
   },
   methods: {
-    ...mapMutations("elementData/", ["updateSpecificAtomsData"]),
+    ...mapMutations("atomData/", ["updateSpecificAtomsData"]),
     dataNotBasic: function(key) {
       if (
         key === "name" ||

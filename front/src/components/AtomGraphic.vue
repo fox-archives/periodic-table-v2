@@ -1,7 +1,7 @@
 <template>
   <div
     class="graphic-outer"
-    :style="currentTheme.elementGraphic[mouseState]"
+    :style="currentTheme.atomGraphic[mouseState]"
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
   >
@@ -20,7 +20,7 @@
 import { mapState } from "vuex";
 
 export default {
-  name: "ElementGraphic",
+  name: "AtomGraphic",
   data() {
     return {
       mouseState: "default"
@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("elementData/", ["selectedAtom"])
+    ...mapState("atomData/", ["selectedAtom"])
   }
 };
 </script>

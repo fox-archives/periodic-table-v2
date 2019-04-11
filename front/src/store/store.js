@@ -1,13 +1,13 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import elementData from "@/store/modules/element-data/elementData";
+import atomData from "@/store/modules/atom-data/atomData";
 import themes from "@/store/modules/themes/themeAggregation.js";
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
-    elementData,
+    atomData,
     themes
   }
 });

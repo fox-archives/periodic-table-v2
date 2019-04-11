@@ -1,8 +1,8 @@
 <template>
   <div
-    class="element-inner"
+    class="atom-inner"
     @mouseover="updateSelectedAtom(atomData.atomicNumber)"
-    :style="currentTheme.element[mouseState]"
+    :style="currentTheme.atom[mouseState]"
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
   >
@@ -23,7 +23,7 @@
 import { mapState, mapMutations } from "vuex";
 
 export default {
-  name: "Element",
+  name: "Atom",
   data() {
     return {
       mouseState: "default"
@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("elementData/", ["specificAtomsData"]),
+    ...mapState("atomData/", ["specificAtomsData"]),
     // CHECK THAT THIS WORKS
     fontSize: function() {
       return {
@@ -43,7 +43,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations("elementData/", ["updateSelectedAtom"])
+    ...mapMutations("atomData/", ["updateSelectedAtom"])
   },
   props: {
     atomData: Object,
@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.element-inner {
+.atom-inner {
   position: absolute;
   top: 0;
   right: 0;
