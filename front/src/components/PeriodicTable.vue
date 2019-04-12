@@ -18,26 +18,21 @@
           >
             <atom-z :atomData="atomData" :index="index"></atom-z>
           </div>
-          <!-- TODO: Vue 3 Componentalize the following (cannot render multiple element on root instance) -->
           <div
             v-for="rowLabel in 7"
             :key="'row' + rowLabel"
-            class="row-label"
+            class="label-outer"
             :style="positionRowLabel(rowLabel)"
           >
-            <div class="row-label label">
-              {{ rowLabel }}
-            </div>
+            <label-z :label="rowLabel" />
           </div>
           <div
             v-for="columnLabel in 18"
             :key="'column' + columnLabel"
-            class="column-label"
+            class="label-outer"
             :style="positionColumnLabel(columnLabel)"
           >
-            <div class="column-label label">
-              {{ columnLabel }}
-            </div>
+            <label-z :label="columnLabel" />
           </div>
         </section>
       </div>
@@ -48,6 +43,7 @@
 <script>
 import { mapState, mapGetters, mapActions } from "vuex";
 import Atom from "@/components/Atom";
+import Label from "@/components/Label";
 
 export default {
   name: "PeriodicTable",
@@ -88,7 +84,8 @@ export default {
     this.fetchUpdatePeriodicTableData(dataToFetch);
   },
   components: {
-    "atom-z": Atom
+    "atom-z": Atom,
+    "label-z": Label,
   }
 };
 </script>
@@ -126,13 +123,5 @@ export default {
 
 .atom-outer {
   position: relative;
-}
-
-.label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
 }
 </style>
