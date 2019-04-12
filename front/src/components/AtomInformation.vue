@@ -6,7 +6,7 @@
     @mouseleave="mouseStateInformation = 'default'"
   >
     <div class="information-inner">
-      <div v-for="(property, key) in selectedAtom" :key="key">
+      <div class="atom-information-box-outer" v-for="(property, key) in selectedAtom" :key="key">
         <atom-information-box
           :myProperty="property"
           :myKey="key"
@@ -37,16 +37,8 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="css">
 .information-outer {
   border-radius: 4px;
-}
-
-.box {
-  margin: 5px;
-
-  &:hover {
-    cursor: pointer;
-  }
 }
 </style>

@@ -1,14 +1,16 @@
 <template>
   <div
     v-if="dataNotBasic(myKey)"
-    class="box"
+    class="atom-information-box-inner"
     :style="currentTheme.atomInformation.box[mouseStateBox]"
     @mouseenter="mouseStateBox = 'hover'"
     @mouseleave="mouseStateBox = 'default'"
     @mousedown="updateSpecificAtomsData(myKey)"
   >
-    <p>{{ atomKeyInEnglish(myKey) }}</p>
-    <p>{{ myProperty }}</p>
+    <div class="box-text">
+      <p>{{ atomKeyInEnglish(myKey) }}</p>
+      <p>{{ myProperty }}</p>
+    </div>
   </div>
 </template>
 
@@ -50,3 +52,19 @@ export default {
   }
 };
 </script>
+
+<style lang="css">
+.atom-information-box-inner {
+  margin-bottom: 2px;
+  border-radius: 4px;
+  overflow: hidden; /* not required because border-radius is really small */
+}
+
+.atom-information-box-inner:hover {
+  cursor: pointer;
+}
+
+.box-text {
+  margin: 2px;
+}
+</style>

@@ -60,9 +60,9 @@ export default {
   bottom: 0;
   left: 0;
   overflow: hidden;
+}
 
-  &:hover {
-    cursor: pointer;
-  }
+.atom-inner:hover {
+  cursor: pointer;
 }
 </style>

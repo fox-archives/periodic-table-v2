@@ -30,10 +30,15 @@ export default {
 
 <style scoped>
 .label {
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  font-size: 18px;
+}
+
+.label:hover {
+  cursor: pointer;
 }
 </style>
