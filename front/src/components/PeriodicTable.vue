@@ -60,13 +60,14 @@ export default {
     ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"]),
     positionColumnLabel: function(columnLabel) {
       return {
-        "grid-area": 1 + "/" + (columnLabel + 1) + "/" + 2 + "/" + (columnLabel + 2)
-      }
+        "grid-area":
+          1 + "/" + (columnLabel + 1) + "/" + 2 + "/" + (columnLabel + 2)
+      };
     },
     positionRowLabel: function(rowLabel) {
       return {
-        "grid-area": (rowLabel + 1) + "/" + 1 + "/" + (rowLabel + 2) + "/" + 2
-      }
+        "grid-area": rowLabel + 1 + "/" + 1 + "/" + (rowLabel + 2) + "/" + 2
+      };
     }
   },
   watch: {
@@ -85,7 +86,7 @@ export default {
   },
   components: {
     "atom-z": Atom,
-    "label-z": Label,
+    "label-z": Label
   }
 };
 </script>

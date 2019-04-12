@@ -12,20 +12,20 @@
 <script>
 import { mapState } from "vuex";
 
-  export default {
-    name: "Label",
-    data() {
-      return {
-        mouseState: "default"
-      }
-    },
-    computed: {
-      ...mapState("themes/", ["currentTheme"])
-    },
-    props: {
-      label: Number
-    }
+export default {
+  name: "Label",
+  data() {
+    return {
+      mouseState: "default"
+    };
+  },
+  computed: {
+    ...mapState("themes/", ["currentTheme"])
+  },
+  props: {
+    label: Number
   }
+};
 </script>
 
 <style scoped>
