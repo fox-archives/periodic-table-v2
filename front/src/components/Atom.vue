@@ -60,6 +60,7 @@ export default {
   bottom: 0;
   left: 0;
   overflow: hidden;
+  border-radius: 2px;
 }
 
 .atom-inner:hover {
