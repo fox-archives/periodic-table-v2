@@ -18,11 +18,26 @@
           >
             <atom-z :atomData="atomData" :index="index"></atom-z>
           </div>
-          <div class="label-period">
-            <label-period></label-period>
+          <!-- TODO: Vue 3 Componentalize the following (cannot render multiple element on root instance) -->
+          <div
+            v-for="rowLabel in 7"
+            :key="'row' + rowLabel"
+            class="row-label"
+            :style="positionRowLabel(rowLabel)"
+          >
+            <div class="row-label label">
+              {{ rowLabel }}
+            </div>
           </div>
-          <div class="label-group">
-            <label-group></label-group>
+          <div
+            v-for="columnLabel in 18"
+            :key="'column' + columnLabel"
+            class="column-label"
+            :style="positionColumnLabel(columnLabel)"
+          >
+            <div class="column-label label">
+              {{ columnLabel }}
+            </div>
           </div>
         </section>
       </div>
@@ -33,8 +48,6 @@
 <script>
 import { mapState, mapGetters, mapActions } from "vuex";
 import Atom from "@/components/Atom";
-import LabelPeriod from "@/components/LabelPeriod";
-import LabelGroup from "@/components/LabelGroup";
 
 export default {
   name: "PeriodicTable",
@@ -48,7 +61,17 @@ export default {
     ...mapGetters("atomData/", ["tabAtomsData", "specificAtomsData"])
   },
   methods: {
-    ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"])
+    ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"]),
+    positionColumnLabel: function(columnLabel) {
+      return {
+        "grid-area": 1 + "/" + (columnLabel + 1) + "/" + 2 + "/" + (columnLabel + 2)
+      }
+    },
+    positionRowLabel: function(rowLabel) {
+      return {
+        "grid-area": (rowLabel + 1) + "/" + 1 + "/" + (rowLabel + 2) + "/" + 2
+      }
+    }
   },
   watch: {
     $route() {
@@ -65,9 +88,7 @@ export default {
     this.fetchUpdatePeriodicTableData(dataToFetch);
   },
   components: {
-    "atom-z": Atom,
-    "label-period": LabelPeriod,
-    "label-group": LabelGroup
+    "atom-z": Atom
   }
 };
 </script>
@@ -94,8 +115,8 @@ export default {
 /* Actual grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(18, 1fr);
-  grid-template-rows: repeat(7, 1fr) 1.5vh repeat(2, 1fr);
+  grid-template-columns: 15px repeat(18, 1fr);
+  grid-template-rows: 20px repeat(7, 1fr) 1.5vh repeat(2, 1fr);
   grid-gap: 2px;
   height: 100%;
   width: 100%;
@@ -105,5 +126,13 @@ export default {
 
 .atom-outer {
   position: relative;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 </style>
