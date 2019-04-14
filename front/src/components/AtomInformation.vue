@@ -6,7 +6,11 @@
     @mouseleave="mouseStateInformation = 'default'"
   >
     <div class="information-inner">
-      <div class="atom-information-box-outer" v-for="(property, key) in selectedAtom" :key="key">
+      <div
+        class="atom-information-box-outer"
+        v-for="(property, key) in selectedAtom"
+        :key="key"
+      >
         <atom-information-box
           :myProperty="property"
           :myKey="key"
