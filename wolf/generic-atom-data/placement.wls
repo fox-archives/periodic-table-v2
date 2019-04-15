@@ -9,59 +9,40 @@ Import@FileNameJoin[{ParentDirectory[], "common-methods.wls"}];
 
 periodicTable = {};
 
-reformatGroup[value_, i_]:=
-	If[MissingQ[value],
-		Return["g-0"];,
-		(* If MissingQ is false *)
-		Return["g-" <> ToString[value]];
-	];
-	
-reformatPeriod[value_, i_]:=
-	If[MissingQ[value],
-		Return["p-0"];,
-		(* If MissingQ is false *)
-		Return["p-" <> ToString[value]];
-	];
-	
-reformatColumn[value_, i_]:=
+formatColumn[value_, i_]:=
 	Which[
 		(* Give element regular value, if get regular value from ElementData *)
 		MissingQ[value] == False,
-			Return["c-" <> ToString[value * 2]];,
+			Return[value];,
 		(* Artifically give element column if it is in the f-block, or an Ant. / Lanth., when get weird values from ElementData *)
-		MissingQ[value] == True && 57 <= i && i <= 71,
-			Return["c-" <> ToString[2*(i - 54)]];,
-		MissingQ[value] == True && 89 <= i && i <= 103,
-			Return["c-" <> ToString[2*(i - 86)]];,
+		57 <= i && i <= 71,
+			Return[i - 54];,
+		89 <= i && i <= 103,
+			Return[i - 86];,
 		True,
-			Return["Unexected Values"];
+			Return["UNEXPECTED"];
 	];
 	
-reformatRow[value_, i_]:=
+formatRow[value_, i_]:=
 	Which[
 	57 <= i && i <= 71,
-		Return["r-17"];,
+		Return[9];,
 	89 <= i && i <= 103,
-		Return["r-19"];,
+		Return[10];,
 	True,
-		Return["r-" <> ToString[value * 2]];
+		Return[value];
 	];
 	
 
 For[i = 1, i < 119, i++,
-	Group = reformatGroup[ElementData[i, "Group"], i];
-	Period = reformatPeriod[ElementData[i, "Period"], i];
-	Column1 = reformatColumn[ElementData[i, "Group"], i];
-	Row1 = reformatRow[ElementData[i, "Period"], i];
-	
+	pColumn = formatColumn[ElementData[i, "Group"], i];
+	pRow = formatRow[ElementData[i, "Period"], i];
 	
 	newElement = {
 		(* Show ith element I for debugging *)
-		(*"i" -> i,*)
-		"group" -> Group,
-		"period" -> Period,
-		"column" -> Column1,
-		"row" -> Row1
+		"i" -> i,
+		"column" -> pColumn,
+		"row" -> pRow
 	};
 	
 	periodicTable = Append[periodicTable, newElement];
@@ -69,10 +50,8 @@ For[i = 1, i < 119, i++,
 	(* Case for Lanthanites *)
 	If[i == 56,
 		lanth = {
-			"group" -> "g-0",
-			"period" -> "p-0",
-			"column" -> "c-6",
-			"row" -> "r-12"
+			"column" -> 6,
+			"row" -> 12
 		};
 		periodicTable = Append[periodicTable, lanth];
 	];
@@ -80,10 +59,8 @@ For[i = 1, i < 119, i++,
 	(* Case for Actinides *)
 	If[i == 88,
 		act = {
-			"group" -> "g-0",
-			"period" -> "p-0",
-			"column" -> "c-6",
-			"row" -> "r-14"
+			"column" -> 6,
+			"row" -> 14
 		};
 		periodicTable = Append[periodicTable, act];
 	];

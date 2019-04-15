@@ -15,6 +15,7 @@
             class="atom-outer"
             v-for="(atomData, index) in tabAtomsData"
             v-bind:key="atomData.name"
+            :style="positionAtom(index)"
           >
             <atom-z :atomData="atomData" :index="index"></atom-z>
           </div>
@@ -44,6 +45,7 @@
 import { mapState, mapGetters, mapActions } from "vuex";
 import Atom from "@/components/Atom";
 import Label from "@/components/Label";
+import AtomPlacements from "../../../wolf/generic-atom-data/placement.json";
 
 export default {
   name: "PeriodicTable",
@@ -58,15 +60,23 @@ export default {
   },
   methods: {
     ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"]),
+    positionAtom: function(index) {
+      let atomPlacement = AtomPlacements[index];
+      let row = atomPlacement.row + 1;
+      let column = atomPlacement.column + 1;
+
+      return {
+        "grid-area": `${row} / ${column} / ${row + 1} / ${column}`
+      };
+    },
     positionColumnLabel: function(columnLabel) {
       return {
-        "grid-area":
-          1 + "/" + (columnLabel + 1) + "/" + 2 + "/" + (columnLabel + 2)
+        "grid-area": `${1} / ${columnLabel + 1} / ${2} / ${columnLabel + 2}`
       };
     },
     positionRowLabel: function(rowLabel) {
       return {
-        "grid-area": rowLabel + 1 + "/" + 1 + "/" + (rowLabel + 2) + "/" + 2
+        "grid-area": `${rowLabel + 1} / ${1} / ${rowLabel + 2} / ${2}`
       };
     }
   },

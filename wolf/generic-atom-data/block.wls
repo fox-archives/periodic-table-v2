@@ -29,7 +29,7 @@ For[i = 1, i < 119, i++,
 	
 	periodicTable = Append[periodicTable, newElement];
 	
-	Case for Lanthanites
+	(* Case for Lanthanites *)
 	If[i == 56,
 		lanth = {
 			"defaultColor" -> "orange",
