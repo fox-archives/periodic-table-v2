@@ -45,13 +45,15 @@ For[i = 1, i < 119, i++,
 		"row" -> pRow
 	};
 	
+	Print@newElementObject;Print[" "];
+
 	periodicTable = Append[periodicTable, newElement];
 	
 	(* Case for Lanthanites *)
 	If[i == 56,
 		lanth = {
-			"column" -> 6,
-			"row" -> 12
+			"column" -> 3,
+			"row" -> 6
 		};
 		periodicTable = Append[periodicTable, lanth];
 	];
@@ -59,8 +61,8 @@ For[i = 1, i < 119, i++,
 	(* Case for Actinides *)
 	If[i == 88,
 		act = {
-			"column" -> 6,
-			"row" -> 14
+			"column" -> 3,
+			"row" -> 7
 		};
 		periodicTable = Append[periodicTable, act];
 	];

@@ -952,6 +952,12 @@
 		"vaporizationHeat":1.4e2
 	},
 	{
+		"name":"Lanth.",
+		"abbreviation":"",
+		"atomicNumber":"",
+		"atomicMass":""
+	},
+	{
 		"name":"Lanthanum",
 		"abbreviation":"La",
 		"atomicNumber":57,
@@ -1494,6 +1500,12 @@
 		"specificHeat":9.2e1,
 		"superconductingPoint":"Unknown",
 		"vaporizationHeat":1.25e2
+	},
+	{
+		"name":"Act.",
+		"abbreviation":"",
+		"atomicNumber":"",
+		"atomicMass":""
 	},
 	{
 		"name":"Actinium",

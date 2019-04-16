@@ -56,6 +56,28 @@ For[i = 1, i < 119, i++,
 	Print@newElementObject;Print[" "];
 
 	periodicTable = Append[periodicTable, newElementObject];
+
+	(* Case for Lanthanites *)
+	If[i == 56,
+		lanth = {
+			"name" -> "Lanth.",
+			"abbreviation" -> "",
+			"atomicNumber" -> "",
+			"atomicMass" -> ""
+		};
+		periodicTable = Append[periodicTable, lanth];
+	];
+	
+	(* Case for Actinides *)
+	If[i == 88,
+		act = {
+			"name" -> "Act.",
+			"abbreviation" -> "",
+			"atomicNumber" -> "",
+			"atomicMass" -> ""
+		};
+		periodicTable = Append[periodicTable, act];
+	];
 ];
 
 deleteExistingFile["thermodynamic-data.json"];

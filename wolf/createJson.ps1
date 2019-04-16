@@ -1,4 +1,5 @@
 # Gets current path of current file
+# baseDir="$0"
 $baseDir = $(Split-Path $PsCommandPath)
 
 cd all-properties-tab

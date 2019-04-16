@@ -2585,6 +2585,12 @@
 		"valence":2
 	},
 	{
+		"name":"Lanth.",
+		"abbreviation":"",
+		"atomicNumber":"",
+		"atomicMass":""
+	},
+	{
 		"name":"Lanthanum",
 		"abbreviation":"La",
 		"atomicNumber":57,
@@ -4295,6 +4301,12 @@
 		"electronAffinity":"Unknown",
 		"electronegativity":0.9,
 		"valence":2
+	},
+	{
+		"name":"Act.",
+		"abbreviation":"",
+		"atomicNumber":"",
+		"atomicMass":""
 	},
 	{
 		"name":"Actinium",

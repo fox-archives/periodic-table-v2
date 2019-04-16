@@ -47,6 +47,8 @@ For[i = 1, i < 119, i++,
 		"color" -> type
 	};
 	
+	Print@newElementObject;Print[" "];
+	
 	periodicTable = Append[periodicTable, newElement];
 	
 	(* Case for Lanthanites *)
