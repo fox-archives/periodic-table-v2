@@ -6,7 +6,7 @@
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
   >
-    <p class="atomic-number" :style="fontSize.agitomicNumber">
+    <p class="atomic-number" :style="fontSize.atomicNumber">
       {{ atomData.atomicNumber }}
     </p>
     <p class="abbreviation" :style="fontSize.abbreviation">
@@ -62,9 +62,11 @@ export default {
   overflow: hidden;
   border-radius: 2px;
   text-overflow: clip;
+  /* So text with dashes doesn't wrap around and have extra height */
+  white-space: nowrap;
 }
 
 .atom-inner:hover {
-  cursor: pointer;
+cursor: pointer;
 }
 </style>

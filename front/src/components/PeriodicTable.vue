@@ -127,5 +127,6 @@ export default {
 
 .atom-outer {
   position: relative;
+  overflow: visible; /* So shadows appear */
 }
 </style>
