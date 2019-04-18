@@ -61,9 +61,9 @@ export default {
   methods: {
     ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"]),
     positionAtom: function(index) {
-      let atomPlacement = AtomPlacements[index];
-      let row = atomPlacement.row + 1;
-      let column = atomPlacement.column + 1;
+      let atomLocation = AtomPlacements[index];
+      let row = atomLocation.row + 1;
+      let column = atomLocation.column + 1;
 
       return {
         "grid-area": `${row} / ${column} / ${row + 1} / ${column}`
