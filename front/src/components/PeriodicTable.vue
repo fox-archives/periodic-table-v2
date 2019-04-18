@@ -47,7 +47,7 @@ import AtomPlacements from "../../../wolf/generic-atom-data/placement.json";
 
 export default {
   name: "PeriodicTable",
-  data() {
+  data: function() {
     return {
       mouseState: "default"
     };
@@ -79,19 +79,18 @@ export default {
     }
   },
   watch: {
-    $route() {
+    $route: function() {
       let dataToFetch = {
         tab: this.$route.meta.tab
       };
       this.fetchUpdatePeriodicTableData(dataToFetch);
     }
   },
-  created() {
+  created: function() {
     let dataToFetch = {
       tab: this.$route.meta.tab
     };
     this.fetchUpdatePeriodicTableData(dataToFetch);
-    console.log(this.tabAtomsData);
   },
   components: {
     "atom-z": Atom,

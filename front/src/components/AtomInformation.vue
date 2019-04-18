@@ -26,7 +26,7 @@ import AtomInformationBox from "@/components/AtomInformationBox";
 
 export default {
   name: "AtomInformation",
-  data() {
+  data: function() {
     return {
       mouseStateInformation: "default"
     };

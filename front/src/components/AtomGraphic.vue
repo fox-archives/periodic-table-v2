@@ -21,7 +21,7 @@ import { mapState } from "vuex";
 
 export default {
   name: "AtomGraphic",
-  data() {
+  data: function() {
     return {
       mouseState: "default"
     };

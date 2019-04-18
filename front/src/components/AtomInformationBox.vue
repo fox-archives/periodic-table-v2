@@ -20,7 +20,7 @@ import convertKeyToEnglish from "@/components/atomKeyToEnglish";
 
 export default {
   name: "AtomInformationBox",
-  data() {
+  data: function() {
     return {
       mouseStateBox: "default"
     };

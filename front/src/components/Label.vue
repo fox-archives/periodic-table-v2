@@ -14,7 +14,7 @@ import { mapState } from "vuex";
 
 export default {
   name: "Label",
-  data() {
+  data: function() {
     return {
       mouseState: "default"
     };

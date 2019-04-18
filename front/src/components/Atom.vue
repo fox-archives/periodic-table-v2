@@ -24,26 +24,34 @@ import { mapState, mapMutations } from "vuex";
 
 export default {
   name: "Atom",
-  data() {
+  data: function() {
     return {
-      mouseState: "default"
+      mouseState: "default",
+      fontSize: {
+        atomicNumber: {fontSize: "1rem"},
+        abbreviation: {fontSize: "1.3rem"},
+        name: {fontSize: "0.8rem"},
+        dynamic: {fontSize: "1rem"}
+      }
     };
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("atomData/", ["specificAtomsData"]),
-    // CHECK THAT THIS WORKS
-    fontSize: function() {
-      return {
-        atomicNumber: { fontSize: "1rem" },
-        abbreviation: { fontSize: "1.3rem" },
-        name: { fontSize: "0.8rem" },
-        dynamic: { fontSize: "1rem" }
-      };
-    }
+    ...mapState("atomData/", ["specificAtomsData"])
   },
   methods: {
-    ...mapMutations("atomData/", ["updateSelectedAtom"])
+    ...mapMutations("atomData/", ["updateSelectedAtom"]),
+    adjustFontSize: function() {
+      console.log("Adjust Font Size");
+    }
+  },
+  created: function() {
+    // TODO: Debounce etc. this guy
+    this.$nextTick(() => {
+      window.addEventListener("resize", () => {
+        this.adjustFontSize();
+      });
+    });
   },
   props: {
     atomData: Object,

@@ -16,7 +16,7 @@ import { mapState } from "vuex";
 
 export default {
   name: "NavItem",
-  data() {
+  data: function() {
     return {
       mouseState: "default"
     };
