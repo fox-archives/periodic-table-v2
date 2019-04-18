@@ -28,10 +28,10 @@ export default {
     return {
       mouseState: "default",
       fontSize: {
-        atomicNumber: {fontSize: "1rem"},
-        abbreviation: {fontSize: "1.3rem"},
-        name: {fontSize: "0.8rem"},
-        dynamic: {fontSize: "1rem"}
+        atomicNumber: { fontSize: "1rem" },
+        abbreviation: { fontSize: "1.3rem" },
+        name: { fontSize: "0.8rem" },
+        dynamic: { fontSize: "1rem" }
       }
     };
   },
@@ -41,9 +41,7 @@ export default {
   },
   methods: {
     ...mapMutations("atomData/", ["updateSelectedAtom"]),
-    adjustFontSize: function() {
-      console.log("Adjust Font Size");
-    }
+    adjustFontSize: function() {}
   },
   created: function() {
     // TODO: Debounce etc. this guy
@@ -75,6 +73,6 @@ export default {
 }
 
 .atom-inner:hover {
-cursor: pointer;
+  cursor: pointer;
 }
 </style>
