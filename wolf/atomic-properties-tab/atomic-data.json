@@ -2585,9 +2585,9 @@
 		"valence":2
 	},
 	{
-		"name":"",
-		"abbreviation":"Lanth.",
-		"atomicNumber":"",
+		"name":"Lanthanides",
+		"abbreviation":"Lan.",
+		"atomicNumber":"57-71",
 		"atomicMass":""
 	},
 	{
@@ -4303,9 +4303,9 @@
 		"valence":2
 	},
 	{
-		"name":"",
+		"name":"Actinides",
 		"abbreviation":"Act.",
-		"atomicNumber":"",
+		"atomicNumber":"89-103",
 		"atomicMass":""
 	},
 	{

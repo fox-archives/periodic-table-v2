@@ -58,6 +58,28 @@ For[i = 1, i < 119, i++,
 	Print@newElementObject;Print[" "];
 
 	periodicTable = Append[periodicTable, newElementObject];
+
+	(* Case for Lanthanites *)
+	If[i == 56,
+		lanth = {
+			"name" -> "Lanthanides",
+			"abbreviation" -> "Lan.",
+			"atomicNumber" -> "57-71",
+			"atomicMass" -> ""
+		};
+		periodicTable = Append[periodicTable, lanth];
+	];
+	
+	(* Case for Actinides *)
+	If[i == 88,
+		act = {
+			"name" -> "Actinides",
+			"abbreviation" -> "Act.",
+			"atomicNumber" -> "89-103",
+			"atomicMass" -> ""
+		};
+		periodicTable = Append[periodicTable, act];
+	];
 ];
 
 deleteExistingFile["material-data.json"];

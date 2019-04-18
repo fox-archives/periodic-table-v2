@@ -61,9 +61,9 @@ For[i = 1, i < 119, i++,
 	(* Case for Lanthanites *)
 	If[i == 56,
 		lanth = {
-			"name" -> "",
-			"abbreviation" -> "Lanth.",
-			"atomicNumber" -> "",
+			"name" -> "Lanthanides",
+			"abbreviation" -> "Lan.",
+			"atomicNumber" -> "57-71",
 			"atomicMass" -> ""
 		};
 		periodicTable = Append[periodicTable, lanth];
@@ -72,9 +72,9 @@ For[i = 1, i < 119, i++,
 	(* Case for Actinides *)
 	If[i == 88,
 		act = {
-			"name" -> "",
+			"name" -> "Actinides",
 			"abbreviation" -> "Act.",
-			"atomicNumber" -> "",
+			"atomicNumber" -> "89-103",
 			"atomicMass" -> ""
 		};
 		periodicTable = Append[periodicTable, act];

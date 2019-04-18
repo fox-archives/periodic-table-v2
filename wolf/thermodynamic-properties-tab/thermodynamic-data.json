@@ -952,9 +952,9 @@
 		"vaporizationHeat":1.4e2
 	},
 	{
-		"name":"",
-		"abbreviation":"Lanth",
-		"atomicNumber":"",
+		"name":"Lanthanides",
+		"abbreviation":"Lan.",
+		"atomicNumber":"57-71",
 		"atomicMass":""
 	},
 	{
@@ -1502,9 +1502,9 @@
 		"vaporizationHeat":1.25e2
 	},
 	{
-		"name":"",
-		"abbreviation":"Act",
-		"atomicNumber":"",
+		"name":"Actinides",
+		"abbreviation":"Act.",
+		"atomicNumber":"89-103",
 		"atomicMass":""
 	},
 	{
