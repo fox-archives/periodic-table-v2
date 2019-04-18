@@ -61,8 +61,8 @@ For[i = 1, i < 119, i++,
 	(* Case for Lanthanites *)
 	If[i == 56,
 		lanth = {
-			"name" -> "Lanth.",
-			"abbreviation" -> "",
+			"name" -> "",
+			"abbreviation" -> "Lanth.",
 			"atomicNumber" -> "",
 			"atomicMass" -> ""
 		};
@@ -72,8 +72,8 @@ For[i = 1, i < 119, i++,
 	(* Case for Actinides *)
 	If[i == 88,
 		act = {
-			"name" -> "Act.",
-			"abbreviation" -> "",
+			"name" -> "",
+			"abbreviation" -> "Act.",
 			"atomicNumber" -> "",
 			"atomicMass" -> ""
 		};

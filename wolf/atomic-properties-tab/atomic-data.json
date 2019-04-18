@@ -2585,8 +2585,8 @@
 		"valence":2
 	},
 	{
-		"name":"Lanth.",
-		"abbreviation":"",
+		"name":"",
+		"abbreviation":"Lanth.",
 		"atomicNumber":"",
 		"atomicMass":""
 	},
@@ -4303,8 +4303,8 @@
 		"valence":2
 	},
 	{
-		"name":"Act.",
-		"abbreviation":"",
+		"name":"",
+		"abbreviation":"Act.",
 		"atomicNumber":"",
 		"atomicMass":""
 	},

@@ -1288,8 +1288,8 @@
 		"vaporizationHeat":1.4e2
 	},
 	{
-		"name":"Lanth.",
-		"abbreviation":"",
+		"name":"",
+		"abbreviation":"Lanth.",
 		"atomicNumber":"",
 		"atomicMass":""
 	},
@@ -2030,8 +2030,8 @@
 		"vaporizationHeat":1.25e2
 	},
 	{
-		"name":"Act.",
-		"abbreviation":"",
+		"name":"",
+		"abbreviation":"Act.",
 		"atomicNumber":"",
 		"atomicMass":""
 	},
