@@ -6,14 +6,14 @@
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
   >
-    <p class="atomic-number" :style="fontSize.atomicNumber">
+    <p class="atomic-number">
       {{ atomData.atomicNumber }}
     </p>
-    <p class="abbreviation" :style="fontSize.abbreviation">
+    <p class="abbreviation">
       <b>{{ atomData.abbreviation }}</b>
     </p>
-    <h3 class="name" :style="fontSize.name">{{ atomData.name }}</h3>
-    <p class="dynamic" :style="fontSize.dynamic">
+    <h3 class="name">{{ atomData.name }}</h3>
+    <p class="dynamic-value">
       {{ specificAtomsData[index] }}
     </p>
   </div>
@@ -26,13 +26,7 @@ export default {
   name: "Atom",
   data: function() {
     return {
-      mouseState: "default",
-      fontSize: {
-        atomicNumber: { fontSize: "1rem" },
-        abbreviation: { fontSize: "1.3rem" },
-        name: { fontSize: "0.8rem" },
-        dynamic: { fontSize: "1rem" }
-      }
+      mouseState: "default"
     };
   },
   computed: {
@@ -40,16 +34,10 @@ export default {
     ...mapState("atomData/", ["specificAtomsData"])
   },
   methods: {
-    ...mapMutations("atomData/", ["updateSelectedAtom"]),
-    adjustFontSize: function() {}
+    ...mapMutations("atomData/", ["updateSelectedAtom"])
   },
   created: function() {
-    // TODO: Debounce etc. this guy
-    this.$nextTick(() => {
-      window.addEventListener("resize", () => {
-        this.adjustFontSize();
-      });
-    });
+    // Looking for resize font size via debounce on window width update? Code in PeriodicTable.vue
   },
   props: {
     atomData: Object,
@@ -74,5 +62,21 @@ export default {
 
 .atom-inner:hover {
   cursor: pointer;
+}
+
+.atomic-number {
+  font-size: var(--atom-atomic-number-font-size);
+}
+
+.abbreviation {
+  font-size: var(--atom-abbreviation-font-size);
+}
+
+.name {
+  font-size: var(--atom-name-font-size);
+}
+
+.dynamic-value {
+  font-size: var(--atom-dynamic-font-size);
 }
 </style>

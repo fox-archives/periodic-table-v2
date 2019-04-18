@@ -9,7 +9,7 @@
       @mouseenter="mouseState = 'hover'"
       @mouseleave="mouseState = 'default'"
     >
-      <section class="grid" v-if="tabAtomsData">
+      <section class="grid" v-if="tabAtomsData" ref="periodicTableGrid">
         <div
           class="atom-outer"
           v-for="(atomData, index) in tabAtomsData"
@@ -76,6 +76,26 @@ export default {
       return {
         "grid-area": `${rowLabel + 1} / ${1} / ${rowLabel + 2} / ${2}`
       };
+    },
+    adjustFontSize: function(periodicTableDOMRect) {
+      let tableWidth = periodicTableDOMRect.width;
+      // Setting variables on `html` element, since manually changing inline styles is too much
+      document.documentElement.style.setProperty(
+        "--atom-atomic-number-font-size",
+        `${tableWidth * 0.012}px`
+      );
+      document.documentElement.style.setProperty(
+        "--atom-abbreviation-font-size",
+        `${tableWidth * 0.022}px`
+      );
+      document.documentElement.style.setProperty(
+        "--atom-name-font-size",
+        `${tableWidth * 0.012}px`
+      );
+      document.documentElement.style.setProperty(
+        "--atom-dynamic-font-size",
+        `${tableWidth * 0.022}px`
+      );
     }
   },
   watch: {
@@ -91,6 +111,17 @@ export default {
       tab: this.$route.meta.tab
     };
     this.fetchUpdatePeriodicTableData(dataToFetch);
+    // TODO: Debounce etc. this guy
+    this.$nextTick(() => {
+      // Recall this may set value of zero just after setting the size (although we probably don't need to worry about that here)
+      let periodicTableDOMRect = this.$refs.periodicTableGrid.getBoundingClientRect();
+      this.adjustFontSize(periodicTableDOMRect);
+
+      window.addEventListener("resize", () => {
+        let periodicTableDOMRect = this.$refs.periodicTableGrid.getBoundingClientRect();
+        this.adjustFontSize(periodicTableDOMRect);
+      });
+    });
   },
   components: {
     "atom-z": Atom,
