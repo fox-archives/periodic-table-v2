@@ -66,6 +66,6 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  overflow: auto;
+  overflow: visible;
 }
 </style>

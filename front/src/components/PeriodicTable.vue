@@ -9,34 +9,32 @@
       @mouseenter="mouseState = 'hover'"
       @mouseleave="mouseState = 'default'"
     >
-      <div class="grid-wrapper">
-        <section class="grid" v-if="tabAtomsData">
-          <div
-            class="atom-outer"
-            v-for="(atomData, index) in tabAtomsData"
-            v-bind:key="atomData.name"
-            :style="positionAtom(index)"
-          >
-            <atom-z :atomData="atomData" :index="index"></atom-z>
-          </div>
-          <div
-            v-for="rowLabel in 7"
-            :key="'row' + rowLabel"
-            class="label-outer"
-            :style="positionRowLabel(rowLabel)"
-          >
-            <label-z :label="rowLabel" />
-          </div>
-          <div
-            v-for="columnLabel in 18"
-            :key="'column' + columnLabel"
-            class="label-outer"
-            :style="positionColumnLabel(columnLabel)"
-          >
-            <label-z :label="columnLabel" />
-          </div>
-        </section>
-      </div>
+      <section class="grid" v-if="tabAtomsData">
+        <div
+          class="atom-outer"
+          v-for="(atomData, index) in tabAtomsData"
+          v-bind:key="atomData.name"
+          :style="positionAtom(index)"
+        >
+          <atom-z :atomData="atomData" :index="index"></atom-z>
+        </div>
+        <div
+          v-for="rowLabel in 7"
+          :key="'row' + rowLabel"
+          class="label-outer"
+          :style="positionRowLabel(rowLabel)"
+        >
+          <label-z :label="rowLabel" />
+        </div>
+        <div
+          v-for="columnLabel in 18"
+          :key="'column' + columnLabel"
+          class="label-outer"
+          :style="positionColumnLabel(columnLabel)"
+        >
+          <label-z :label="columnLabel" />
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -93,6 +91,7 @@ export default {
       tab: this.$route.meta.tab
     };
     this.fetchUpdatePeriodicTableData(dataToFetch);
+    console.log(this.tabAtomsData);
   },
   components: {
     "atom-z": Atom,
@@ -111,25 +110,19 @@ export default {
   padding-bottom: 60%;
 }
 
-/* For aspect ratio */
-.grid-wrapper {
+/* Actual grid */
+.grid {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-}
-
-/* Actual grid */
-.grid {
   display: grid;
   grid-template-columns: 15px repeat(18, 1fr);
   grid-template-rows: 20px repeat(7, 1fr) 1.5vh repeat(2, 1fr);
   grid-gap: 2px;
-  height: 100%;
-  width: 100%;
   /* If atoms overflow and exceed available width, this overflow adds scrolling */
-  overflow: auto;
+  /*overflow: auto;*/
 }
 
 .atom-outer {

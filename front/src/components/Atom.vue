@@ -6,7 +6,7 @@
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
   >
-    <p class="atomic-number" :style="fontSize.atomicNumber">
+    <p class="atomic-number" :style="fontSize.agitomicNumber">
       {{ atomData.atomicNumber }}
     </p>
     <p class="abbreviation" :style="fontSize.abbreviation">
@@ -61,6 +61,7 @@ export default {
   left: 0;
   overflow: hidden;
   border-radius: 2px;
+  text-overflow: clip;
 }
 
 .atom-inner:hover {
