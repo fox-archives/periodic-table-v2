@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from "vuex";
+import { mapState, mapActions } from "vuex";
 import Atom from "@/components/Atom";
 import Label from "@/components/Label";
 import AtomPlacements from "../../../wolf/generic-atom-data/placement.json";
@@ -58,7 +58,7 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapGetters("atomData/", ["tabAtomsData", "specificAtomsData"])
+    ...mapState("atomData/", ["tabAtomsData"])
   },
   methods: {
     ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"]),

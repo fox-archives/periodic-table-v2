@@ -51,6 +51,6 @@ export default {
 
 .active {
   position: relative;
-  topL: 5px;
+  top: 5px;
 }
 </style>

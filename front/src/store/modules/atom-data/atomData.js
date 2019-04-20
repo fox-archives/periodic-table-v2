@@ -14,27 +14,13 @@ const state = {
   },
 
   /* Highlighted labels will depend on this */
-  selectedAtomPosition: {
-
-  },
+  selectedAtomPosition: {},
 
   /* Highlighted periods and groups will depend on this */
-  selectedLabelPosition: {
-
-  }
+  selectedLabelPosition: {}
 };
 
-const getters = {
-  tabAtomsData: function(state) {
-    return state.tabAtomsData;
-  },
-  specificAtomsData: function(state) {
-    return state.specificAtomsData;
-  },
-  selectedAtom: function(state) {
-    return state.selectedAtom;
-  }
-};
+const getters = {};
 
 const mutations = {
   // Updates selectedAtom in state, giving that object all existing properties of selected atom

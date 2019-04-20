@@ -44,6 +44,9 @@ getGroup[value_, i_]:= (
 	];
 )
 	
+getPeriod[value_, i_]:= (
+	Return[value];
+)
 
 For[i = 1, i < 119, i++,
 	(* pColumn and pRow represent positions in the grid (not adjusted for the existance of labels on the main grid) *)
@@ -52,7 +55,7 @@ For[i = 1, i < 119, i++,
 
 	(* Actual Group or Period the element is categorized in *)
 	pGroup = getGroup[ElementData[i, "Group"], i];
-	pPeriod = ElementData[i, "Period"];
+	pPeriod = getPeriod[ElementData[i, "Period"], i];
 
 	newElement = {
 		(* Show ith element I for debugging *)

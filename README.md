@@ -12,3 +12,7 @@ Same project goals as Periodic Table Version 1. Rewritten because I've learned a
 ## Roadmap (Long-Term)
 
 - Run the theme files against program, checking their schema
+
+### Notes
+
+#### Atom font sizes

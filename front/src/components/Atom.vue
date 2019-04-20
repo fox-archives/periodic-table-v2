@@ -34,7 +34,10 @@ export default {
     ...mapState("atomData/", ["specificAtomsData"])
   },
   methods: {
-    ...mapMutations("atomData/", ["updateSelectedAtom", "updateSelectedAtomPosition"]),
+    ...mapMutations("atomData/", [
+      "updateSelectedAtom",
+      "updateSelectedAtomPosition"
+    ]),
     highlightLabels: function() {
       this.updateSelectedAtomPosition(this.placement);
     }
