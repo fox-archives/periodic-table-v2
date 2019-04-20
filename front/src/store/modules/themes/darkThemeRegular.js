@@ -107,5 +107,23 @@ export default {
       color: oc.gray3,
       transition: "box-shadow .15s"
     }
+  },
+
+  // Each column and row label (label-inner) styling
+  label: {
+    default: {
+      backgroundColor: oc.gray8,
+      border: "1px solid " + oc.orange8,
+      boxShadow: "1px 1px 2px " + oc.gray6,
+      color: oc.gray3,
+      transition: "all .15s"
+    },
+    hover: {
+      backgroundColor: oc.gray8,
+      border: "1px solid " + oc.orange8,
+      boxShadow: "2px 2px 4px " + oc.gray6,
+      color: oc.gray3,
+      transition: "all .15s"
+    }
   }
 };

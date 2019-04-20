@@ -16,7 +16,11 @@
           v-bind:key="atomData.name"
           :style="positionAtom(index)"
         >
-          <atom-z :atomData="atomData" :index="index"></atom-z>
+          <atom-z
+            :atomData="atomData"
+            :index="index"
+            :placement="atomPlacementData(index)"
+          ></atom-z>
         </div>
         <div
           v-for="rowLabel in 7"
@@ -24,7 +28,7 @@
           class="label-outer"
           :style="positionRowLabel(rowLabel)"
         >
-          <label-z :label="rowLabel" />
+          <label-z :labelNumber="rowLabel" labelType="period" />
         </div>
         <div
           v-for="columnLabel in 18"
@@ -32,7 +36,7 @@
           class="label-outer"
           :style="positionColumnLabel(columnLabel)"
         >
-          <label-z :label="columnLabel" />
+          <label-z :labelNumber="columnLabel" labelType="group" />
         </div>
       </section>
     </div>
@@ -58,6 +62,9 @@ export default {
   },
   methods: {
     ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"]),
+    atomPlacementData: function(index) {
+      return AtomPlacements[index];
+    },
     positionAtom: function(index) {
       let atomLocation = AtomPlacements[index];
       let row = atomLocation.row + 1;

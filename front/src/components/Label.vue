@@ -1,11 +1,12 @@
 <template>
   <div
     class="label"
+    :class="{ active: checkLabelActive }"
     :style="currentTheme.label[mouseState]"
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
   >
-    {{ label }}
+    {{ labelNumber }}
   </div>
 </template>
 
@@ -20,10 +21,15 @@ export default {
     };
   },
   computed: {
-    ...mapState("themes/", ["currentTheme"])
+    ...mapState("themes/", ["currentTheme"]),
+    ...mapState("atomData/", ["selectedAtomPosition"]),
+    checkLabelActive: function() {
+      return this.selectedAtomPosition[this.labelType] === this.labelNumber;
+    }
   },
   props: {
-    label: Number
+    labelNumber: Number,
+    labelType: String
   }
 };
 </script>
@@ -41,5 +47,10 @@ export default {
 
 .label:hover {
   cursor: pointer;
+}
+
+.active {
+  position: relative;
+  topL: 5px;
 }
 </style>

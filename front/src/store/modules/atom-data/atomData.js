@@ -4,12 +4,23 @@ const state = {
   tabAtomsData: [], // Atom data that's dependent on the selected tab
   specificAtomsData: [], // Bottom of each atom-z
 
+  /* This atom shows in the sidebar */
   selectedAtom: {
     name: "Hydrogen",
     abbreviation: "H",
     atomicNumber: 1,
     atomicWeight: 1.008
     // Other property data needs to be fetched on a per-route basis (do NOT add it here)
+  },
+
+  /* Highlighted labels will depend on this */
+  selectedAtomPosition: {
+
+  },
+
+  /* Highlighted periods and groups will depend on this */
+  selectedLabelPosition: {
+
   }
 };
 
@@ -36,6 +47,9 @@ const mutations = {
 
     state.selectedAtom = {}; // Object.assign does not clear old properties, so this does (inefficient, but works)
     state.selectedAtom = Object.assign({}, state.selectedAtom, atomTab);
+  },
+  updateSelectedAtomPosition: function(state, payload) {
+    state.selectedAtomPosition = payload;
   },
   updateSpecificAtomsData: function(state, key) {
     let newSpecificAtomsData = [];
