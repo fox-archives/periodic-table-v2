@@ -18,8 +18,8 @@
         >
           <atom-z
             :atomData="atomData"
-            :index="index"
-            :placement="atomPlacementData(index)"
+            :atomIndex="index"
+            :atomPlacement="atomPlacementData(index)"
           ></atom-z>
         </div>
         <div
@@ -66,9 +66,8 @@ export default {
       return AtomPlacements[index];
     },
     positionAtom: function(index) {
-      let atomLocation = AtomPlacements[index];
-      let row = atomLocation.row + 1;
-      let column = atomLocation.column + 1;
+      let row = this.atomPlacementData(index).row + 1;
+      let column = this.atomPlacementData(index).column + 1;
 
       return {
         "grid-area": `${row} / ${column} / ${row + 1} / ${column}`

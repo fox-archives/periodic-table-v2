@@ -1,7 +1,7 @@
 <template>
   <div
     class="atom-inner"
-    @mouseover="[updateSelectedAtom(atomData.atomicNumber), highlightLabels()]"
+    @mouseover="[updateSelectedAtom(atomData.atomicNumber), highlightLabels]"
     :style="currentTheme.atom[mouseState]"
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
@@ -14,7 +14,7 @@
     </p>
     <h3 class="name">{{ atomData.name }}</h3>
     <p class="dynamic-value">
-      {{ specificAtomsData[index] }}
+      {{ specificAtomsData[atomIndex] }}
     </p>
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
       "updateSelectedAtomPosition"
     ]),
     highlightLabels: function() {
-      this.updateSelectedAtomPosition(this.placement);
+      this.updateSelectedAtomPosition(this.atomPlacement);
     }
   },
   created: function() {
@@ -47,8 +47,8 @@ export default {
   },
   props: {
     atomData: Object,
-    index: Number,
-    placement: Object
+    atomIndex: Number,
+    atomPlacement: Object
   }
 };
 </script>

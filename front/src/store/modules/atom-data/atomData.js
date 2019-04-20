@@ -34,8 +34,10 @@ const mutations = {
     state.selectedAtom = {}; // Object.assign does not clear old properties, so this does (inefficient, but works)
     state.selectedAtom = Object.assign({}, state.selectedAtom, atomTab);
   },
+  // Updates object of the position data of elements (DOMRect)
   updateSelectedAtomPosition: function(state, payload) {
-    state.selectedAtomPosition = payload;
+    state.selectedAtomPosition = {};
+    state.selectedAtomPosition = Object.assign({}, state.selectedAtomPosition, payload);
   },
   updateSpecificAtomsData: function(state, key) {
     let newSpecificAtomsData = [];
