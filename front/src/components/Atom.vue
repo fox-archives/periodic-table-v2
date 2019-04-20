@@ -1,7 +1,9 @@
 <template>
   <div
     class="atom-inner"
-    @mouseover="[updateSelectedAtom(atomData.atomicNumber), highlightLabels]"
+    @mouseover="
+      [updateSelectedAtom(atomData.atomicNumber), updateActiveLabel(atomIndex)]
+    "
     :style="currentTheme.atom[mouseState]"
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
@@ -34,13 +36,8 @@ export default {
     ...mapState("atomData/", ["specificAtomsData"])
   },
   methods: {
-    ...mapMutations("atomData/", [
-      "updateSelectedAtom",
-      "updateSelectedAtomPosition"
-    ]),
-    highlightLabels: function() {
-      this.updateSelectedAtomPosition(this.atomPlacement);
-    }
+    ...mapMutations("atomData/", ["updateSelectedAtom"]),
+    ...mapMutations("labelData/", ["updateActiveLabel"])
   },
   created: function() {
     // Looking for resize font size via debounce on window width update? Code in PeriodicTable.vue

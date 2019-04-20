@@ -1,7 +1,7 @@
 <template>
   <div
     class="label"
-    :class="{ active: checkLabelActive }"
+    :class="{ active: updateActiveLabel }"
     :style="currentTheme.label[mouseState]"
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
@@ -22,14 +22,16 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("atomData/", ["selectedAtomPosition"]),
-    checkLabelActive: function() {
-      return this.selectedAtomPosition[this.labelType] === this.labelNumber;
-    }
+    updateActiveLabel: function() {}
   },
   props: {
     labelNumber: Number,
-    labelType: String
+    labelType: {
+      type: String,
+      validator: function(value) {
+        return value === "period" || value === "group";
+      }
+    }
   }
 };
 </script>
@@ -50,7 +52,6 @@ export default {
 }
 
 .active {
-  position: relative;
-  top: 5px;
+  background-color: blue;
 }
 </style>

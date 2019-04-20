@@ -23,20 +23,20 @@
           ></atom-z>
         </div>
         <div
-          v-for="rowLabel in 7"
-          :key="'row' + rowLabel"
+          v-for="periodLabelIndex in periodLabels.length"
+          :key="'row' + periodLabelIndex"
           class="label-outer"
-          :style="positionRowLabel(rowLabel)"
+          :style="positionRowLabel(periodLabelIndex)"
         >
-          <label-z :labelNumber="rowLabel" labelType="period" />
+          <label-z :labelNumber="periodLabelIndex" labelType="period" />
         </div>
         <div
-          v-for="columnLabel in 18"
-          :key="'column' + columnLabel"
+          v-for="groupLabel in groupLabels.length"
+          :key="'column' + groupLabel"
           class="label-outer"
-          :style="positionColumnLabel(columnLabel)"
+          :style="positionColumnLabel(groupLabel)"
         >
-          <label-z :labelNumber="columnLabel" labelType="group" />
+          <label-z :labelNumber="groupLabel" labelType="group" />
         </div>
       </section>
     </div>
@@ -58,7 +58,8 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("atomData/", ["tabAtomsData"])
+    ...mapState("atomData/", ["tabAtomsData"]),
+    ...mapState("labelData/", ["periodLabels", "groupLabels"])
   },
   methods: {
     ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"]),

@@ -14,10 +14,7 @@ const state = {
   },
 
   /* Highlighted labels will depend on this */
-  selectedAtomPosition: {},
-
-  /* Highlighted periods and groups will depend on this */
-  selectedLabelPosition: {}
+  selectedAtomPosition: {}
 };
 
 const getters = {};
@@ -29,15 +26,11 @@ const mutations = {
     let index = atomicNumber - 1;
 
     // Extract atom from list of tabAtomsData
-    let atomTab = state.tabAtomsData[index];
+    let atomFromTabsAtomsData = state.tabAtomsData[index];
 
-    state.selectedAtom = {}; // Object.assign does not clear old properties, so this does (inefficient, but works)
-    state.selectedAtom = Object.assign({}, state.selectedAtom, atomTab);
-  },
-  // Updates object of the position data of elements (DOMRect)
-  updateSelectedAtomPosition: function(state, payload) {
-    state.selectedAtomPosition = {};
-    state.selectedAtomPosition = Object.assign({}, state.selectedAtomPosition, payload);
+    state.selectedAtom = atomFromTabsAtomsData;
+    // state.selectedAtom = {}; // Object.assign does not clear old properties, so this does (inefficient, but works)
+    // state.selectedAtom = Object.assign({}, state.selectedAtom, atomTab);
   },
   updateSpecificAtomsData: function(state, key) {
     let newSpecificAtomsData = [];
