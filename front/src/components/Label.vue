@@ -1,7 +1,7 @@
 <template>
   <div
     class="label"
-    :class="{ active: updateActiveLabel }"
+    :class="groupLabels[labelNumber - 1]"
     :style="currentTheme.label[mouseState]"
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
@@ -22,7 +22,7 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    updateActiveLabel: function() {}
+    ...mapState("labelData/", ["periodLabels", "groupLabels"])
   },
   props: {
     labelNumber: Number,

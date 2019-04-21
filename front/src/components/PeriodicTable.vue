@@ -47,7 +47,7 @@
 import { mapState, mapActions } from "vuex";
 import Atom from "@/components/Atom";
 import Label from "@/components/Label";
-import AtomPlacements from "../../../wolf/generic-atom-data/placement.json";
+import atomPlacements from "../../../wolf/generic-atom-data/placement.json";
 
 export default {
   name: "PeriodicTable",
@@ -64,7 +64,7 @@ export default {
   methods: {
     ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"]),
     atomPlacementData: function(index) {
-      return AtomPlacements[index];
+      return atomPlacements[index];
     },
     positionAtom: function(index) {
       let row = this.atomPlacementData(index).row + 1;
