@@ -28,7 +28,7 @@
           class="label-outer"
           :style="positionRowLabel(periodLabelIndex)"
         >
-          <label-z :labelNumber="periodLabelIndex" labelType="period" />
+          <label-period :labelNumber="periodLabelIndex" />
         </div>
         <div
           v-for="groupLabel in groupLabels.length"
@@ -36,7 +36,7 @@
           class="label-outer"
           :style="positionColumnLabel(groupLabel)"
         >
-          <label-z :labelNumber="groupLabel" labelType="group" />
+          <label-group :labelNumber="groupLabel" />
         </div>
       </section>
     </div>
@@ -46,7 +46,8 @@
 <script>
 import { mapState, mapActions } from "vuex";
 import Atom from "@/components/Atom";
-import Label from "@/components/Label";
+import LabelPeriod from "@/components/LabelPeriod";
+import LabelGroup from "@/components/LabelGroup";
 import atomPlacements from "../../../wolf/generic-atom-data/placement.json";
 
 export default {
@@ -132,7 +133,8 @@ export default {
   },
   components: {
     "atom-z": Atom,
-    "label-z": Label
+    "label-period": LabelPeriod,
+    "label-group": LabelGroup
   }
 };
 </script>

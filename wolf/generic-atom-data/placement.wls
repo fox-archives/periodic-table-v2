@@ -40,7 +40,7 @@ getGroup[value_, i_]:= (
 		MissingQ[value] == False,
 			Return[value];,
 		True,
-			Return["NOGROUP"]
+			Return["NO_GROUP"]
 	];
 )
 	
