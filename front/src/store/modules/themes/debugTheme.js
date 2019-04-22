@@ -16,61 +16,30 @@ export default {
     { "--color": oc.gray3 }
   ],
 
-  // The large icon text or graphic, enlarged view of basic atom data
-  atomGraphic: {
-    default: {
-      backgroundColor: oc.gray9,
-      border: "1px solid " + oc.grape8,
-      boxShadow: "1px 1px 2px " + oc.gray5,
-      color: oc.gray3,
-      transition: "all .15s"
-    },
-    hover: {
-      backgroundColor: oc.gray9,
-      border: "1px solid " + oc.grape8,
-      boxShadow: "2px 2px 4px " + oc.gray5,
-      color: oc.gray3,
-      transition: "all .15s"
-    }
-  },
+  atomGraphic: [
+    { "--background-color": oc.gray9 },
+    { "--border": oc.grape8 },
+    { "--box-shadow": oc.gray6 },
+    { "--box-shadow_hover": oc.gray4 },
+    { "--color": oc.gray3 }
+  ],
 
-  // List of all information of a particular atom
-  atomInformation: {
-    // Box that surrounds all the boxes of information. It contains all atomInformation
-    information: {
-      default: {
-        backgroundColor: oc.gray9,
-        border: "1px solid " + oc.red8,
-        boxShadow: "1px 1px 2px " + oc.gray5,
-        color: oc.gray3,
-        transition: "all .15s"
-      },
-      hover: {
-        backgroundColor: oc.gray9,
-        border: "1px solid " + oc.red8,
-        boxShadow: "2px 2px 4px " + oc.gray5,
-        color: oc.gray3,
-        transition: "all .15s"
-      }
-    },
-    // The actual box with one piece of information
-    box: {
-      default: {
-        backgroundColor: oc.gray8,
-        border: "1px solid " + oc.green8,
-        boxShadow: "1px 1px 2px " + oc.gray5,
-        color: oc.gray3,
-        transition: "all .15s"
-      },
-      hover: {
-        backgroundColor: oc.gray7,
-        border: "1px solid " + oc.green8,
-        boxShadow: "2px 2px 4px " + oc.gray5,
-        color: oc.gray3,
-        transition: "all .15s"
-      }
-    }
-  },
+  // Box that surrounds all the boxes of information. It contains all atomInformation
+  atomInformation: [
+    { "--background-color": oc.gray9 },
+    { "--border": oc.red8 },
+    { "--box-shadow": oc.gray6 },
+    { "--box-shadow_hover": oc.gray4 },
+    { "--color": oc.gray3 }
+  ],
+
+  atomInformationBox: [
+    { "--background-color": oc.gray8 },
+    { "--border": oc.green8 },
+    { "--box-shadow": oc.gray6 },
+    { "--box-shadow_hover": oc.gray4 },
+    { "--color": oc.gray3 }
+  ],
 
   // The periodic table in general
   periodicTable: {
