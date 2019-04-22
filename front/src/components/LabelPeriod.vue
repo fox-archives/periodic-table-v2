@@ -1,7 +1,7 @@
 <template>
   <div
     class="label"
-    :class="groupLabels[labelNumber - 1]"
+    :class="periodLabels[labelNumber - 1]"
     :style="currentTheme.label[mouseState]"
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
@@ -14,7 +14,7 @@
 import { mapState } from "vuex";
 
 export default {
-  name: "Label",
+  name: "LabelPeriod",
   data: function() {
     return {
       mouseState: "default"
@@ -22,16 +22,10 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("labelData/", ["periodLabels", "groupLabels"])
+    ...mapState("labelData/", ["periodLabels"])
   },
   props: {
-    labelNumber: Number,
-    labelType: {
-      type: String,
-      validator: function(value) {
-        return value === "period" || value === "group";
-      }
-    }
+    labelNumber: Number
   }
 };
 </script>

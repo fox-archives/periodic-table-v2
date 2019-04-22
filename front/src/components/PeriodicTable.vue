@@ -9,30 +9,34 @@
       @mouseenter="mouseState = 'hover'"
       @mouseleave="mouseState = 'default'"
     >
-      <section class="grid" v-if="tabAtomsData">
+      <section class="grid" v-if="tabAtomsData" ref="periodicTableGrid">
         <div
           class="atom-outer"
           v-for="(atomData, index) in tabAtomsData"
           v-bind:key="atomData.name"
           :style="positionAtom(index)"
         >
-          <atom-z :atomData="atomData" :index="index"></atom-z>
+          <atom-z
+            :atomData="atomData"
+            :atomIndex="index"
+            :atomPlacement="atomPlacementData(index)"
+          ></atom-z>
         </div>
         <div
-          v-for="rowLabel in 7"
-          :key="'row' + rowLabel"
+          v-for="periodLabel in periodLabels.length"
+          :key="'row' + periodLabel"
           class="label-outer"
-          :style="positionRowLabel(rowLabel)"
+          :style="positionRowLabel(periodLabel)"
         >
-          <label-z :label="rowLabel" />
+          <label-period :labelNumber="periodLabel" />
         </div>
         <div
-          v-for="columnLabel in 18"
-          :key="'column' + columnLabel"
+          v-for="groupLabel in groupLabels.length"
+          :key="'column' + groupLabel"
           class="label-outer"
-          :style="positionColumnLabel(columnLabel)"
+          :style="positionColumnLabel(groupLabel)"
         >
-          <label-z :label="columnLabel" />
+          <label-group :labelNumber="groupLabel" />
         </div>
       </section>
     </div>
@@ -40,10 +44,11 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from "vuex";
+import { mapState, mapActions } from "vuex";
 import Atom from "@/components/Atom";
-import Label from "@/components/Label";
-import AtomPlacements from "../../../wolf/generic-atom-data/placement.json";
+import LabelPeriod from "@/components/LabelPeriod";
+import LabelGroup from "@/components/LabelGroup";
+import atomPlacements from "../../../wolf/generic-atom-data/placement.json";
 
 export default {
   name: "PeriodicTable",
@@ -54,14 +59,17 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapGetters("atomData/", ["tabAtomsData", "specificAtomsData"])
+    ...mapState("atomData/", ["tabAtomsData"]),
+    ...mapState("labelData/", ["periodLabels", "groupLabels"])
   },
   methods: {
     ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"]),
+    atomPlacementData: function(index) {
+      return atomPlacements[index];
+    },
     positionAtom: function(index) {
-      let atomLocation = AtomPlacements[index];
-      let row = atomLocation.row + 1;
-      let column = atomLocation.column + 1;
+      let row = this.atomPlacementData(index).row + 1;
+      let column = this.atomPlacementData(index).column + 1;
 
       return {
         "grid-area": `${row} / ${column} / ${row + 1} / ${column}`
@@ -76,6 +84,26 @@ export default {
       return {
         "grid-area": `${rowLabel + 1} / ${1} / ${rowLabel + 2} / ${2}`
       };
+    },
+    adjustFontSize: function(periodicTableDOMRect) {
+      let tableWidth = periodicTableDOMRect.width;
+      // Setting variables on `html` element, since manually changing inline styles is too much
+      document.documentElement.style.setProperty(
+        "--atom-atomic-number-font-size",
+        `${tableWidth * 0.012}px`
+      );
+      document.documentElement.style.setProperty(
+        "--atom-abbreviation-font-size",
+        `${tableWidth * 0.022}px`
+      );
+      document.documentElement.style.setProperty(
+        "--atom-name-font-size",
+        `${tableWidth * 0.012}px`
+      );
+      document.documentElement.style.setProperty(
+        "--atom-dynamic-font-size",
+        `${tableWidth * 0.022}px`
+      );
     }
   },
   watch: {
@@ -91,10 +119,22 @@ export default {
       tab: this.$route.meta.tab
     };
     this.fetchUpdatePeriodicTableData(dataToFetch);
+    // TODO: Debounce etc. this guy
+    this.$nextTick(() => {
+      // Recall this may set value of zero just after setting the size (although we probably don't need to worry about that here)
+      let periodicTableDOMRect = this.$refs.periodicTableGrid.getBoundingClientRect();
+      this.adjustFontSize(periodicTableDOMRect);
+
+      window.addEventListener("resize", () => {
+        let periodicTableDOMRect = this.$refs.periodicTableGrid.getBoundingClientRect();
+        this.adjustFontSize(periodicTableDOMRect);
+      });
+    });
   },
   components: {
     "atom-z": Atom,
-    "label-z": Label
+    "label-period": LabelPeriod,
+    "label-group": LabelGroup
   }
 };
 </script>

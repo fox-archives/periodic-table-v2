@@ -14,7 +14,7 @@
 import { mapState } from "vuex";
 
 export default {
-  name: "Label",
+  name: "LabelGroup",
   data: function() {
     return {
       mouseState: "default"
@@ -22,16 +22,10 @@ export default {
   },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("labelData/", ["periodLabels", "groupLabels"])
+    ...mapState("labelData/", ["groupLabels"])
   },
   props: {
-    labelNumber: Number,
-    labelType: {
-      type: String,
-      validator: function(value) {
-        return value === "period" || value === "group";
-      }
-    }
+    labelNumber: Number
   }
 };
 </script>
@@ -49,9 +43,5 @@ export default {
 
 .label:hover {
   cursor: pointer;
-}
-
-.active {
-  background-color: blue;
 }
 </style>

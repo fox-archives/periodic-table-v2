@@ -1,20 +1,22 @@
 <template>
   <div
     class="atom-inner"
-    @mouseover="updateSelectedAtom(atomData.atomicNumber)"
+    @mouseover="
+      [updateSelectedAtom(atomData.atomicNumber), updateActiveLabel(atomIndex)]
+    "
     :style="currentTheme.atom[mouseState]"
     @mouseenter="mouseState = 'hover'"
     @mouseleave="mouseState = 'default'"
   >
-    <p class="atomic-number" :style="fontSize.atomicNumber">
+    <p class="atomic-number">
       {{ atomData.atomicNumber }}
     </p>
-    <p class="abbreviation" :style="fontSize.abbreviation">
+    <p class="abbreviation">
       <b>{{ atomData.abbreviation }}</b>
     </p>
-    <h3 class="name" :style="fontSize.name">{{ atomData.name }}</h3>
-    <p class="dynamic" :style="fontSize.dynamic">
-      {{ specificAtomsData[index] }}
+    <h3 class="name">{{ atomData.name }}</h3>
+    <p class="dynamic-value">
+      {{ specificAtomsData[atomIndex] }}
     </p>
   </div>
 </template>
@@ -26,13 +28,7 @@ export default {
   name: "Atom",
   data: function() {
     return {
-      mouseState: "default",
-      fontSize: {
-        atomicNumber: { fontSize: "1rem" },
-        abbreviation: { fontSize: "1.3rem" },
-        name: { fontSize: "0.8rem" },
-        dynamic: { fontSize: "1rem" }
-      }
+      mouseState: "default"
     };
   },
   computed: {
@@ -41,19 +37,15 @@ export default {
   },
   methods: {
     ...mapMutations("atomData/", ["updateSelectedAtom"]),
-    adjustFontSize: function() {}
+    ...mapMutations("labelData/", ["updateActiveLabel"])
   },
   created: function() {
-    // TODO: Debounce etc. this guy
-    this.$nextTick(() => {
-      window.addEventListener("resize", () => {
-        this.adjustFontSize();
-      });
-    });
+    // Looking for resize font size via debounce on window width update? Code in PeriodicTable.vue
   },
   props: {
     atomData: Object,
-    index: Number
+    atomIndex: Number,
+    atomPlacement: Object
   }
 };
 </script>
@@ -74,5 +66,21 @@ export default {
 
 .atom-inner:hover {
   cursor: pointer;
+}
+
+.atomic-number {
+  font-size: var(--atom-atomic-number-font-size);
+}
+
+.abbreviation {
+  font-size: var(--atom-abbreviation-font-size);
+}
+
+.name {
+  font-size: var(--atom-name-font-size);
+}
+
+.dynamic-value {
+  font-size: var(--atom-dynamic-font-size);
 }
 </style>
