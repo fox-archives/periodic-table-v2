@@ -2,9 +2,7 @@ import oc from "@/store/modules/themes/commonThemeVariables";
 
 export default {
   // The overall app, like the background and stuff
-  app: [
-    { "background-color": oc.black }
-  ],
+  app: [{ "background-color": oc.black }],
   // The navigation bar
   navigation: [
     { "--background-color": oc.gray9 },
@@ -48,22 +46,13 @@ export default {
   ],
 
   // Each single atom (atom-inner) styling
-  atom: {
-    default: {
-      backgroundColor: oc.gray8,
-      border: "1px solid " + oc.yellow8,
-      boxShadow: "1px 1px 2px " + oc.gray6,
-      color: oc.gray3,
-      transition: "all .15s"
-    },
-    hover: {
-      backgroundColor: oc.gray8,
-      border: "1px solid " + oc.yellow8,
-      boxShadow: "2px 2px 4px " + oc.gray6,
-      color: oc.gray3,
-      transition: "all .15s"
-    }
-  },
+  atom: [
+    { "--background-color": oc.gray8 },
+    { "--border": oc.yellow8 },
+    { "--box-shadow": oc.gray6 },
+    { "--box-shadow_hover": oc.gray4 },
+    { "--color": oc.gray3 }
+  ],
 
   // Each column and row label (label-inner) styling
   label: [
