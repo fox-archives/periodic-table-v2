@@ -47,7 +47,11 @@ export default {
   color: var(--color);
 }
 
-.label:hover, .label.active {
+.label:hover {
   box-shadow: 1px 1px 2px var(--box-shadow_hover);
+}
+
+.label.active {
+  background-color: var(--background-color_c-active);
 }
 </style>

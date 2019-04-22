@@ -1,9 +1,10 @@
 import oc from "@/store/modules/themes/commonThemeVariables";
 
 export default {
-  // The overall app, like the background and stuff
+  // Root app instance
   app: [{ "background-color": oc.black }],
-  // The navigation bar
+
+  // Navigation bar
   navigation: [
     { "--background-color": oc.gray9 },
     { "--background-color_hover": oc.gray8 },
@@ -12,6 +13,7 @@ export default {
     { "--color": oc.gray3 }
   ],
 
+  // Box surrounding the element atomic number, abbreviation, and the name
   atomGraphic: [
     { "--background-color": oc.gray9 },
     { "--border": oc.grape8 },
@@ -57,11 +59,13 @@ export default {
   // Each column and row label (label-inner) styling
   label: [
     { "--background-color": oc.gray8 },
+    { "--background-color_c-active" : oc.gray7 },
     { "--border": oc.orange8 },
     { "--box-shadow": oc.gray6 },
     { "--box-shadow_hover": oc.gray4 },
     { "--color": oc.gray3 }
   ],
 
+  // Footer
   footer: [{ "--color": oc.gray3 }]
 };

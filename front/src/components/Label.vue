@@ -51,7 +51,7 @@ export default {
   cursor: pointer;
 }
 
-.active {
+.label.active {
   background-color: blue;
 }
 </style>
