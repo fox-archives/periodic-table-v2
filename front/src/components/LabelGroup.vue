@@ -1,7 +1,7 @@
 <template>
   <div
     class="label"
-    :class="groupLabels[labelNumber - 1]"
+    :class="[...groupLabels[labelNumber - 1]]"
     :style="[...currentTheme.label]"
   >
     {{ labelNumber }}
@@ -47,7 +47,7 @@ export default {
   color: var(--color);
 }
 
-.label:hover {
+.label:hover, .label.active {
   box-shadow: 1px 1px 2px var(--box-shadow_hover);
 }
 </style>
