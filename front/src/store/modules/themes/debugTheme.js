@@ -59,7 +59,7 @@ export default {
   // Each column and row label (label-inner) styling
   label: [
     { "--background-color": oc.gray8 },
-    { "--background-color_c-active" : oc.gray7 },
+    { "--background-color_c-active": oc.gray7 },
     { "--border": oc.orange8 },
     { "--box-shadow": oc.gray6 },
     { "--box-shadow_hover": oc.gray4 },

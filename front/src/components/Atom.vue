@@ -4,6 +4,7 @@
     @mouseover="
       [updateSelectedAtom(atomData.atomicNumber), updateActiveLabel(atomIndex)]
     "
+    @mouseleave="updateActiveLabel(-1)"
     :style="[...currentTheme.atom]"
   >
     <p class="atomic-number">
