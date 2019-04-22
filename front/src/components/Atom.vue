@@ -4,9 +4,7 @@
     @mouseover="
       [updateSelectedAtom(atomData.atomicNumber), updateActiveLabel(atomIndex)]
     "
-    :style="currentTheme.atom[mouseState]"
-    @mouseenter="mouseState = 'hover'"
-    @mouseleave="mouseState = 'default'"
+    :style="[...currentTheme.atom]"
   >
     <p class="atomic-number">
       {{ atomData.atomicNumber }}
@@ -26,11 +24,6 @@ import { mapState, mapMutations } from "vuex";
 
 export default {
   name: "Atom",
-  data: function() {
-    return {
-      mouseState: "default"
-    };
-  },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
     ...mapState("atomData/", ["specificAtomsData"])
@@ -82,5 +75,18 @@ export default {
 
 .dynamic-value {
   font-size: var(--atom-dynamic-font-size);
+}
+</style>
+
+<style scoped>
+.atom-inner {
+  background-color: var(--background-color);
+  border: 1px solid var(--border);
+  box-shadow: 1px 1px 2px var(--box-shadow);
+  color: var(--color);
+}
+
+.atom-inner:hover {
+  box-shadow: 1px 1px 2px var(--box-shadow_hover);
 }
 </style>

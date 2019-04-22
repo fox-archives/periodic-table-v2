@@ -3,12 +3,7 @@
     <div v-if="!tabAtomsData">
       <p>LOADING DATA HERE</p>
     </div>
-    <div
-      class="grid-wrapper-outer"
-      :style="currentTheme.periodicTable[mouseState]"
-      @mouseenter="mouseState = 'hover'"
-      @mouseleave="mouseState = 'default'"
-    >
+    <div class="grid-wrapper-outer" :style="[...currentTheme.periodicTable]">
       <section class="grid" v-if="tabAtomsData" ref="periodicTableGrid">
         <div
           class="atom-outer"
@@ -167,5 +162,17 @@ export default {
 .atom-outer {
   position: relative;
   overflow: visible; /* So shadows appear */
+}
+</style>
+
+<style scoped>
+.grid-wrapper-outer {
+  background-color: var(--background-color);
+  border: 1px solid var(--border);
+  box-shadow: 1px 1px 2px var(--box-shadow);
+}
+
+.grid-wrapper-outer:hover {
+  box-shadow: 2px 2px 4px var(--box-shadow_hover);
 }
 </style>

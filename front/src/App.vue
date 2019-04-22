@@ -1,5 +1,5 @@
 <template>
-  <div class="app-outer" :style="currentTheme.app.default">
+  <div class="app-outer" :style="[...currentTheme.app]">
     <div class="app">
       <navigation />
       <router-view class="router-view" />
@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
 * {
   box-sizing: border-box;
   padding: 0;
@@ -43,7 +43,7 @@ export default {
   grid-template-rows: max-content 1fr max-content;
   margin: 0 10px;
   height: 100%;
-  // If this is enabled, then scrollbar appears (since margin is added to the width of 100%
+  /* If this is enabled, then scrollbar appears (since margin is added to the width of 100% */
   /*width: 100%;*/
 }
 </style>
