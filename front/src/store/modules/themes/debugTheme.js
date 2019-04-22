@@ -8,29 +8,13 @@ export default {
     }
   },
   // The navigation bar
-  navigation: {
-    default: {
-      backgroundColor: oc.gray9,
-      border: "1px solid " + oc.blue8,
-      boxShadow: "1px 1px 2px " + oc.gray5,
-      color: oc.gray3,
-      transition: "all .15s"
-    },
-    hover: {
-      backgroundColor: oc.gray8,
-      border: "1px solid " + oc.blue8,
-      boxShadow: "2px 2px 4px " + oc.gray5,
-      color: oc.gray3,
-      transition: "all .15s"
-    },
-    click: {
-      backgroundColor: oc.gray8,
-      border: "1px solid " + oc.blue8,
-      boxShadow: "2px 2px 4px " + oc.gray5,
-      color: oc.gray3,
-      transition: "all .15s"
-    }
-  },
+  navigation: [
+    { "--background-color": oc.gray9 },
+    { "--background-color_hover": oc.gray8 },
+    { "--border": oc.blue8 },
+    { "--box-shadow": oc.gray5 },
+    { "--color": oc.gray3 }
+  ],
 
   // The large icon text or graphic, enlarged view of basic atom data
   atomGraphic: {
