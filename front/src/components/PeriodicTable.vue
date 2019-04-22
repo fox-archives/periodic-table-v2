@@ -23,12 +23,12 @@
           ></atom-z>
         </div>
         <div
-          v-for="periodLabelIndex in periodLabels.length"
-          :key="'row' + periodLabelIndex"
+          v-for="periodLabel in periodLabels.length"
+          :key="'row' + periodLabel"
           class="label-outer"
-          :style="positionRowLabel(periodLabelIndex)"
+          :style="positionRowLabel(periodLabel)"
         >
-          <label-period :labelNumber="periodLabelIndex" />
+          <label-period :labelNumber="periodLabel" />
         </div>
         <div
           v-for="groupLabel in groupLabels.length"
