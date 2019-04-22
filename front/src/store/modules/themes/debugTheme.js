@@ -2,11 +2,9 @@ import oc from "@/store/modules/themes/commonThemeVariables";
 
 export default {
   // The overall app, like the background and stuff
-  app: {
-    default: {
-      backgroundColor: oc.black
-    }
-  },
+  app: [
+    { "background-color": oc.black }
+  ],
   // The navigation bar
   navigation: [
     { "--background-color": oc.gray9 },
@@ -42,20 +40,12 @@ export default {
   ],
 
   // The periodic table in general
-  periodicTable: {
-    default: {
-      backgroundColor: oc.gray9,
-      border: "1px solid " + oc.violet8,
-      boxShadow: "1px 1px 2px " + oc.gray6,
-      transition: "all .15s"
-    },
-    hover: {
-      backgroundColor: oc.gray9,
-      border: "1px solid " + oc.violet8,
-      boxShadow: "2px 2px 4px " + oc.gray6,
-      transition: "all .15s"
-    }
-  },
+  periodicTable: [
+    { "--background-color": oc.gray9 },
+    { "--border": oc.violet8 },
+    { "--box-shadow": oc.gray6 },
+    { "--box-shadow_hover": oc.gray4 }
+  ],
 
   // Each single atom (atom-inner) styling
   atom: {
@@ -76,20 +66,13 @@ export default {
   },
 
   // Each column and row label (label-inner) styling
-  label: {
-    default: {
-      backgroundColor: oc.gray8,
-      border: "1px solid " + oc.orange8,
-      boxShadow: "1px 1px 2px " + oc.gray6,
-      color: oc.gray3,
-      transition: "all .15s"
-    },
-    hover: {
-      backgroundColor: oc.gray8,
-      border: "1px solid " + oc.orange8,
-      boxShadow: "2px 2px 4px " + oc.gray6,
-      color: oc.gray3,
-      transition: "all .15s"
-    }
-  }
+  label: [
+    { "--background-color": oc.gray8 },
+    { "--border": oc.orange8 },
+    { "--box-shadow": oc.gray6 },
+    { "--box-shadow_hover": oc.gray4 },
+    { "--color": oc.gray3 }
+  ],
+
+  footer: [{ "--color": oc.gray3 }]
 };
