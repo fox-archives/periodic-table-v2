@@ -98,14 +98,14 @@ export default {
     }
   },
   watch: {
-    $route: function() {
+    $route() {
       let dataToFetch = {
         tab: this.$route.meta.tab
       };
       this.fetchUpdatePeriodicTableData(dataToFetch);
     }
   },
-  created: function() {
+  created() {
     let dataToFetch = {
       tab: this.$route.meta.tab
     };

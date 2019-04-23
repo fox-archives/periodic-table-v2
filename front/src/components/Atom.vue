@@ -34,7 +34,7 @@ export default {
     ...mapMutations("atomData/", ["updateSelectedAtom"]),
     ...mapMutations("labelData/", ["updateActiveLabels"])
   },
-  created: function() {
+  created() {
     // Looking for resize font size via debounce on window width update? Code in PeriodicTable.vue
   },
   props: {
