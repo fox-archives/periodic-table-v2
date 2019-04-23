@@ -5,7 +5,9 @@ export default {
   app: [{ "background-color": oc.black }],
 
   // Navigation bar
-  navigation: [
+  navigationBar: [{ "--background-color_c-router-link-active": oc.gray7 }],
+
+  navigationItem: [
     { "--background-color": oc.gray9 },
     { "--background-color_hover": oc.gray8 },
     { "--border": oc.blue8 },

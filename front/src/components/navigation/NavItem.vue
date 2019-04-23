@@ -1,5 +1,5 @@
 <template>
-  <li class="nav-item-outer" :style="[...currentTheme.navigation]">
+  <li class="nav-item-outer" :style="[...currentTheme.navigationItem]">
     <slot />
   </li>
 </template>

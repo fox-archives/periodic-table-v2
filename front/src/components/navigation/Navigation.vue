@@ -1,5 +1,5 @@
 <template>
-  <nav class="navigation">
+  <nav class="navigation" :style="[...currentTheme.navigationBar]">
     <ul class="navigation-list">
       <router-link tag="p" to="/properties">
         <nav-item>Properties</nav-item>
@@ -24,10 +24,14 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 import NavItem from "@/components/navigation/NavItem";
 
 export default {
   name: "Navigation",
+  computed: {
+    ...mapState("themes/", ["currentTheme"])
+  },
   components: {
     "nav-item": NavItem
   }
@@ -42,5 +46,9 @@ export default {
 .navigation-list {
   display: flex;
   list-style-type: none;
+}
+
+.router-link-active li {
+  background-color: var(--background-color_c-router-link-active) !important;
 }
 </style>
