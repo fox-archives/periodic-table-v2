@@ -50,6 +50,7 @@ export default {
   // Each single atom (atom-inner) styling
   atom: [
     { "--background-color": oc.gray8 },
+    { "--background-color_c-active": oc.gray7 },
     { "--border": oc.yellow8 },
     { "--box-shadow": oc.gray6 },
     { "--box-shadow_hover": oc.gray4 },

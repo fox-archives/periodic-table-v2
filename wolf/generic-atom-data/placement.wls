@@ -76,8 +76,8 @@ For[i = 1, i < 119, i++,
 			"column" -> 3,
 			"row" -> 6,
 			
-			"group" -> 3,
-			"period" -> 6
+			"group" -> "NO_GROUP",
+			"period" -> "NO_PERIOD"
 		};
 		periodicTable = Append[periodicTable, lanth];
 	];
@@ -88,8 +88,8 @@ For[i = 1, i < 119, i++,
 			"column" -> 3,
 			"row" -> 7,
 
-			"group" -> 3,
-			"period" -> 7
+			"group" -> "NO_GROUP",
+			"period" -> "NO_PERIOD"
 		};
 		periodicTable = Append[periodicTable, act];
 	];

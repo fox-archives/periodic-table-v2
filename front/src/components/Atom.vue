@@ -5,7 +5,7 @@
     @mouseover="
       [updateSelectedAtom(atomData.atomicNumber), updateActiveLabels(atomIndex)]
     "
-    @mouseleave="updateActiveLabels(atomIndex)"
+    @mouseleave="updateActiveLabels(-1)"
     :style="[...currentTheme.atom]"
   >
     <p class="atomic-number">
@@ -90,5 +90,9 @@ export default {
 
 .atom-inner:hover {
   box-shadow: 1px 1px 2px var(--box-shadow_hover);
+}
+
+.atom-inner.active {
+  background-color: var(--background-color_c-active);
 }
 </style>

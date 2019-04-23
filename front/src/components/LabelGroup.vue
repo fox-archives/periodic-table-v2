@@ -3,7 +3,8 @@
     class="label"
     :class="[...groupLabelsActive[labelIndex]]"
     :style="[...currentTheme.label]"
-    @mouseover="[updateActiveAtoms(labelIndex)]"
+    @mouseover="[updateActiveAtoms({ labelIndex, labelType: 'group' })]"
+    @mouseleave="[updateActiveAtoms({ labelIndex: -1, labelType: 'group' })]"
   >
     {{ labelIndex + 1 }}
   </div>

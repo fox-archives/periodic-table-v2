@@ -1,4 +1,6 @@
+import Vue from "vue";
 import api from "@/api/fetchData";
+import atomPlacements from "../../../../../wolf/generic-atom-data/placement.json";
 
 const state = {
   tabAtomsData: [], // Atom data that's dependent on the selected tab
@@ -13,7 +15,8 @@ const state = {
     // Other property data needs to be fetched on a per-route basis (do NOT add it here)
   },
 
-  activeAtoms: new Array(120).fill({ active: false })
+  activeAtoms: new Array(120).fill({ active: false }),
+  activeAtomsLastActive: []
 };
 
 const mutations = {
@@ -37,8 +40,30 @@ const mutations = {
     }
     state.specificAtomsData = newSpecificAtomsData;
   },
-  updateActiveAtoms: function(state, labelNumber) {
-    console.log(labelNumber);
+  updateActiveAtoms: function(state, payload) {
+    let labelIndex, labelType;
+    ({ labelIndex, labelType } = payload);
+
+    if (labelType === "period") labelType = "period";
+    if (labelType === "group") labelType = "group";
+    // console.log(labelType);
+
+    // Reset the old values
+    state.activeAtomsLastActive.forEach(atomsLastActive => {
+      Vue.set(state.activeAtoms, atomsLastActive, { active: false });
+    });
+    state.activeAtomsLastActive = [];
+
+    // labelIndex of -1 means we want to remove any labels
+    if (labelIndex === -1) return;
+
+    // TODO: PRIORITY 2: Refactor for better perf
+    atomPlacements.forEach((atomPlacement, index) => {
+      if (atomPlacement[labelType] === labelIndex + 1) {
+        Vue.set(state.activeAtoms, index, { active: true });
+        state.activeAtomsLastActive.push(index);
+      }
+    });
   }
 };
 

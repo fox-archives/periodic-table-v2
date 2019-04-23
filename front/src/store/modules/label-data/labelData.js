@@ -12,8 +12,6 @@ const state = {
 
 const mutations = {
   updateActiveLabels: function(state, atomIndex) {
-    let atomPlacement = atomPlacements[atomIndex];
-
     // Reset the old values
     Vue.set(state.periodLabelsActive, state.periodLabelLastActive, {
       active: false
@@ -22,7 +20,11 @@ const mutations = {
       active: false
     });
 
+    // atomIndex of -1 it means we want to remove all active labels
+    if (atomIndex === -1) return;
+
     // Set the new values
+    let atomPlacement = atomPlacements[atomIndex];
     Vue.set(state.periodLabelsActive, atomPlacement.period - 1, {
       active: true
     });

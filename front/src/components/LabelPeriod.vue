@@ -3,19 +3,24 @@
     class="label"
     :class="[...periodLabelsActive[labelIndex]]"
     :style="[...currentTheme.label]"
+    @mouseover="[updateActiveAtoms({ labelIndex, labelType: 'period' })]"
+    @mouseleave="[updateActiveAtoms({ labelIndex: -1, labelType: 'period' })]"
   >
     {{ labelIndex + 1 }}
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapMutations } from "vuex";
 
 export default {
   name: "LabelPeriod",
   computed: {
     ...mapState("themes/", ["currentTheme"]),
     ...mapState("labelData/", ["periodLabelsActive"])
+  },
+  methods: {
+    ...mapMutations("atomData/", ["updateActiveAtoms"])
   },
   props: {
     labelIndex: Number
