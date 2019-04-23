@@ -1,24 +1,28 @@
 <template>
   <div
     class="label"
-    :class="[...groupLabels[labelNumber - 1]]"
+    :class="[...groupLabelsActive[labelIndex]]"
     :style="[...currentTheme.label]"
+    @mouseover="[updateActiveAtoms(labelIndex)]"
   >
-    {{ labelNumber }}
+    {{ labelIndex + 1 }}
   </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapMutations } from "vuex";
 
 export default {
   name: "LabelGroup",
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("labelData/", ["groupLabels"])
+    ...mapState("labelData/", ["groupLabelsActive"])
+  },
+  methods: {
+    ...mapMutations("atomData/", ["updateActiveAtoms"]),
   },
   props: {
-    labelNumber: Number
+    labelIndex: Number
   }
 };
 </script>

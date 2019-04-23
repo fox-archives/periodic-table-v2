@@ -1,10 +1,10 @@
 <template>
   <div
     class="label"
-    :class="[...periodLabels[labelNumber - 1]]"
+    :class="[...periodLabelsActive[labelIndex]]"
     :style="[...currentTheme.label]"
   >
-    {{ labelNumber }}
+    {{ labelIndex + 1}}
   </div>
 </template>
 
@@ -15,10 +15,10 @@ export default {
   name: "LabelPeriod",
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("labelData/", ["periodLabels"])
+    ...mapState("labelData/", ["periodLabelsActive"])
   },
   props: {
-    labelNumber: Number
+    labelIndex: Number
   }
 };
 </script>
