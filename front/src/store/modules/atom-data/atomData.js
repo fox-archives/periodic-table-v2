@@ -16,8 +16,6 @@ const state = {
   activeAtoms: new Array(120).fill({ active: false })
 };
 
-const getters = {};
-
 const mutations = {
   // Updates selectedAtom in state, giving that object all existing properties of selected atom
   updateSelectedAtom: function(state, atomicNumber) {
@@ -58,7 +56,6 @@ const actions = {
 export default {
   namespaced: true,
   state,
-  getters,
   mutations,
   actions
 };

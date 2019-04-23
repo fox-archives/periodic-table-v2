@@ -2,7 +2,6 @@ import Vue from "vue";
 import atomPlacements from "../../../../../wolf/generic-atom-data/placement.json";
 
 const state = {
-  // TODO: Rename periodLabels to periodLabelActive etc.
   // 7
   periodLabelsActive: new Array(7).fill({ active: false }),
   periodLabelLastActive: -1,
@@ -10,8 +9,6 @@ const state = {
   groupLabelsActive: new Array(18).fill({ active: false }),
   groupLabelLastActive: -1
 };
-
-const getters = {};
 
 const mutations = {
   updateActiveLabels: function(state, atomIndex) {
@@ -41,6 +38,5 @@ const mutations = {
 export default {
   namespaced: true,
   state,
-  getters,
   mutations
 };

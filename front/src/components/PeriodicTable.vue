@@ -39,6 +39,7 @@
 </template>
 
 <script>
+import { throttle, debounce } from "lodash";
 import { mapState, mapActions } from "vuex";
 import Atom from "@/components/Atom";
 import LabelPeriod from "@/components/LabelPeriod";
@@ -110,16 +111,26 @@ export default {
       tab: this.$route.meta.tab
     };
     this.fetchUpdatePeriodicTableData(dataToFetch);
-    // TODO: Debounce etc. this guy
     this.$nextTick(() => {
       // Recall this may set value of zero just after setting the size (although we probably don't need to worry about that here)
       let periodicTableDOMRect = this.$refs.periodicTableGrid.getBoundingClientRect();
       this.adjustFontSize(periodicTableDOMRect);
 
-      window.addEventListener("resize", () => {
-        let periodicTableDOMRect = this.$refs.periodicTableGrid.getBoundingClientRect();
-        this.adjustFontSize(periodicTableDOMRect);
-      });
+      window.addEventListener(
+        "resize",
+        debounce(() => {
+          let periodicTableDOMRect = this.$refs.periodicTableGrid.getBoundingClientRect();
+          this.adjustFontSize(periodicTableDOMRect);
+        }, 333)
+      );
+
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          let periodicTableDOMRect = this.$refs.periodicTableGrid.getBoundingClientRect();
+          this.adjustFontSize(periodicTableDOMRect);
+        }, 1000)
+      );
     });
   },
   components: {

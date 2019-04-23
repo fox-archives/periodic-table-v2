@@ -20,6 +20,7 @@
     "gulp-run": "^1.7.1",
     "gzip": "^0.1.0",
     "jsonminify": "^0.4.1",
+    "lodash": "^4.17.11",
     "prettier": "^1.16.4"
   },
   "dependencies": {}
