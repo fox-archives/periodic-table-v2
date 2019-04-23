@@ -7,9 +7,9 @@ import labelData from "@/store/modules/label-data/labelData";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    modules: {
-        themes,
-        atomData,
-        labelData
-    }
+  modules: {
+    themes,
+    atomData,
+    labelData
+  }
 });
