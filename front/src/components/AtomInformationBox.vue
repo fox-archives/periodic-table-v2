@@ -2,10 +2,7 @@
   <div
     v-if="dataNotBasic(myKey)"
     class="atom-information-box-inner"
-    :style="currentTheme.atomInformation.box[mouseStateBox]"
-    @mouseenter="mouseStateBox = 'hover'"
-    @mouseleave="mouseStateBox = 'default'"
-    @mousedown="updateSpecificAtomsData(myKey)"
+    :style="[...currentTheme.atomInformationBox]"
   >
     <div class="box-text">
       <p>{{ atomKeyInEnglish(myKey) }}</p>
@@ -20,11 +17,6 @@ import convertKeyToEnglish from "@/components/atomKeyToEnglish";
 
 export default {
   name: "AtomInformationBox",
-  data: function() {
-    return {
-      mouseStateBox: "default"
-    };
-  },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
     ...mapState("atomData/", ["selectedAtom"])
@@ -66,5 +58,18 @@ export default {
 
 .box-text {
   margin: 2px;
+}
+</style>
+
+<style scoped>
+.atom-information-box-inner {
+  background-color: var(--background-color);
+  border: 1px solid var(--border);
+  box-shadow: 2px 2px 4px var(--box-shadow);
+  color: var(--color);
+}
+
+.atom-information-box-inner:hover {
+  box-shadow: 2px 2px 4px var(--box-shadow_hover);
 }
 </style>

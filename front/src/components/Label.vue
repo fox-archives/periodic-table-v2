@@ -2,9 +2,7 @@
   <div
     class="label"
     :class="groupLabels[labelNumber - 1]"
-    :style="currentTheme.label[mouseState]"
-    @mouseenter="mouseState = 'hover'"
-    @mouseleave="mouseState = 'default'"
+    @mouseover="updateActiveAtoms(labelNumber)"
   >
     {{ labelNumber }}
   </div>
@@ -15,11 +13,6 @@ import { mapState } from "vuex";
 
 export default {
   name: "Label",
-  data: function() {
-    return {
-      mouseState: "default"
-    };
-  },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
     ...mapState("labelData/", ["periodLabels", "groupLabels"])
@@ -51,7 +44,7 @@ export default {
   cursor: pointer;
 }
 
-.active {
+.label.active {
   background-color: blue;
 }
 </style>

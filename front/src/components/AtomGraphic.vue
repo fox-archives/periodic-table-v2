@@ -1,10 +1,5 @@
 <template>
-  <div
-    class="graphic-outer"
-    :style="currentTheme.atomGraphic[mouseState]"
-    @mouseenter="mouseState = 'hover'"
-    @mouseleave="mouseState = 'default'"
-  >
+  <div class="graphic-outer" :style="[...currentTheme.atomGraphic]">
     <div class="graphic">
       <div class="graphic-inner">
         <p>{{ selectedAtom.atomicNumber }}</p>
@@ -21,11 +16,6 @@ import { mapState } from "vuex";
 
 export default {
   name: "AtomGraphic",
-  data: function() {
-    return {
-      mouseState: "default"
-    };
-  },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
     ...mapState("atomData/", ["selectedAtom"])
@@ -53,5 +43,18 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+</style>
+
+<style scoped>
+.graphic-outer {
+  background-color: var(--background-color);
+  border: 1px solid var(--border);
+  box-shadow: 2px 2px 4px var(--box-shadow);
+  color: var(--color);
+}
+
+.graphic-outer:hover {
+  box-shadow: 2px 2px 4px var(--box-shadow_hover);
 }
 </style>

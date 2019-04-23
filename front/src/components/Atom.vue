@@ -1,12 +1,12 @@
 <template>
   <div
     class="atom-inner"
+    :class="[...activeAtoms[atomIndex]]"
     @mouseover="
-      [updateSelectedAtom(atomData.atomicNumber), updateActiveLabel(atomIndex)]
+      [updateSelectedAtom(atomData.atomicNumber), updateActiveLabels(atomIndex)]
     "
-    :style="currentTheme.atom[mouseState]"
-    @mouseenter="mouseState = 'hover'"
-    @mouseleave="mouseState = 'default'"
+    @mouseleave="updateActiveLabels(atomIndex)"
+    :style="[...currentTheme.atom]"
   >
     <p class="atomic-number">
       {{ atomData.atomicNumber }}
@@ -26,20 +26,15 @@ import { mapState, mapMutations } from "vuex";
 
 export default {
   name: "Atom",
-  data: function() {
-    return {
-      mouseState: "default"
-    };
-  },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
-    ...mapState("atomData/", ["specificAtomsData"])
+    ...mapState("atomData/", ["specificAtomsData", "activeAtoms"])
   },
   methods: {
     ...mapMutations("atomData/", ["updateSelectedAtom"]),
-    ...mapMutations("labelData/", ["updateActiveLabel"])
+    ...mapMutations("labelData/", ["updateActiveLabels"])
   },
-  created: function() {
+  created() {
     // Looking for resize font size via debounce on window width update? Code in PeriodicTable.vue
   },
   props: {
@@ -82,5 +77,18 @@ export default {
 
 .dynamic-value {
   font-size: var(--atom-dynamic-font-size);
+}
+</style>
+
+<style scoped>
+.atom-inner {
+  background-color: var(--background-color);
+  border: 1px solid var(--border);
+  box-shadow: 1px 1px 2px var(--box-shadow);
+  color: var(--color);
+}
+
+.atom-inner:hover {
+  box-shadow: 1px 1px 2px var(--box-shadow_hover);
 }
 </style>

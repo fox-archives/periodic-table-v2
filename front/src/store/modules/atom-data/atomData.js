@@ -13,8 +13,7 @@ const state = {
     // Other property data needs to be fetched on a per-route basis (do NOT add it here)
   },
 
-  /* Highlighted labels will depend on this */
-  selectedAtomPosition: {}
+  activeAtoms: new Array(120).fill({ active: false })
 };
 
 const getters = {};
@@ -39,6 +38,9 @@ const mutations = {
       newSpecificAtomsData.push(property);
     }
     state.specificAtomsData = newSpecificAtomsData;
+  },
+  updateActiveAtoms: function(state, labelNumber) {
+    console.log(labelNumber);
   }
 };
 
