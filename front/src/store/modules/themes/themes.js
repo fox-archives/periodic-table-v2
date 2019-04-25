@@ -1,5 +1,3 @@
-import lightThemeRegular from "@/store/modules/themes/lightThemeRegular";
-import lightThemeOutline from "@/store/modules/themes/lightThemeOutline";
 import darkThemeRegular from "@/store/modules/themes/darkThemeRegular";
 import debugTheme from "@/store/modules/themes/debugTheme";
 
@@ -11,19 +9,10 @@ const state = {
     name: "Light Theme Regular",
     ...darkThemeRegular
   },
-  lightThemeRegular: {
-    name: "Light Theme Regular",
-    ...lightThemeRegular
-  },
-  lightThemeOutline: {
-    name: "Bare Theme",
-    ...lightThemeOutline
-  },
   darkThemeRegular: {
     name: "Dark Theme Regular",
     ...darkThemeRegular
-  },
-  darkThemeOutline: {}
+  }
 };
 
 export default {
