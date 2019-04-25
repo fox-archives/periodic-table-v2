@@ -2,7 +2,7 @@ import oc from "@/store/modules/themes/commonThemeVariables";
 
 export default {
   // Root app instance
-  app: [{ "background-color": oc.black }],
+  app: [{ "--background-color": oc.black }],
 
   // Navigation bar
   navigationBar: [{ "--background-color_c-router-link-active": oc.gray7 }],

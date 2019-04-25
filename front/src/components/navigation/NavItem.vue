@@ -38,5 +38,10 @@ export default {
 
 .nav-item-outer:hover {
   background-color: var(--background-color_hover);
+  box-shadow: 1px 1px 2px var(--box-shadow_hover);
+}
+
+.nav-item-outer:active {
+  box-shadow: 2px 2px 4px var(--box-shadow_active);
 }
 </style>

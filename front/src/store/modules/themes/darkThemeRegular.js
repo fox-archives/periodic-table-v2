@@ -1,129 +1,65 @@
 import oc from "@/store/modules/themes/commonThemeVariables";
 
 export default {
-  // The overall app, like the background and stuff
-  app: {
-    default: {
-      backgroundColor: oc.black
-    }
-  },
-  // The navigation bar
-  navigation: {
-    default: {
-      backgroundColor: oc.gray9,
-      // boxShadow: "2px 2px 4px " + oc.gray9,
-      color: oc.gray3,
-      transition: "box-shadow .15s"
-    },
-    hover: {
-      backgroundColor: oc.gray8,
-      boxShadow: "2px 2px 4px " + oc.gray7,
-      color: oc.gray3,
-      transition: "box-shadow .15s"
-    },
-    click: {
-      backgroundColor: oc.gray8,
-      boxShadow: "2px 2px 4px " + oc.gray6,
-      color: oc.gray3,
-      transition: "box-shadow .15s"
-    }
-  },
+  // Root app instance
+  app: [{ "--background-color": oc.black }],
 
-  // The large icon text or graphic, enlarged view of basic atom data
-  atomGraphic: {
-    default: {
-      backgroundColor: oc.gray9,
-      boxShadow: "2px 2px 4px " + oc.gray7,
-      color: oc.gray3,
-      transition: "box-shadow .15s"
-    },
-    hover: {
-      backgroundColor: oc.gray9,
-      boxShadow: "2px 2px 4px " + oc.gray6,
-      color: oc.gray3,
-      transition: "box-shadow .15s"
-    }
-  },
+  // Navigation bar
+  navigation: [
+    { "--background-color": oc.gray9 },
+    { "--background-color_hover": oc.gray8 },
+    { "--box-shadow_hover": oc.gray7 },
+    { "--box-shadow_active": oc.gray6 },
+    { "--color": oc.gray3 }
+  ],
+
+  // Box surrounding the element atomic number, abbreviation, and the name
+  atomGraphic: [
+    { "--background-color": oc.gray9 },
+    { "--box-shadow": oc.gray7 },
+    { "--box-shadow_hover": oc.gray6 },
+    { "--color": oc.gray3 }
+  ],
 
   // List of all information of a particular atom
-  atomInformation: {
-    // Box that surrounds all the boxes of information. It contains all atomInformation
-    information: {
-      default: {
-        backgroundColor: oc.gray9,
-        boxShadow: "2px 2px 4px " + oc.gray7,
-        color: oc.gray3,
-        transition: "box-shadow .15s"
-      },
-      hover: {
-        backgroundColor: oc.gray9,
-        boxShadow: "2px 2px 4px " + oc.gray6,
-        color: oc.gray3,
-        transition: "box-shadow .15s"
-      }
-    },
-    // The actual box with one piece of information
-    box: {
-      default: {
-        backgroundColor: oc.gray8,
-        color: oc.gray3,
-        transition: "box-shadow .15s"
-      },
-      hover: {
-        backgroundColor: oc.gray7,
-        color: oc.gray3,
-        boxShadow: "2px 2px 2px " + oc.gray8
-      }
-    }
-  },
+  atomInformation: [
+    { "--background-color": oc.gray9 },
+    { "--box-shadow": oc.gray7 },
+    { "--box-shadow_hover": oc.gray6 },
+    { "--color": oc.gray3 }
+  ],
+
+  atomInformationBox: [
+    { "--background-color": oc.gray8 },
+    { "--background-color_hover": oc.gray7 },
+    { "--box-shadow_hover": oc.gray6 },
+    { "--color": oc.gray3 }
+  ],
 
   // The periodic table in general
-  periodicTable: {
-    default: {
-      backgroundColor: oc.gray9,
-      boxShadow: "2px 2px 4px " + oc.gray7,
-      transition: "box-shadow .15s"
-    },
-    hover: {
-      backgroundColor: oc.gray9,
-      boxShadow: "2px 2px 4px " + oc.gray6,
-      transition: "box-shadow .15s"
-    }
-  },
+  periodicTable: [
+    { "--background-color": oc.gray9 },
+    { "--box-shadow": oc.gray7 },
+    { "--box-shadow_hover": oc.gray6 }
+  ],
 
   // Each single atom (atom-inner) styling
-  atom: {
-    default: {
-      backgroundColor: oc.gray8,
-      boxShadow: "2px 2px 4px " + oc.gray7,
-      // border: "1px solid " + oc.gray2,
-      color: oc.gray3,
-      transition: "box-shadow .15s"
-    },
-    hover: {
-      backgroundColor: oc.gray8,
-      // border: "1px solid " + oc.gray2,
-      boxShadow: "2px 2px 4px " + oc.gray6,
-      color: oc.gray3,
-      transition: "box-shadow .15s"
-    }
-  },
+  atom: [
+    { "--background-color": oc.gray8 },
+    { "--box-shadow": oc.gray7 },
+    { "--box-shadow_hover": oc.gray6 },
+    { "--color": oc.gray3 }
+  ],
 
   // Each column and row label (label-inner) styling
-  label: {
-    default: {
-      backgroundColor: oc.gray8,
-      border: "1px solid " + oc.orange8,
-      boxShadow: "1px 1px 2px " + oc.gray6,
-      color: oc.gray3,
-      transition: "all .15s"
-    },
-    hover: {
-      backgroundColor: oc.gray8,
-      border: "1px solid " + oc.orange8,
-      boxShadow: "2px 2px 4px " + oc.gray6,
-      color: oc.gray3,
-      transition: "all .15s"
-    }
-  }
+  label: [
+    { "--background-color": oc.gray8 },
+    { "--background-color_c-active": oc.gray7 },
+    { "--box-shadow": oc.gray7 },
+    { "--box-shadow_hover": oc.gray6 },
+    { "--color": oc.gray3 }
+  ],
+
+  // Footer
+  footer: [{ "--color": oc.gray3 }]
 };
