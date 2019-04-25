@@ -7,31 +7,31 @@
       <section class="grid" v-if="tabAtomsData" ref="periodicTableGrid">
         <div
           class="atom-outer"
-          v-for="(atomData, index) in tabAtomsData"
-          v-bind:key="atomData.name"
-          :style="positionAtom(index)"
+          v-for="(atomData, atomIndex) in tabAtomsData"
+          :key="atomData.name"
+          :style="positionAtom(atomIndex)"
         >
           <atom-z
             :atomData="atomData"
-            :atomIndex="index"
-            :atomPlacement="atomPlacementData(index)"
+            :atomIndex="atomIndex"
+            :atomPlacement="atomPlacementData(atomIndex)"
           ></atom-z>
         </div>
         <div
-          v-for="periodLabel in periodLabels.length"
-          :key="'row' + periodLabel"
+          v-for="(labelNumber, labelIndex) in periodLabelsActive.length"
+          :key="'period' + labelNumber"
           class="label-outer"
-          :style="positionRowLabel(periodLabel)"
+          :style="positionRowLabel(labelIndex)"
         >
-          <label-period :labelNumber="periodLabel" />
+          <label-period :labelIndex="labelIndex" />
         </div>
         <div
-          v-for="groupLabel in groupLabels.length"
-          :key="'column' + groupLabel"
+          v-for="(labelNumber, labelIndex) in groupLabelsActive.length"
+          :key="'group' + labelNumber"
           class="label-outer"
-          :style="positionColumnLabel(groupLabel)"
+          :style="positionColumnLabel(labelIndex)"
         >
-          <label-group :labelNumber="groupLabel" />
+          <label-group :labelIndex="labelIndex" />
         </div>
       </section>
     </div>
@@ -47,15 +47,10 @@ import atomPlacements from "../../../wolf/generic-atom-data/placement.json";
 
 export default {
   name: "PeriodicTable",
-  data: function() {
-    return {
-      mouseState: "default"
-    };
-  },
   computed: {
     ...mapState("themes/", ["currentTheme"]),
     ...mapState("atomData/", ["tabAtomsData"]),
-    ...mapState("labelData/", ["periodLabels", "groupLabels"])
+    ...mapState("labelData/", ["periodLabelsActive", "groupLabelsActive"])
   },
   methods: {
     ...mapActions("atomData/", ["fetchUpdatePeriodicTableData"]),
@@ -70,14 +65,15 @@ export default {
         "grid-area": `${row} / ${column} / ${row + 1} / ${column}`
       };
     },
-    positionColumnLabel: function(columnLabel) {
+    positionColumnLabel: function(columnLabelIndex) {
       return {
-        "grid-area": `${1} / ${columnLabel + 1} / ${2} / ${columnLabel + 2}`
+        "grid-area": `${1} / ${columnLabelIndex + 2} / ${2} / ${columnLabelIndex +
+          3}`
       };
     },
-    positionRowLabel: function(rowLabel) {
+    positionRowLabel: function(rowLabelIndex) {
       return {
-        "grid-area": `${rowLabel + 1} / ${1} / ${rowLabel + 2} / ${2}`
+        "grid-area": `${rowLabelIndex + 2} / ${1} / ${rowLabelIndex + 3} / ${2}`
       };
     },
     adjustFontSize: function(periodicTableDOMRect) {
@@ -102,14 +98,14 @@ export default {
     }
   },
   watch: {
-    $route: function() {
+    $route() {
       let dataToFetch = {
         tab: this.$route.meta.tab
       };
       this.fetchUpdatePeriodicTableData(dataToFetch);
     }
   },
-  created: function() {
+  created() {
     let dataToFetch = {
       tab: this.$route.meta.tab
     };
