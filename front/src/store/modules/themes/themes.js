@@ -9,7 +9,7 @@ const state = {
 
   currentTheme: {
     name: "Light Theme Regular",
-    ...debugTheme
+    ...darkThemeRegular
   },
   lightThemeRegular: {
     name: "Light Theme Regular",

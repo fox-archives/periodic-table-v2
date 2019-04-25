@@ -47,3 +47,9 @@ export default {
   /*width: 100%;*/
 }
 </style>
+
+<style scoped>
+.app-outer {
+  background-color: var(--background-color);
+}
+</style>
