@@ -56,19 +56,22 @@ const mutations = {
     if (labelIndex === -1) return;
 
     // TODO: PRIORITY 2: Refactor for better perf
-    atomPlacements.forEach((atomPlacement, index) => {
-      if (atomPlacement[labelType] === labelIndex + 1) {
-        console.log("bravo", atomPlacement[labelType]);
-        console.log("charlie", labelIndex + 1);
+    console.log("update");
 
-        console.log(atomPlacement);
-        console.log("labelIndex", labelIndex);
-        console.log("index", index);
-        // Vue.set(state.activeAtoms, index, { active: true });
-        state.activeAtomsLastActive.push(index);
-        console.log("----------");
-      }
-    });
+
+    // atomPlacements.forEach((atomPlacement, index) => {
+    //   if (atomPlacement[labelType] === labelIndex + 1) {
+    //     console.log("bravo", atomPlacement[labelType]);
+    //     console.log("charlie", labelIndex + 1);
+
+    //     console.log(atomPlacement);
+    //     console.log("labelIndex", labelIndex);
+    //     console.log("index", index);
+    //     Vue.set(state.activeAtoms, index, { active: true });
+    //     state.activeAtomsLastActive.push(index);
+    //     console.log("----------");
+    //   }
+    // });
   }
 };
 

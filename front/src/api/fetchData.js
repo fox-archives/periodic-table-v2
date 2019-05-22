@@ -11,7 +11,7 @@ export default {
         return response.json();
       })
       .then(myJson => {
-        context.state.tabAtomsData = myJson;
+        context.state.tabAtomsData = Object.freeze(myJson);
       })
       // Update selectedAtom with new data
       .then(() => {
