@@ -8,6 +8,9 @@
     @mouseleave="updateActiveLabels(-1)"
     :style="[...currentTheme.atom]"
   >
+    <p style="font-size: 6px;">
+      {{ atomData.fusionHeat || "test" }}
+    </p>
     <p class="atomic-number">
       {{ atomData.atomicNumber }}
     </p>

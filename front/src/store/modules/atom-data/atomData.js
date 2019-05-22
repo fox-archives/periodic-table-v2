@@ -46,12 +46,10 @@ const mutations = {
 
     if (labelType === "period") labelType = "period";
     if (labelType === "group") labelType = "group";
-    // console.log(labelType);
 
     // Reset the old values
-    state.activeAtomsLastActive.forEach(atomsLastActive => {
-      Vue.set(state.activeAtoms, atomsLastActive, { active: false });
-    });
+    state.activeAtoms = new Array(120).fill({ active: false });
+
     state.activeAtomsLastActive = [];
 
     // labelIndex of -1 means we want to remove any labels
@@ -60,8 +58,15 @@ const mutations = {
     // TODO: PRIORITY 2: Refactor for better perf
     atomPlacements.forEach((atomPlacement, index) => {
       if (atomPlacement[labelType] === labelIndex + 1) {
-        Vue.set(state.activeAtoms, index, { active: true });
+        console.log("bravo", atomPlacement[labelType]);
+        console.log("charlie", labelIndex + 1);
+
+        console.log(atomPlacement);
+        console.log("labelIndex", labelIndex);
+        console.log("index", index);
+        // Vue.set(state.activeAtoms, index, { active: true });
         state.activeAtomsLastActive.push(index);
+        console.log("----------");
       }
     });
   }

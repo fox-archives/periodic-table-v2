@@ -8,7 +8,7 @@
     </div>
     <div class="periodic-table-wrapper">
       <div class="periodic-table-wrapper-inner">
-        <periodic-table />
+        <periodic-table-single />
       </div>
     </div>
   </div>
@@ -18,13 +18,15 @@
 import AtomGraphic from "@/components/AtomGraphic";
 import AtomInformation from "@/components/AtomInformation";
 import PeriodicTable from "@/components/PeriodicTable";
+import PeriodicTableSingle from "@/components/PeriodicTableSingle";
 
 export default {
   name: "Interface",
   components: {
     "atom-graphic": AtomGraphic,
     "atom-information": AtomInformation,
-    "periodic-table": PeriodicTable
+    "periodic-table": PeriodicTable,
+    "periodic-table-single": PeriodicTableSingle
   }
 };
 </script>
