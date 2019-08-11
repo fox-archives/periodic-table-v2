@@ -11,8 +11,6 @@ periodicTable = {};
 Print["all-properties-data.wls creating properties"];
 
 For[i = 1, i < 119, i++,
-	(* i = elementList[[i]]; *)
-
 	(* COMMON PROPERTIES *)
 	name = ElementData[i, "Name"] // Capitalize;
 	abbreviation = ElementData[i, "Abbreviation"];
@@ -76,8 +74,6 @@ For[i = 1, i < 119, i++,
 		"superconductingPoint" -> superconductingPoint,
 		"vaporizationHeat" -> vaporizationHeat
 	};
-
-	Print@newElementObject;Print[" "];
 
 	periodicTable = Append[periodicTable, newElementObject];
 

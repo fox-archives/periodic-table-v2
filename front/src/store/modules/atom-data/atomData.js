@@ -58,20 +58,9 @@ const mutations = {
     // TODO: PRIORITY 2: Refactor for better perf
     console.log("update");
 
-
-    // atomPlacements.forEach((atomPlacement, index) => {
-    //   if (atomPlacement[labelType] === labelIndex + 1) {
-    //     console.log("bravo", atomPlacement[labelType]);
-    //     console.log("charlie", labelIndex + 1);
-
-    //     console.log(atomPlacement);
-    //     console.log("labelIndex", labelIndex);
-    //     console.log("index", index);
-    //     Vue.set(state.activeAtoms, index, { active: true });
-    //     state.activeAtomsLastActive.push(index);
-    //     console.log("----------");
-    //   }
-    // });
+    atomPlacements.forEach((placement, index, arr) => {
+      console.log(placement);
+    });
   }
 };
 
