@@ -1,6 +1,10 @@
 # Periodic Table Version 2
 
-Same project goals as Periodic Table Version 1. Rewritten because I've learned a lot since starting the first version. Abandoned in favor of updating and improving the initial verison.
+Same project goals as Periodic Table Version 1. Rewritten because I've learned a lot since starting the first version.
+
+## Archive
+
+Archived in favor of updating and improving the initial verison, which is closer to completion.
 
 ## Roadmap (Short-Term)
 
