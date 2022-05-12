@@ -6,6 +6,14 @@ Same project goals as Periodic Table Version 1. Rewritten because I've learned a
 
 Archived in favor of updating and improving the initial verison, which is closer to completion.
 
+## Archive 2
+
+The frontend and backend have been modified so the project still builds. See `./Bakefile.sh` for details
+
+### Preview
+
+![Website preview](./assets/screenshot.png)
+
 ## Roadmap (Short-Term)
 
 - Fix whitespace in main periodic table (make it look nicer)

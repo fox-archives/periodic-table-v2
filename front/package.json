@@ -23,8 +23,9 @@
     "eslint": "^5.14.0",
     "eslint-plugin-vue": "^5.2.1",
     "lint-staged": "^8.1.4",
-    "node-sass": "^4.9.0",
+    "sass": "^1.51.0",
     "sass-loader": "^7.0.1",
+    "vue-cli": "^2.9.6",
     "vue-template-compiler": "^2.6.6"
   },
   "eslintConfig": {
